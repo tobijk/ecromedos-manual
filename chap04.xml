@@ -1,0 +1,471 @@
+
+	<chapter>
+		<title><label id="sect:writingdocuments"/>Basic Document Editing</title>
+		<p>
+			This chapter starts with a crash course in XML and then continues teaching
+		you the essentials of writing documents in ecromedos Markup Language.
+		</p>
+		<section>
+			<title>A Brief Introduction to XML</title>
+			<p>
+				<idxterm><item>XML</item></idxterm>
+
+				The <i>Extensible Markup Language</i> is not a data description language in
+			itself. Rather, it defines a syntax that lets you design your own customized
+			markup languages for arbitrary data models. Take a look at the following
+			example:
+			</p>
+			<listing>
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					strip="yes"><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<cocktail alcoholic="yes">
+    <name>Pina Colada</name>
+    <ingredient>
+        <name>rum</name>
+        <amount unit="oz">3</amount>
+    </ingredient>
+    <ingredient>
+        <name>coconut milk</name>
+        <amount unit="tbsp">3</amount>
+    </ingredient>
+    <ingredient>
+        <name>pineapple</name>
+        <amount unit="tbsp">3</amount>
+    </ingredient>
+    <ingredient>
+        <name>ice</name>
+        <amount unit="cup">2</amount>
+    </ingredient>
+</cocktail>
+				]]></code>
+			</listing>
+			<p>
+				What you see is a complete XML document describing the popular Pina
+			Colada cocktail. On the first line, you see the XML declaration. It specifies
+			the XML version and the character encoding of the document. In general, you
+			should use one of the unicode character encodings UTF-8 or UTF-16, since any
+			standards-conforming XML parser is required to be able to read these.
+			What follows is the root element <tt><b>cocktail</b></tt> which in turn	contains
+			a <tt><b>name</b></tt> element, telling us the name of the cocktail, followed by
+			the various ingredients that you need to make a Pina Colada.
+			</p>
+			<p>
+				<idxterm><item>tag</item></idxterm>
+
+				The textual elements delimiting the beginning and end of an XML element are
+			called <i>tags</i>. An opening tag has the form <tt>&lt;element&gt;</tt> and
+			the	corresponding closing tag is written <tt>&lt;/element&gt;</tt>.	XML elements
+			must be properly nested and there can be only one root element. Thus, you can
+			picture the logical structure of an XML document as a tree. A single, bare
+			element of this tree is called a <i>node</i>. Its direct descendants are called
+			its <i>children</i> and the node from which it originates is called the <i>parent</i>.
+			Nodes may carry additional attributes. Our cocktail, for instance, has the
+			attribute <tt><b>alcoholic</b></tt> which in this case is set appropriately to
+			<tt>yes</tt>.
+			</p>
+			<p>
+				<idxterm><item>ecromedos</item><subitem>Markup Language</subitem></idxterm>
+
+				The names of elements and attributes can be chosen arbitrarily to represent
+			a given data model. In this example we tried to model a drink but you might just
+			as well define a set of tags to describe the parts of an automotive vehicle.
+			When working with ecromedos, you will be using XML-based markup to describe the
+			logical structure of standard text documents.
+			</p>
+		</section>
+		<section>
+			<title>How to Structure Your Documents</title>
+			<p>
+			<idxterm><item>document</item><subitem>structure</subitem></idxterm>
+
+				In general, you should start new documents from a document template, as
+			described in section <ref idref="sect:maketemplate"/>. An initial template
+			produced that way will contain a complete skeleton for a document of the chosen
+			document class. For a book or report the overall structure of a document can be
+			represented by the following tree:
+			</p>
+			<listing>
+				<code bgcolor="#eeeeee" strip="yes">
+report
+  |-head
+  |-make-toc
+  |-preface
+  .
+  .
+  |-chapter
+  |  |-title
+  |  |-<i>blockelements</i>
+  |  |-section
+  |  .  |-title
+  |  .  |-<i>blockelements</i>
+  |     |-subsection
+  |     .  |-title
+  |     .  |-<i>blockelements</i>
+  |        |-subsubsection
+  |        .  |-title
+  |        .  `-<i>blockelements</i>
+  .
+  .
+  |-appendix
+  |  |-title
+  |  |-<i>blockelements</i>
+  |  |-section
+  |  .
+  |  .
+  .
+  .
+  |-glossary
+  |-biblio
+  |-index
+  .
+  .
+				</code>
+			</listing>
+			<p>
+				<idxterm><item>sectioning</item></idxterm>
+
+				This tree is greatly simplified and incomplete, because naturally any type of
+			sectioning element, with the exception of <tt><b>subsubsection</b></tt>, can
+			contain multiple subsections.
+			</p>
+			<p>
+				<idxterm group="ecml"><item>preface</item></idxterm>
+				<idxterm group="ecml"><item>abstract</item></idxterm>
+
+				When using the article class, the <tt><b>preface</b></tt> element is
+			replaced by <tt><b>abstract</b></tt> and the elements <tt><b>glossary</b></tt>
+			and <tt><b>index</b></tt> are not available. Furthermore, the top-level sectioning
+			element in an article is the <tt><b>section</b></tt>.
+			</p>
+		</section>
+		<section>
+			<title>Basic Text Formatting</title>
+			<p>
+				<idxterm><item>text formatting</item></idxterm>
+				<idxterm><item>emphasis</item></idxterm>
+				<idxterm group="ecml" sortkey="I"><item>i</item></idxterm>
+				<idxterm group="ecml" sortkey="B"><item>b</item></idxterm>
+				<idxterm group="ecml" sortkey="U"><item>u</item></idxterm>
+				<idxterm group="ecml"><item>tt</item></idxterm>
+
+				From your word processor you may be used to being able to emphasize text by
+			setting it in bold or italic letters or by underlining it. With ecromedos you
+			can achieve this by enclosing the span of text to be formatted inside the tags
+			<tt><b>b</b></tt> for bold print, <tt><b>i</b></tt> for italics or
+			<tt><b>u</b></tt> for underlining. You may also combine these arbitrarily. In
+			addition, you may use the <tt><b>tt</b></tt> tag to make text appear in
+			typewriter letters, which is useful for setting, for example, internet
+			addresses.
+			</p>
+			<table print-width="100%" screen-width="800px" frame="top,bottom"
+				align="left" id="tbl:textformatting" float="no">
+				<caption>Using text-formatting elements</caption>
+				<shortcaption>Using text-formatting elements (continued)</shortcaption>
+				<colgroup>
+					<col width="60%"/>
+					<col width="40%"/>
+				</colgroup>
+				<th frame="rowsep">
+					<td><b>Markup</b></td>
+					<td><b>Resulting Output</b></td>
+				</th>
+				<tr>
+					<td><tt>&lt;u&gt;underlined text&lt;/u&gt;</tt></td>
+					<td><u>underlined text</u></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;i&gt;text in italics&lt;/i&gt;</tt></td>
+					<td><i>text in italics</i></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;b&gt;bold-faced letters&lt;/b&gt;</tt></td>
+					<td><b>bold-faced letters</b></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;b&gt;&lt;i&gt;bold face and italics&lt;/i&gt;&lt;/b&gt;</tt></td>
+					<td><b><i>bold face and italics</i></b></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;tt&gt;text in typewriter letters&lt;/tt&gt;</tt></td>
+					<td><tt>text in typewriter letters</tt></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;xx-small&gt;text in XXS&lt;/xx-small&gt;</tt></td>
+					<td><xx-small>text in XXS</xx-small></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;x-small&gt;text in XS&lt;/x-small&gt;</tt></td>
+					<td><x-small>text in XS</x-small></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;small&gt;small letters&lt;/small&gt;</tt></td>
+					<td><small>small letters</small></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;medium&gt;regular size&lt;medium&gt;</tt></td>
+					<td><medium>regular size</medium></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;large&gt;large letters&lt;large&gt;</tt></td>
+					<td><large>large letters</large></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;x-large&gt;text in XL&lt;x-large&gt;</tt></td>
+					<td><x-large>text in XL</x-large></td>
+				</tr>
+				<tr>
+					<td><tt>&lt;xx-large&gt;text in XXL&lt;xx-large&gt;</tt></td>
+					<td><xx-large>text in XXL</xx-large></td>
+				</tr>
+			</table>
+			<p>
+				<idxterm group="ecml"><item>xx-small</item></idxterm>
+				<idxterm group="ecml"><item>x-small</item></idxterm>
+				<idxterm group="ecml"><item>small</item></idxterm>
+				<idxterm group="ecml"><item>medium</item></idxterm>
+				<idxterm group="ecml"><item>large</item></idxterm>
+				<idxterm group="ecml"><item>x-large</item></idxterm>
+				<idxterm group="ecml"><item>xx-large</item></idxterm>
+
+				For the sake of completeness, there are the seven elements
+			<tt><b>xx-small</b></tt>, <tt><b>x-small</b></tt>, <tt><b>small</b></tt>,
+			<tt><b>medium</b></tt>, <tt><b>large</b></tt>, <tt><b>x-large</b></tt> and
+			<tt><b>xx-large</b></tt> that let you control the font size. However, there
+			should hardly ever be a reason to change the font size explicitely. Table
+			<ref idref="tbl:textformatting"/> shows a series of examples on text formatting.
+			</p>
+			<p>
+				You may have noticed that this is one of the few areas where the ecromedos
+			Markup Language (ECML) isn't purely semantic. If that bothers you, just pretend
+			<tt><b>i</b></tt> stood for <i>emphasis</i> and discard the other elements.
+			Alternatively, you could develop your own, completely semantic markup language
+			on top of ECML.
+			</p>
+		</section>
+		<section>
+			<title>Controlling Hyphenation</title>
+			<p>
+				<idxterm><item>hyphenation</item></idxterm>
+				<idxterm group="ecml" sortkey="Y"><item>y</item></idxterm>
+
+				In printable output, text is set justified over the entire width of the
+			page's text area. In order to avoid large gaps of white space between words,
+			&latex; uses a clever algorithm and language-specifc patterns to hyphenate words
+			automatically. However, sometimes the hyphenation algorithm fails and in rare
+			cases it cannot hyphenate certain words, at all. You can provide hints, telling
+			&latex; where a word may be broken up, by inserting <tt><b>y</b></tt> tags in
+			the right spots. For example, in order to tell &latex; that it may split the word
+			<qq>bibliography</qq> only between <i>biblio</i> and <i>graphy</i>, you would
+			write <tt>biblio&lt;y/&gt;graphy</tt> in your markup.
+			</p>
+		</section>
+		<section>
+			<title>Manually Inserting Line or Page Breaks</title>
+			<p>
+				<idxterm><item>page break</item></idxterm>
+				<idxterm><item>line break</item></idxterm>
+				<idxterm group="ecml"><item>br</item></idxterm>
+				<idxterm group="ecml"><item>pagebreak</item></idxterm>
+
+				In general, you should not have to worry about where a line breaks or where
+			a new page begins, because it is the job of the formatting engine (i.e. &latex;
+			or your web browser) to take care of this. In rare cases, however, you may have
+			to intervene manually. You can use the <tt><b>br</b></tt> element to break the
+			current line or <tt><b>pagebreak</b></tt> to start a new page. You should
+			<i>not</i> use multiple line or page breaks in a row. Mind that a page break is
+			only visible in printable output.
+			</p>
+			<p>
+				<idxterm group="ecml"><item>nobr</item></idxterm>
+				<idxterm><item>non-breaking space</item></idxterm>
+
+				When you need to <i>prevent</i> linebreaks in certain places, you can either
+			use the non-breaking space (see section <ref idref="sect:entities"/>) or protect
+			the specific strip of text with the <tt><b>nobr</b></tt> tag. For example, a
+			title or academic degree should not be separated from the name that follows it.
+			Consequently, you should write <tt>Dr.&amp;nbsp;Pepper</tt> or
+			<tt>&lt;nobr&gt;Dr. Pepper&lt;/nobr&gt;</tt> to prevent the formatting engine
+			from possibly breaking the line right before the name Pepper. 
+			</p>
+		</section>
+		<section>
+			<title><label id="sect:xreferences"/>Working with Cross-References</title>
+			<p>
+				<idxterm><item>cross-references</item></idxterm>
+
+				Sometimes you will want to refer to another section in your manuscript, i.e.
+			you may write something like <qq><i>[...] you will find out more about this on
+			page XYZ</i></qq>. However, at the time of writing your markup, you cannot tell
+			on which page the section you are referring to will actually be printed. The
+			solution is to label the locations you wish to reference and let ecromedos take
+			care of filling in the correct values whenever it encounters a reference to a
+			label in your document<footnote>Depending on the target format, ecromedos may
+			actually delegate the task of filling in cross-references to the formatting
+			subsystem, such as is the case for &latex; output.</footnote>.
+			</p>
+			<p>
+				<idxterm group="ecml"><item>label</item></idxterm>
+				<idxterm group="ecml"><item>label</item><subitem>id</subitem></idxterm>
+
+				The syntax for the definition of cross-references has changed slightly in
+			ecromedos version 2. To label a certain spot in the text, use the <tt><b>label</b></tt>
+			tag. This tag has a single, mandatory <tt><b>id</b></tt> attribute. This must be
+			a unique identifier among all elements that carry an <tt><b>id</b></tt> attribute.
+			Take a look at the following example:
+			</p>
+			<listing>
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					strip="yes"><![CDATA[			
+<chapter>
+    <title>The Show about Nothing</title>
+    <p>
+        Seinfeld<label id="seinfeld"> is the best
+        sitcom of all times.
+    </p>
+</chapter>
+				]]></code>
+			</listing>
+			<p>
+				You can now use the element <tt><b>ref</b></tt> to obtain the section number
+			and <tt><b>pageref</b></tt> to get the page number like this:
+			</p>
+			<listing>
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					strip="yes"><![CDATA[
+<chapter>
+    <title>About Myself</title>
+    <p>
+        I really enjoy watching Seinfeld. You can read more
+        about Seinfeld in section <ref idref="seinfeld"/> on
+        page <pageref idref="seinfeld"/>.
+    </p>
+</chapter>
+				]]></code>
+			</listing>
+			<p>
+				<idxterm group="ecml"><item>ref</item></idxterm>
+				<idxterm group="ecml"><item>ref</item><subitem>idref</subitem></idxterm>
+				<idxterm group="ecml"><item>pageref</item></idxterm>
+				<idxterm group="ecml"><item>pageref</item><subitem>idref</subitem></idxterm>
+
+				The <tt><b>ref</b></tt> and <tt><b>pageref</b></tt> elements can also point
+			to any other object with an <tt><b>id</b></tt> attribute, such as a
+			<tt><b>figure</b></tt> or a numbered <tt><b>equation</b></tt>. In that case
+			<tt><b>ref</b></tt> will resolve to the corresponding object counter instead of
+			the section counter.
+			</p>
+		</section>
+		<section>
+			<title>Placing Marginal Notes and Footnotes</title>
+			<p>
+				<idxterm><item>marginal notes</item></idxterm>
+				<idxterm group="ecml"><item>marginal</item></idxterm>
+
+				Marginal notes can be placed with the <tt><b>marginal</b></tt> tag. And
+			if you have Javascript turned on, they will even be displayed correctly in
+			HTML output. Try this example:
+			</p>
+			<listing>
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					strip="yes"><![CDATA[
+<p>
+    In this episode<marginal>The Summer of George</marginal>,
+    George finally looses his job at the Yankee Stadium but
+    gets an extra three months' pay-off.
+</p>
+				]]></code>
+			</listing>
+			<p>
+				<idxterm><item>footnotes</item></idxterm>
+				<idxterm group="ecml"><item>footnote</item></idxterm>
+
+				Please note that &latex; does not allow setting marginals inside table
+			cells. For HTML output this limitation does not exist. Footnotes are placed	in
+			the same fashion as marginals by use of the <tt><b>footnote</b></tt> tag. They
+			do work from inside tables without restrictions. 
+			</p>
+		</section>
+		<section>
+			<title><label id="sect:quoting"/>Inline and Block Quotes</title>
+			<p>
+				<idxterm><item>quoting</item></idxterm>
+				<idxterm><item>quoting</item><subitem>inline</subitem></idxterm>
+				<idxterm group="ecml" sortkey="Q"><item>q</item></idxterm>
+				<idxterm group="ecml"><item>qq</item></idxterm>
+
+				Unless you are setting your text in typewriter letters, you will not be able
+			to enter the correct quotation marks for your language directly with your
+			keyboard. You could use XML character entities to access the glyphs, but that is
+			tedious. Instead you should use the tags <tt><b>q</b></tt> and <tt><b>qq</b></tt>
+			for single and double quoting, respectively.
+			</p>
+			<p>
+				<idxterm><item>quoting</item><subitem>block</subitem></idxterm>
+				<idxterm group="ecml"><item>blockquote</item></idxterm>
+
+				When quoting large portions of text, consider using the <tt><b>blockquote</b></tt>
+			tag, which acts as a block element and may contain multiple paragraphs of text.
+			Block quotes will be indented left and right to set them off from the rest of the
+			text.
+			</p>
+		</section>
+		<section>
+			<title><label id="sect:entities"/>Useful Pre-Defined Entities</title>
+			<p>
+				<idxterm><item>entities</item></idxterm>
+				<idxterm><item>zero-width space</item></idxterm>
+				<idxterm group="ecml"><item>entity</item></idxterm>
+
+				ecromedos defines a small set of entities that may come in handy occasionally.
+			Table <ref idref="tbl:entities"/> shows the available entity names and what they
+			stand for. The zero-width space is particularly useful for making long path names or
+			Internet addresses break across lines without introducing hyphens or spaces.
+			</p>
+			<table print-width="50%" screen-width="400px" align="left"
+				frame="top,bottom" id="tbl:entities">
+				<caption>Pre-Defined Entities</caption>
+				<shortcaption>Pre-Defined Entities (continued)</shortcaption>
+				<colgroup>
+					<col width="30%"/>
+					<col width="70%"/>
+				</colgroup>
+				<th frame="rowsep">
+					<td><b>Entity</b></td><td><b>Resolves to</b></td>
+				</th>
+				<tr><td>&amp;tex;</td><td>&tex;</td></tr>
+				<tr><td>&amp;latex;</td><td>&latex;</td></tr>
+				<tr><td>&amp;xetex;</td><td>&xetex;</td></tr>
+				<tr><td>&amp;xelatex;</td><td>&xelatex;</td></tr>
+				<tr><td>&amp;nbsp;</td><td>The non-breaking space</td></tr>
+				<tr><td>&amp;zwsp;</td><td>The zero-width space</td></tr>
+				<tr><td>&amp;endash;</td><td>&endash;</td></tr>
+				<tr><td>&amp;emdash;</td><td>&emdash;</td></tr>
+				<tr><td>&amp;dots;</td><td>&dots;</td></tr>
+				<tr><td>&amp;check;</td><td>&check;</td></tr>
+				<tr><td>&amp;cross;</td><td>&cross;</td></tr>
+			</table>
+			<p>
+				For direct access to these entities, you must include the following document
+			type declaration at the top of your document:
+			</p>
+			<listing>
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					strip="yes"><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE report SYSTEM "http://www.ecromedos.net/dtd/2.0/ecromedos.dtd">
+				]]></code>
+			</listing>
+			<p>
+				<idxterm><item>document type declaration</item></idxterm>
+				<idxterm group="ecml"><item>entity</item><subitem>name</subitem></idxterm>
+
+				If you start your documents by generating a template, as described in section
+			<ref idref="sect:maketemplate"/>, the document type declaration will already be
+			in place. Entities can also be accessed by name, through the <tt><b>entity</b></tt>
+			element, without including the document type declaration. For example, you
+			can insert an em-dash into the text by writing <tt>&lt;entity name="emdash"/&gt;</tt>.
+			</p>
+		</section>
+	</chapter>
+

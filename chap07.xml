@@ -1,0 +1,18 @@
+
+	<chapter>
+		<title><label id="sect:styling"/>Styling Your Documents</title>
+		<p>
+			This chapter is about giving an individual note to your documents by modifying
+		the central document stylesheets. 
+		</p>
+		<section>
+			<title>Editing the CSS-Stylesheet</title>
+			<minisection>
+				<title>Head and Table of Contents</title>
+			</minisection>
+		</section>
+		<section>
+			<title>Changing the Look of &latex;-based Output</title>
+		</section>
+	</chapter>
+

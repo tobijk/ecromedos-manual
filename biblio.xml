@@ -1,0 +1,41 @@
+
+	<biblio number="no">
+		<bibitem label="W3CXML" id="bib:W3CXML">
+			World Wide Web Consortium. <i>Extensible Markup Language (XML) 1.0 (Third Edition)</i>.
+			W3C Recommendation. February 4, 2004.<br/>
+			URL:&nbsp;<tt><link url="http://www.w3.org/TR/2004/REC-xml-20040204/">http://&zwsp;www.&zwsp;w3.&zwsp;org/&zwsp;TR/&zwsp;2004/&zwsp;REC-xml-20040204/</link></tt>.
+		</bibitem>
+		<bibitem label="W3CXSL" id="W3CXSL">
+			World Wide Web Consortium. <i>Extensible Stylesheet Language (XSL) Version 1.0</i>.
+			W3C Recommendation. October 15, 2001.<br/>
+			URL:&nbsp;<tt><link url="http://www.w3c.org/TR/xsl/">http://&zwsp;www.&zwsp;w3c.&zwsp;org/&zwsp;TR/&zwsp;xsl/</link></tt>.
+		</bibitem>
+		<bibitem label="W3CXSLT" id="W3CXSLT">
+			World Wide Web Consortium. <i>XSL Transformations (XSLT) Version 1.0</i>.
+			W3C Recommendation. November 16, 1999.<br/>
+			URL:&nbsp;<tt><link url="http://www.w3c.org/TR/xslt">http://&zwsp;www.&zwsp;w3c.&zwsp;org/&zwsp;TR/&zwsp;xslt</link></tt>.
+		</bibitem>
+		<bibitem label="DBGUIDE" id="bib:DBGUIDE">
+			Norman Walsh. <i>DocBook 5.0: The Definitive Guide</i>.
+			Draft Version 0.0.25, Mar 2008.<br/>
+			URL:&nbsp;<tt><link url="http://www.docbook.org/tdg5/en/html/docbook.html">http://&zwsp;www.&zwsp;docbook.&zwsp;org/&zwsp;tdg5/&zwsp;en/&zwsp;html/&zwsp;docbook.html</link></tt>
+		</bibitem>
+		<bibitem label="LSHORT" id="bib:LSHORT">
+			Tobias Oetiker et al. <i>The Not so Short Introduction to &latex; 2<sub><m>\epsilon</m></sub></i>.
+			Version 4.20, May 2006.<br/>
+			URL:&nbsp;<tt><link url="http://www.ctan.org/get/info/lshort/english/lshort.pdf">http://&zwsp;www.&zwsp;ctan.&zwsp;org/&zwsp;get/&zwsp;info/&zwsp;lshort/&zwsp;english/&zwsp;lshort.pdf</link></tt>
+		</bibitem>
+		<bibitem label="LATEX" id="bib:LATEX">
+			Wikipedia The Free Encyclopedia. <i>&latex;</i>.<br/>
+			URL:&nbsp;<tt><link url="http://en.wikipedia.org/wiki/LaTeX">http://&zwsp;en.&zwsp;wikipedia.&zwsp;org/&zwsp;wiki/&zwsp;LaTeX</link></tt>.
+		</bibitem>
+		<bibitem label="GPL2" id="bib:GPL2">
+			The Free Software Foundation. <i>The GNU General Public License, version 2.</i> June 1991.<br/>
+			URL:&nbsp;<tt><link url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://&zwsp;www.&zwsp;gnu.&zwsp;org/&zwsp;licenses/&zwsp;old-licenses/&zwsp;gpl-2.0.html</link></tt>.
+		</bibitem>
+		<bibitem label="KOMASCR" id="bib:KOMASCR">
+			Frank Neukam, Markus Kohm, Axel Kielhorn. <i>The KOMA-Script Bundle</i>. March 2005.<br/>
+			URL:&nbsp;<tt><link url="ftp://ftp.ctan.org/tex-archive/macros/latex/contrib/koma-script/scrguien.pdf">ftp://&zwsp;ftp.&zwsp;ctan.&zwsp;org/&zwsp;tex-&zwsp;archive/&zwsp;macros/&zwsp;latex/&zwsp;contrib/&zwsp;koma-&zwsp;script/&zwsp;scrguien.pdf</link></tt>.
+		</bibitem>
+	</biblio>
+
