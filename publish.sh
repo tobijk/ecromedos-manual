@@ -22,6 +22,6 @@ mkdir tmp html pdf
 	for i in `seq 3`; do
 		xelatex report.tex
 	done &&
-	mv report.pdf ../pdf) > /dev/null
+	mv report.pdf ../pdf/manual.pdf) > /dev/null
 
 rm -fr tmp
