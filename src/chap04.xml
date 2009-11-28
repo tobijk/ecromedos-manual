@@ -90,6 +90,7 @@
 report
   |-head
   |-make-toc
+  |-legal
   |-preface
   .
   .
@@ -134,9 +135,9 @@ report
 				<idxterm group="ecml"><item>abstract</item></idxterm>
 
 				When using the article class, the <tt><b>preface</b></tt> element is
-			replaced by <tt><b>abstract</b></tt> and the elements <tt><b>glossary</b></tt>
-			and <tt><b>index</b></tt> are not available. Furthermore, the top-level sectioning
-			element in an article is the <tt><b>section</b></tt>.
+			replaced by <tt><b>abstract</b></tt> and the elements <tt><b>legal</b></tt>, 
+			<tt><b>glossary</b></tt> and <tt><b>index</b></tt> are not available. Furthermore,
+			the top-level sectioning element in an article is the <tt><b>section</b></tt>.
 			</p>
 		</section>
 		<section>
