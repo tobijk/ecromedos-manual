@@ -37,7 +37,7 @@
 				example:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
 						strip="yes"><![CDATA[
 <p>
 Users who are already familiar with HTML or document markup
@@ -68,7 +68,7 @@ will find learning ECML particularly easy.
 				sort as <qq>krokodil</qq>, you would write:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
 						strip="yes"><![CDATA[
 <defterm sortkey="Krokodil">
 	<dt>Crocodile</dt>
@@ -90,7 +90,7 @@ will find learning ECML particularly easy.
 				American English might look like this:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
 						strip="yes"><![CDATA[
 ...
 </appendix>
@@ -142,7 +142,7 @@ will find learning ECML particularly easy.
 				yourself, then here is how to do it:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
 						strip="yes"><![CDATA[
 <glossary>
 	...
@@ -193,7 +193,7 @@ will find learning ECML particularly easy.
 			for individual sections. A typical bibliography might look like this:
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+				<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
 					strip="yes"><![CDATA[
 <biblio number="yes">
     <bibitem label="KOCH09" id="bib:KOCH09">
@@ -231,7 +231,7 @@ will find learning ECML particularly easy.
 				to point the reader to the corresponding entry like this:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
 						strip="yes"><![CDATA[
 	...
 	<p>
@@ -268,7 +268,7 @@ will find learning ECML particularly easy.
 				an excerpt from the	source code of this chapter:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
 						strip="yes"><![CDATA[
 <p>
 	<idxterm group="ecml">
@@ -328,7 +328,7 @@ will find learning ECML particularly easy.
 				into the document.
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
 						strip="yes"><![CDATA[
 	...
 	</biblio>
@@ -359,7 +359,7 @@ will find learning ECML particularly easy.
 				end	of this document.
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
+					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
 						strip="yes"><![CDATA[
 <index title="Language Elements" columns="2" tocentry="yes">
 	<idxsection name="A">
