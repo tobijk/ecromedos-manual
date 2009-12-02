@@ -446,21 +446,20 @@
 			</p>
 			<listing>
 				<code bgcolor="#eeeeee" syntax="xml" colorscheme="ide-codewarrior"
-					strip="yes"><![CDATA[
-<listing>
-    <code syntax="c" colorscheme="ide-eclipse"
-        strip="yes" startline="1" linestep="100">
-    
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+					strip="yes">
+&lt;listing&gt;
+    &lt;code syntax="c" colorscheme="ide-eclipse"
+        strip="yes" startline="1" linestep="100">&lt;![CDATA[
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
 
 int main(void) {
     printf("Hello World!\n");
     return 0;
 }
-    </code>
-</listing>
-				]]></code>
+	]]&gt;&lt;/code>
+&lt;/listing&gt;
+				</code>
 			</listing>
 			<p>
 				With the <tt><b>colorscheme</b></tt> attribute you can choose between available
