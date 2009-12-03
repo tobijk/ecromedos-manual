@@ -88,7 +88,7 @@ $&gt; ecromedos -n <i>class</i> &gt; index.xml
 				following listing.
 				</p>
 				<listing>
-					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="ide-codewarrior"
+					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="xml-editor"
 						strip="yes"><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE report SYSTEM
