@@ -195,7 +195,7 @@
 			<subsection>
 				<title>Activating the Grid Rules</title>
 				<p>
-					The table above does not have a grid. To draw a frame around your
+					The table above does not have a visible grid. To draw a frame around your
 				table, use the <tt><b>frame</b></tt> attribute on the table element and
 				add an arbitary combination of the keywords	<tt>left</tt>, <tt>right</tt>,
 				<tt>top</tt> and <tt>bottom</tt> to it, in a comma separated list. Each

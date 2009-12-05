@@ -233,11 +233,11 @@ will find learning ECML particularly easy.
 				<listing>
 					<code bgcolor="#f2f2f2" syntax="xml" colorscheme="xml-editor"
 						strip="yes"><![CDATA[
-	...
-	<p>
-	For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
-	</p>
-	...
+...
+<p>
+For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
+</p>
+...
 					]]></code>
 				</listing>			
 				<p>
