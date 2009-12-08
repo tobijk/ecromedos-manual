@@ -1,6 +1,7 @@
 
 	<chapter>
 		<title><label id="sect:liststablesfigures"/>Advanced Language Features</title>
+		<make-overview pagenumbers="no"/>
 		<p>
 			What you have learned up until now won't get you far, if you intend to write
 		anything but plain prose. This chapter introduces some of the more advanced
@@ -432,8 +433,8 @@
 			<title>Verbatim Text and Code Listings</title>
 			<p>
 				You can use the <tt><b>verbatim</b></tt> element when you need to print scripts
-			where whitespace has to be displayed 1:1 as written. Text inside a verbatim tag will
-			be printed in typewriter letters and whitespace will be preserved and displayed just
+			and want whitespace to be preseved. Text inside a verbatim tag will
+			be printed in typewriter letters and whitespace will be displayed 1:1 just
 			as it appeared in your editor.
 			</p>
 			<p>
@@ -469,6 +470,8 @@ int main(void) {
 			The <tt><b>linestep</b></tt> attribute specifies the increment
 			from one line to the next. Setting the <tt><b>strip</b></tt> attribute to <tt>yes</tt>
 			will result in whitespace being stripped from the beginning and end of your listing.
+			You can override the background color of the selected coloring scheme with the
+			<tt><b>bgcolor</b></tt> attribute.
 			</p>
 		</section>
 

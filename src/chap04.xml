@@ -1,6 +1,7 @@
 
 	<chapter>
 		<title><label id="sect:writingdocuments"/>Basic Document Editing</title>
+		<make-overview pagenumbers="no"/>
 		<p>
 			This chapter starts with a crash course in XML and then continues teaching
 		you the essentials of writing documents in ecromedos Markup Language.
