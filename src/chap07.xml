@@ -1,7 +1,6 @@
 
 	<chapter>
 		<title><label id="sect:styling"/>Styling Your Documents</title>
-		<make-overview pagenumbers="no"/>
 		<p>
 			This chapter is about giving an individual note to your documents by modifying
 		the central document stylesheets. 

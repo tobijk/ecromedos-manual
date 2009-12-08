@@ -1,7 +1,6 @@
 
 	<chapter>
 		<title><label id="sect:backmatter"/>The Backmatter</title>
-		<make-overview pagenumbers="no"/>
 		<p>
 			This chapter deals with creating the backmatter of a document. The backmatter
 		comprises the appendices, glossary and bibliography, as well as the keyword indexes.

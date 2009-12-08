@@ -1,7 +1,6 @@
 
 	<chapter>
 		<title><label id="sect:liststablesfigures"/>Advanced Language Features</title>
-		<make-overview pagenumbers="no"/>
 		<p>
 			What you have learned up until now won't get you far, if you intend to write
 		anything but plain prose. This chapter introduces some of the more advanced

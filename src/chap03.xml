@@ -1,7 +1,6 @@
 
 	<chapter>
 		<title><label id="sect:generalusage"/>General Usage Instructions</title>
-		<make-overview pagenumbers="no"/>
 		<p>
 			<idxterm><item>command line usage</item></idxterm>
 
