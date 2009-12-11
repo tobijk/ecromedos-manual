@@ -52,7 +52,7 @@
 	</book>
 	<report>
 		<document-font>\renewcommand{\rmdefault}{\sfdefault}\normalfont</document-font>
-		<document-options>pointednumbers,automark,pagesize,headinclude,footexclude,bibtotoc</document-options>
+		<document-options>pointednumbers,automark,pagesize,headinclude,footexclude,bibtotoc,headsepline</document-options>
 		<document-title>\large\sffamily\bfseries</document-title>
 		<document-subtitle>\normalsize</document-subtitle>
 		<sectioning-title>\normalsize\sffamily\bfseries</sectioning-title>
@@ -75,15 +75,15 @@
 		<page-style>scrheadings</page-style>
 		<titlepage-style>empty</titlepage-style>
 		<partpage-style>empty</partpage-style>
-		<chapterpage-style>scrplain</chapterpage-style>
+		<chapterpage-style>scrheadings</chapterpage-style>
 		<indexpage-style>scrheadings</indexpage-style>
 		<page-head-fields>
-			\ihead[]{}
-			\chead[]{\headmark}
-			\ohead[]{}
+			\ihead[]{ecromedos 2 - Users' Manual}
+			\chead[]{}
+			\ohead[]{\headmark}
 			\ifoot[]{}
-			\cfoot[\pagemark]{\pagemark}
-			\ofoot[]{}
+			\cfoot[]{}
+			\ofoot[]{\rule[-1pt]{5pt}{9pt} \pagemark}
 		</page-head-fields>
 	</report>
 	<article>
@@ -96,13 +96,13 @@
 		<minitoc-section-title>\large\sffamily\bfseries</minitoc-section-title>
 		<subsection-title>\large\sffamily\bfseries</subsection-title>
 		<subsubsection-title>\normalsize\sffamily\bfseries</subsubsection-title>
-		<description-label>\normalsize\rmfamily\bfseries</description-label>
-		<footnote>\footnotesize\rmfamily</footnote>
-		<footnote-label>\footnotesize\rmfamily</footnote-label>
-		<footnote-reference>\footnotesize\rmfamily</footnote-reference>
-		<page-number>\normalsize\upshape\rmfamily</page-number>
-		<paragraph-title>\normalsize\rmfamily\bfseries</paragraph-title>
-		<page-head>\normalsize\slshape</page-head>
+		<description-label>\normalsize\sffamily\bfseries</description-label>
+		<footnote>\footnotesize\sffamily</footnote>
+		<footnote-label>\footnotesize\sffamily</footnote-label>
+		<footnote-reference>\footnotesize\sffamily</footnote-reference>
+		<page-number>\normalsize\upshape\sffamily</page-number>
+		<paragraph-title>\normalsize\sffamily\bfseries</paragraph-title>
+		<page-head>\normalsize</page-head>
 		<caption-setup>font=small,font=rm,labelfont=bf,format=hang,labelformat=simple</caption-setup>
 		<page-style>scrheadings</page-style>
 		<titlepage-style>scrplain</titlepage-style>
