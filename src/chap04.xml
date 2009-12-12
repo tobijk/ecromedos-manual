@@ -424,7 +424,7 @@ report
 			Internet addresses break across lines without introducing hyphens or spaces.
 			</p>
 			<table print-width="50%" screen-width="400px" align="left"
-				frame="top,bottom" id="tbl:entities">
+				frame="top,bottom" id="tbl:entities" float="yes">
 				<caption>Pre-Defined Entities</caption>
 				<shortcaption>Pre-Defined Entities (continued)</shortcaption>
 				<colgroup>

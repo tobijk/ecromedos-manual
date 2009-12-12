@@ -8,7 +8,7 @@
 -->
 <style>
 	<book>
-		<document-font>\renewcommand{\familydefault}{\rmdefault}</document-font>
+		<document-font>\renewcommand{\rmdefault}{\sfdefault}\normalfont</document-font>
 		<document-options>pointednumbers,cleardoubleempty,automark,pagesize,headsepline,headinclude,footexclude,bibtotoc</document-options>
 		<document-title>\large\sffamily\bfseries</document-title>
 		<document-subtitle>\normalsize</document-subtitle>
@@ -19,27 +19,27 @@
 		<minitoc-section-title>\large\sffamily\bfseries</minitoc-section-title>
 		<subsection-title>\large\sffamily\bfseries</subsection-title>
 		<subsubsection-title>\normalsize\sffamily\bfseries</subsubsection-title>
-		<description-label>\normalsize\rmfamily\bfseries</description-label>
-		<footnote>\footnotesize\rmfamily</footnote>
-		<footnote-label>\footnotesize\rmfamily</footnote-label>
-		<footnote-reference>\footnotesize\rmfamily</footnote-reference>
-		<page-number>\normalsize\upshape\rmfamily</page-number>
-		<paragraph-title>\normalsize\rmfamily\bfseries</paragraph-title>
+		<description-label>\normalsize\sffamily\bfseries</description-label>
+		<footnote>\footnotesize\sffamily</footnote>
+		<footnote-label>\footnotesize\sffamily</footnote-label>
+		<footnote-reference>\footnotesize\sffamily</footnote-reference>
+		<page-number>\normalsize\upshape\sffamily</page-number>
+		<paragraph-title>\normalsize\sffamily\bfseries</paragraph-title>
 		<part-title>\huge\sffamily\bfseries</part-title>
 		<minitoc-part-title>\Large\sffamily\bfseries</minitoc-part-title>
 		<part-number>\huge\sffamily\bfseries</part-number>
 		<page-head>\normalsize\slshape</page-head>
-		<caption-setup>font=small,font=rm,labelfont=bf,format=hang,labelformat=simple</caption-setup>
+		<caption-setup>font=small,font=sf,labelfont=bf,format=hang,labelformat=simple</caption-setup>
 		<page-style>scrheadings</page-style>
 		<titlepage-style>empty</titlepage-style>
 		<partpage-style>empty</partpage-style>
 		<chapterpage-style>scrplain</chapterpage-style>
 		<indexpage-style>scrplain</indexpage-style>
 		<page-head-fields>
-			\lehead[]{\headmark}
+			\lehead[]{ecromedos 2 - Users' Manual}
 			\cehead[]{}
 			\rehead[]{}
-			\lefoot[\pagemark]{\pagemark}
+			\lefoot[\pagemark{} {\rule[-1pt]{5pt}{9pt}}]{\pagemark{} {\rule[-1pt]{5pt}{9pt}}}
 			\cefoot[]{}
 			\refoot[]{}
 			\lohead[]{}
@@ -47,7 +47,7 @@
 			\rohead[]{\headmark}
 			\lofoot[]{}
 			\cofoot[]{}
-			\rofoot[\pagemark]{\pagemark}
+			\rofoot[{\rule[-1pt]{5pt}{9pt}} \pagemark]{{\rule[-1pt]{5pt}{9pt}} \pagemark}
 		</page-head-fields>
 	</book>
 	<report>
@@ -61,21 +61,21 @@
 		<section-title>\Large\sffamily\bfseries</section-title>
 		<subsection-title>\large\sffamily\bfseries</subsection-title>
 		<subsubsection-title>\normalsize\sffamily\bfseries</subsubsection-title>
-		<description-label>\normalsize\rmfamily\bfseries</description-label>
-		<footnote>\footnotesize\rmfamily</footnote>
-		<footnote-label>\footnotesize\rmfamily</footnote-label>
-		<footnote-reference>\footnotesize\rmfamily</footnote-reference>
-		<page-number>\normalsize\upshape\rmfamily</page-number>
-		<paragraph-title>\normalsize\rmfamily\bfseries</paragraph-title>
+		<description-label>\normalsize\sffamily\bfseries</description-label>
+		<footnote>\footnotesize\sffamily</footnote>
+		<footnote-label>\footnotesize\sffamily</footnote-label>
+		<footnote-reference>\footnotesize\sffamily</footnote-reference>
+		<page-number>\normalsize\upshape\sffamily</page-number>
+		<paragraph-title>\normalsize\sffamily\bfseries</paragraph-title>
 		<part-title>\huge\sffamily\bfseries</part-title>
 		<minitoc-part-title>\Large\sffamily\bfseries</minitoc-part-title>
 		<part-number>\huge\sffamily\bfseries</part-number>
 		<page-head>\normalsize\slshape</page-head>
-		<caption-setup>font=small,font=rm,labelfont=bf,format=hang,labelformat=simple</caption-setup>
+		<caption-setup>font=small,font=sf,labelfont=bf,format=hang,labelformat=simple</caption-setup>
 		<page-style>scrheadings</page-style>
 		<titlepage-style>empty</titlepage-style>
 		<partpage-style>empty</partpage-style>
-		<chapterpage-style>scrheadings</chapterpage-style>
+		<chapterpage-style>scrplain</chapterpage-style>
 		<indexpage-style>scrheadings</indexpage-style>
 		<page-head-fields>
 			\ihead[]{ecromedos 2 - Users' Manual}
@@ -83,11 +83,11 @@
 			\ohead[]{\headmark}
 			\ifoot[]{}
 			\cfoot[]{}
-			\ofoot[]{\rule[-1pt]{5pt}{9pt} \pagemark}
+			\ofoot[{\rule[-1pt]{5pt}{9pt}} \pagemark]{\rule[-1pt]{5pt}{9pt} \pagemark}
 		</page-head-fields>
 	</report>
 	<article>
-		<document-font>\renewcommand{\familydefault}{\rmdefault}</document-font>
+		<document-font>\renewcommand{\rmdefault}{\sfdefault}\normalfont</document-font>
 		<document-options>pointednumbers,automark,pagesize,abstracton,headinclude,footexclude,bibtotoc</document-options>
 		<document-title>\large\sffamily\bfseries</document-title>
 		<document-subtitle>\normalsize</document-subtitle>
@@ -103,7 +103,7 @@
 		<page-number>\normalsize\upshape\sffamily</page-number>
 		<paragraph-title>\normalsize\sffamily\bfseries</paragraph-title>
 		<page-head>\normalsize</page-head>
-		<caption-setup>font=small,font=rm,labelfont=bf,format=hang,labelformat=simple</caption-setup>
+		<caption-setup>font=small,font=sf,labelfont=bf,format=hang,labelformat=simple</caption-setup>
 		<page-style>scrheadings</page-style>
 		<titlepage-style>scrplain</titlepage-style>
 		<chapterpage-style>scrheadings</chapterpage-style>
