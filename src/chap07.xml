@@ -2,13 +2,58 @@
 	<chapter>
 		<title><label id="sect:styling"/>Styling Your Documents</title>
 		<p>
-			This chapter is about giving an individual note to your documents by modifying
-		the central document stylesheets. 
+			For each supported output format, there exists a subfolder	
+		<tt>transform/<i>format</i></tt> below the installation folder. Inside this
+		folder, the XSL stylesheets with the conversion rules and a style definition
+		file <tt>style.xml</tt> is stored. The format of the style definition file is
+		dependant on the given output format.
+		</p>
+		<p>
+			To modify the style definition for a given format, create and edit a copy
+		of the <tt>style.xml</tt> file. Then use the <tt><b>-s</b></tt> command line
+		switch to point the document processor to the new style file.
 		</p>
 		<section>
 			<title>Editing the CSS-Stylesheet</title>
+			<p>
+				The central style definition for XHTML output is an old-fashioned
+			CSS stylesheet, wrapped in an XML container. For users who have previous
+			experience with CSS, most parts of the stylesheet should be straight-forward
+			to figure out. The following subsections focus on pointing out the less
+			obvious elements of the stylesheet, mostly concerning the page layout.
+			</p>
 			<minisection>
-				<title>Head and Table of Contents</title>
+				<title>Frontpage and Table of Contents</title>
+				<figure  align="left" border="yes">
+					<caption>The title page header elements.</caption>
+					<img src="img/html-doc-head.png" print-width="100%" screen-width="800px"/>
+				</figure>
+				<figure  align="left" border="yes">
+					<caption>The table of contents.</caption>
+					<img src="img/html-doc-toc.png" print-width="100%" screen-width="800px"/>
+				</figure>
+			</minisection>
+			<minisection>
+				<title>Navigation Elements</title>
+				<figure  align="left" border="yes">
+					<caption>The top navigation bar.</caption>
+					<img src="img/html-page-top.png" print-width="100%" screen-width="800px"/>
+				</figure>
+				<figure  align="left" border="yes">
+					<caption>The navigation bar at the page bottom.</caption>
+					<img src="img/html-page-bottom.png" print-width="100%" screen-width="800px"/>
+				</figure>
+			</minisection>
+			<minisection>
+				<title>Glossary and Index</title>
+				<figure  align="left" border="yes">
+					<caption>The glossary.</caption>
+					<img src="img/html-glossary.png" print-width="100%" screen-width="800px"/>
+				</figure>
+				<figure  align="left" border="yes">
+					<caption>A keyword index.</caption>
+					<img src="img/html-index.png" print-width="100%" screen-width="800px"/>
+				</figure>
 			</minisection>
 		</section>
 		<section>
