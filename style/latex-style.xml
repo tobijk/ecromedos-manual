@@ -36,6 +36,7 @@
 		<chapterpage-style>scrplain</chapterpage-style>
 		<indexpage-style>scrplain</indexpage-style>
 		<page-head-fields>
+			\automark[chapter]{section}
 			\lehead[]{ecromedos 2 - Users' Manual}
 			\cehead[]{}
 			\rehead[]{}
