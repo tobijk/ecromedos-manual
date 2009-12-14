@@ -3,43 +3,85 @@
 		<title><label id="sect:styling"/>Styling Your Documents</title>
 		<p>
 			For each supported output format, there exists a subfolder	
-		<tt>transform/<i>format</i></tt> below the installation folder. Inside this
-		folder, the XSL stylesheets with the conversion rules and a style definition
-		file <tt>style.xml</tt> is stored. The format of the style definition file is
-		dependant on the given output format.
+		<tt>transform/&lt;format&gt;</tt> below the installation folder. Inside this
+		folder, the XSL stylesheets with the transformation rules for this target
+		format and a style definition file <tt>style.xml</tt> are stored.
 		</p>
 		<p>
-			To modify the style definition for a given format, create and edit a copy
-		of the <tt>style.xml</tt> file. Then use the <tt><b>-s</b></tt> command line
-		switch to point the document processor to the new style file.
+			To modify the style definition for a given target format, create and edit a
+		copy of the corresponding <tt>style.xml</tt> file. Then use the <tt><b>-s</b></tt>
+		command line switch to point the document processor to the new style file. The
+		format and contents of the style definition file differ depending on the output
+		format.
 		</p>
 		<section>
 			<title>Editing the CSS-Stylesheet</title>
 			<p>
-				The central style definition for XHTML output is an old-fashioned
-			CSS stylesheet, wrapped in an XML container. For users who have previous
+				The central style definition for XHTML is an old-fashioned
+			CSS stylesheet, wrapped inside an XML container. For users who have previous
 			experience with CSS, most parts of the stylesheet should be straight-forward
-			to figure out. The following subsections focus on pointing out the less
-			obvious elements of the stylesheet, mostly concerning the page layout.
+			to figure out. The following subsections focus on pointing out the elements
+			of the stylesheet concerning the page layout.
 			</p>
 			<minisection>
 				<title>Frontpage and Table of Contents</title>
-				<figure  align="left" border="yes">
+				<p>
+					The document head, carrying for example the title, authors, date of
+				publication, publisher and copyright details, is set inside a <tt>div</tt>
+				section with the id <color rgb="#881111"><tt><b>#head</b></tt></color>,
+				</p>
+				<figure align="left" border="yes" id="fig:dochead">
 					<caption>The title page header elements.</caption>
 					<img src="img/html-doc-head.png" print-width="100%" screen-width="800px"/>
 				</figure>
-				<figure  align="left" border="yes">
+				<p>
+					marked with a red outline in figure <ref idref="fig:dochead"/>. The header
+				elements themselves are arranged in a table with style class <tt><b>head</b></tt>,
+				marked by the blue outline in figure <ref idref="fig:dochead"/>.
+				Each element is contained in a separate cell with style class <tt><b>head-<i>element</i></b></tt>,
+				e.g. <tt><b>head-title</b></tt>. The subtitle is set in the same cell as the main title, but
+				wrapped in an extra <tt>div</tt> with style class <tt><b>subtitle</b></tt>, so that it can
+				be styled differently from the main title.
+				</p>
+				<figure  align="left" border="yes" id="fig:doctoc">
 					<caption>The table of contents.</caption>
 					<img src="img/html-doc-toc.png" print-width="100%" screen-width="800px"/>
 				</figure>
+				<p>
+					The table of contents (TOC) is contained inside a <tt>div</tt> section with id
+				<color rgb="#881111"><tt><b>#toc</b></tt></color>, marked with a red outline in
+				figure <ref idref="fig:doctoc"/>. The TOC heading and <qq>list of</qq> headings
+				are set in <tt>divs</tt> with style class <tt><b>toc-heading</b></tt> and 
+				<tt><b>listof-heading</b></tt>, respectively. The entries in the TOC are <tt>divs</tt>
+				with style classes <tt><b>toc-mainitem</b></tt> and <tt><b>toc-subitem</b></tt>, the
+				empty elements in between sections have style class <tt><b>toc-spacer</b></tt>.
+				The indentation of the TOC entries cannot be influenced through the CSS stylesheet, as
+				it is applied dynamically during transformation.
+				</p>
 			</minisection>
 			<minisection>
 				<title>Navigation Elements</title>
+				<p>
+					The top navigation bar is set inside a <tt>div</tt> section with id
+				<color rgb="#881111"><tt><b>nav-top</b></tt></color>, which in turns contains
+				a table with the same style class name. The table has a cell <tt><b>nav-top-title</b></tt>
+				displaying the document title and a cell <tt><b>nav-top-buttons</b></tt> containing
+				the navigations buttons.
+				</p>
 				<figure  align="left" border="yes">
 					<caption>The top navigation bar.</caption>
 					<img src="img/html-page-top.png" print-width="100%" screen-width="800px"/>
 				</figure>
-				<figure  align="left" border="yes">
+				<p>
+					Analogously, the bottom navigation bar consists of a <tt>div</tt> with id
+				<color rgb="#"><tt><b>nav-bottom</b></tt></color> containing a table carrying the
+				same style class name. This table is split into three cells <tt><b>nav-bottom-left</b></tt>,
+				<tt><b>nav-bottom-center</b></tt> and <tt><b>nav-bottom-right</b></tt>. The text labels
+				and links to previous, next and superordinate sections (see fig. <ref idref="fig:navbottom"/>)
+				are styled in separate <tt>spans</tt> with style classes <tt><b>nav-link-dir</b></tt> and
+				<tt><b>nav-link</b></tt>, respectively.
+				</p>
+				<figure  align="left" border="yes" id="fig:navbottom">
 					<caption>The navigation bar at the page bottom.</caption>
 					<img src="img/html-page-bottom.png" print-width="100%" screen-width="800px"/>
 				</figure>
