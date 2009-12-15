@@ -58,6 +58,7 @@
 			<p>
 				<idxterm><item>ecromedos</item><subitem>Document Processor</subitem></idxterm>
 				<idxterm><item>document pre-processor</item></idxterm>
+				<idxterm><item>pre-processor</item></idxterm>
 
 				The <i>ecromedos Document Processor</i> (eDP) uses XSL Transformations
 			(XSLT) to convert source documents from ECML to the supported output formats.

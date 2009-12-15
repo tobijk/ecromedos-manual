@@ -41,6 +41,8 @@
 				]]></code>
 			</listing>
 			<p>
+				<idxterm><item>XML</item><subitem>declaration</subitem></idxterm>
+
 				What you see is a complete XML document describing the popular Pina
 			Colada cocktail. On the first line, you see the XML declaration. It specifies
 			the XML version and the character encoding of the document. In general, you
@@ -52,6 +54,8 @@
 			</p>
 			<p>
 				<idxterm><item>tag</item></idxterm>
+				<idxterm><item>XML</item><subitem>element</subitem></idxterm>
+				<idxterm><item>node</item></idxterm>
 
 				The textual elements delimiting the beginning and end of an XML element are
 			called <i>tags</i>. An opening tag has the form <tt>&lt;element&gt;</tt> and
@@ -66,6 +70,7 @@
 			</p>
 			<p>
 				<idxterm><item>ecromedos</item><subitem>Markup Language</subitem></idxterm>
+				<idxterm><item>XML</item><subitem>markup</subitem></idxterm>
 
 				The names of elements and attributes can be chosen arbitrarily to represent
 			a given data model. In this example we tried to model a drink but you might just
@@ -77,7 +82,9 @@
 		<section>
 			<title>How to Structure Your Documents</title>
 			<p>
+			<idxterm><item>document class</item></idxterm>
 			<idxterm><item>document</item><subitem>structure</subitem></idxterm>
+			<idxterm><item>document</item><subitem>tree</subitem></idxterm>
 
 				In general, you should start new documents from a document template, as
 			described in section <ref idref="sect:maketemplate"/>. An initial template
@@ -133,6 +140,9 @@ report
 			<p>
 				<idxterm group="ecml"><item>preface</item></idxterm>
 				<idxterm group="ecml"><item>abstract</item></idxterm>
+				<idxterm group="ecml"><item>legal</item></idxterm>
+				<idxterm group="ecml"><item>glossary</item></idxterm>
+				<idxterm group="ecml"><item>section</item></idxterm>
 
 				When using the article class, the <tt><b>preface</b></tt> element is
 			replaced by <tt><b>abstract</b></tt> and the elements <tt><b>legal</b></tt>, 
@@ -143,8 +153,11 @@ report
 		<section>
 			<title>Basic Text Formatting</title>
 			<p>
-				<idxterm><item>text formatting</item></idxterm>
+				<idxterm><item>text-formatting elements</item></idxterm>
 				<idxterm><item>emphasis</item></idxterm>
+				<idxterm><item>emphasis</item><subitem>bold</subitem></idxterm>
+				<idxterm><item>emphasis</item><subitem>italic</subitem></idxterm>
+				<idxterm><item>emphasis</item><subitem>underlined</subitem></idxterm>
 				<idxterm group="ecml" sortkey="I"><item>i</item></idxterm>
 				<idxterm group="ecml" sortkey="B"><item>b</item></idxterm>
 				<idxterm group="ecml" sortkey="U"><item>u</item></idxterm>
@@ -228,6 +241,7 @@ report
 				<idxterm group="ecml"><item>large</item></idxterm>
 				<idxterm group="ecml"><item>x-large</item></idxterm>
 				<idxterm group="ecml"><item>xx-large</item></idxterm>
+				<idxterm><item>font size</item></idxterm>
 
 				For the sake of completeness, there are the seven elements
 			<tt><b>xx-small</b></tt>, <tt><b>x-small</b></tt>, <tt><b>small</b></tt>,
@@ -280,6 +294,7 @@ report
 			<p>
 				<idxterm group="ecml"><item>nobr</item></idxterm>
 				<idxterm><item>non-breaking space</item></idxterm>
+				<idxterm><item>line break</item><subitem>prevention</subitem></idxterm>
 
 				When you need to <i>prevent</i> linebreaks in certain places, you can either
 			use the non-breaking space (see section <ref idref="sect:entities"/>) or protect
@@ -349,6 +364,7 @@ report
 				<idxterm group="ecml"><item>ref</item><subitem>idref</subitem></idxterm>
 				<idxterm group="ecml"><item>pageref</item></idxterm>
 				<idxterm group="ecml"><item>pageref</item><subitem>idref</subitem></idxterm>
+				<idxterm><item>section counter</item></idxterm>
 
 				The <tt><b>ref</b></tt> and <tt><b>pageref</b></tt> elements can also point
 			to any other object with an <tt><b>id</b></tt> attribute, such as a
@@ -416,6 +432,8 @@ report
 			<p>
 				<idxterm><item>entities</item></idxterm>
 				<idxterm><item>zero-width space</item></idxterm>
+				<idxterm><item>em-dash</item></idxterm>
+				<idxterm><item>en-dash</item></idxterm>
 				<idxterm group="ecml"><item>entity</item></idxterm>
 
 				ecromedos defines a small set of entities that may come in handy occasionally.

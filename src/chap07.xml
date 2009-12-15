@@ -2,6 +2,8 @@
 	<chapter>
 		<title><label id="sect:styling"/>Styling Your Documents</title>
 		<p>
+			<idxterm><item>style definitions</item></idxterm>
+		
 			For each supported output format, there exists a subfolder	
 		<tt>transform/&lt;format&gt;</tt> below the installation folder. Inside this
 		folder, the XSL stylesheets with the transformation rules which produce this
@@ -17,6 +19,8 @@
 		<section>
 			<title>Editing the CSS-Stylesheet</title>
 			<p>
+				<idxterm><item>CSS</item></idxterm>
+
 				The central style definition for XHTML is an old-fashioned
 			CSS stylesheet, wrapped inside an XML container. For users who have previous
 			experience with CSS, most parts of the stylesheet should be straight-forward
@@ -134,6 +138,8 @@
 		<section>
 			<title>Changing the Look of &latex;-based Output</title>
 			<p>
+				<idxterm><item>LaTeX style definition</item></idxterm>
+
 				In the style definition file for &latex; you will find separate sections for each
 			of the main document classes, each of which contains a list of stylable elements for that
 			document class. Some basic knowledge of &latex; will be required to be able to edit these.

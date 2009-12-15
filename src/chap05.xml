@@ -26,6 +26,11 @@
 					<idxterm><item>numbered lists</item></idxterm>
 					<idxterm><item>ordered lists</item></idxterm>
 
+					<idxterm group="ecml"><item>ul</item></idxterm>
+					<idxterm group="ecml"><item>ol</item></idxterm>
+					<idxterm group="ecml"><item>ol</item><subitem>type</subitem></idxterm>
+					<idxterm group="ecml"><item>li</item></idxterm>
+
 					Bullet lists are set with the <tt><b>ul</b></tt> element and ordered lists
 				with the <tt><b>ol</b></tt> element. List items are enclosed inside <tt><b>li</b></tt>
 				tags. Both list types may be nested within each other up to four levels deep.
@@ -87,6 +92,11 @@
 			<subsection>
 				<title><label id="sect:definitionlists"/>Definition Lists</title>
 				<p>
+					<idxterm><item>definition lists</item></idxterm>
+					<idxterm group="ecml"><item>dl</item></idxterm>
+					<idxterm group="ecml"><item>dt</item></idxterm>
+					<idxterm group="ecml"><item>dd</item></idxterm>
+
 					Definition lists are set with the <tt><b>dl</b></tt> element. An item in a
 				definition list has two components: a term or expression to be defined and its
 				respective definition. Take a look at the following example:
@@ -119,6 +129,9 @@
 		<section>
 			<title>Defining Tables</title>
 			<p>
+				<idxterm><item>table</item><subitem>defining</subitem></idxterm>			
+				<idxterm><item>table</item><subitem>model</subitem></idxterm>
+
 				Starting with version 2, ecromedos features a complete table model with
 			table captions, cells that can span multiple columns, nested subtables and minute
 			control over the visibility of the table borders. The language elements for setting
@@ -129,6 +142,8 @@
 			<subsection>
 				<title>Basic Tables</title>
 				<p>
+					<idxterm group="ecml"><item>table</item><subitem>basic exmaple</subitem></idxterm>
+
 					Tables are likely the most complicated part of ECML. But once you know the
 				ins and outs of the ECML table model, you will appreciate the ease with which
 				you can create good-looking tables in your documents. To get you started, take a
@@ -161,6 +176,15 @@
 					]]></code>
 				</listing>
 				<p>
+					<idxterm><item>table</item><subitem>width</subitem></idxterm>
+					<idxterm><item>table</item><subitem>alignment</subitem></idxterm>
+
+					<idxterm group="ecml"><item>table</item></idxterm>
+					<idxterm group="ecml"><item>table</item><subitem>print-width</subitem></idxterm>
+					<idxterm group="ecml"><item>table</item><subitem>screen-width</subitem></idxterm>
+					<idxterm group="ecml"><item>table</item><subitem>id</subitem></idxterm>
+					<idxterm group="ecml"><item>table</item><subitem>align</subitem></idxterm>
+
 					The attributes <tt><b>print-width</b></tt> and <tt><b>screen-width</b></tt>
 				determine the horizontal expansion of the table. For printable output, you can
 				specify the table width in centimeters (cm), points (pt) or as a percentage (%)
@@ -174,6 +198,15 @@
 				(see section <ref idref="sect:xreferences"/>).
 				</p>
 				<p>
+					<idxterm><item>table</item><subitem>captions</subitem></idxterm>
+					<idxterm><item>table</item><subitem>column layout</subitem></idxterm>
+
+					<idxterm group="ecml"><item>caption</item></idxterm>
+					<idxterm group="ecml"><item>shortcaption</item></idxterm>
+					<idxterm group="ecml"><item>colgroup</item></idxterm>
+					<idxterm group="ecml"><item>col</item></idxterm>
+					<idxterm group="ecml"><item>col</item><subitem>width</subitem></idxterm>
+
 					The optional <tt><b>caption</b></tt> element can be used to give the table a
 				descriptive annotation. If you supply a <tt><b>shortcaption</b></tt> it will be
 				printed on continuing pages when a table extends over more than one page. The
@@ -183,6 +216,13 @@
 				strange effects.
 				</p>
 				<p>
+					<idxterm><item>table</item><subitem>head and foot</subitem></idxterm>
+
+					<idxterm group="ecml"><item>th</item></idxterm>
+					<idxterm group="ecml"><item>tf</item></idxterm>
+					<idxterm group="ecml"><item>tr</item></idxterm>
+					<idxterm group="ecml"><item>td</item></idxterm>
+
 					The table may start with one or more header rows distinguished by the
 				<tt><b>th</b></tt> element and end with one or more footer rows distinguished by
 				the <tt><b>tf</b></tt> element. Regular rows are set with the <tt><b>tr</b></tt>
@@ -195,6 +235,9 @@
 			<subsection>
 				<title>Activating the Grid Rules</title>
 				<p>
+					<idxterm group="ecml"><item>table</item><subitem>frame</subitem></idxterm>
+					<idxterm><item>table</item><subitem>grid lines</subitem></idxterm>
+
 					The table above does not have a visible grid. To draw a frame around your
 				table, use the <tt><b>frame</b></tt> attribute on the table element and
 				add an arbitary combination of the keywords	<tt>left</tt>, <tt>right</tt>,
@@ -203,6 +246,11 @@
 				outer frame border.
 				</p>
 				<p>
+					<idxterm group="ecml"><item>th</item><subitem>frame</subitem></idxterm>
+					<idxterm group="ecml"><item>tf</item><subitem>frame</subitem></idxterm>
+					<idxterm group="ecml"><item>tr</item><subitem>frame</subitem></idxterm>
+					<idxterm group="ecml"><item>td</item><subitem>frame</subitem></idxterm>
+
 					Using the keywords <tt>rowsep</tt> and <tt>colsep</tt>, you can activate
 				the dividing lines in between table cells. You can do this globally, by adding
 				them to the table's <tt>frame</tt> element, or for individual rows
@@ -241,6 +289,10 @@
 					</code>
 				</listing>
 				<p>
+					<idxterm group="ecml"><item>table</item><subitem>print-rulewidth</subitem></idxterm>
+					<idxterm group="ecml"><item>table</item><subitem>screen-rulewidth</subitem></idxterm>
+					<idxterm group="ecml"><item>table</item><subitem>rulecolor</subitem></idxterm>
+
 					The thickness of the grid rules may be specified with the attributes
 					<tt><b>print-rulewidth</b></tt> and <tt><b>screen-rulewidth</b></tt>.
 					The color of the lines can be controlled via the <tt><b>rulecolor</b></tt>
@@ -252,6 +304,13 @@
 			<subsection>
 				<title>Coloring Table Cells</title>
 				<p>
+					<idxterm><item>table</item><subitem>coloring</subitem></idxterm>
+
+					<idxterm group="ecml"><item>th</item><subitem>color</subitem></idxterm>
+					<idxterm group="ecml"><item>tf</item><subitem>color</subitem></idxterm>
+					<idxterm group="ecml"><item>tr</item><subitem>color</subitem></idxterm>
+					<idxterm group="ecml"><item>td</item><subitem>color</subitem></idxterm>
+
 					You may color individual rows or cells by setting the <tt><b>color</b></tt>
 				attribute on the corresponding tag. For example, to give the second cell in the
 				first row from the previous example a gray background, you could write:
@@ -274,6 +333,12 @@
 			<subsection>
 				<title>Text-Alignment in Table Cells</title>
 				<p>
+					<idxterm><item>table</item><subitem>text alignment</subitem></idxterm>
+
+					<idxterm group="ecml"><item>th</item><subitem>valign</subitem></idxterm>
+					<idxterm group="ecml"><item>tf</item><subitem>valign</subitem></idxterm>
+					<idxterm group="ecml"><item>tr</item><subitem>valign</subitem></idxterm>
+
 					The vertical alignment of text in tables can be controlled only for entire
 					rows, but not for individual cells. This is due to &latex;'s limited
 					capabilities in this respect. To determine the vertical alignment of text
@@ -282,6 +347,11 @@
 					<tt>bottom</tt>.
 				</p>
 				<p>
+					<idxterm group="ecml"><item>th</item><subitem>align</subitem></idxterm>
+					<idxterm group="ecml"><item>tf</item><subitem>align</subitem></idxterm>
+					<idxterm group="ecml"><item>tr</item><subitem>align</subitem></idxterm>
+					<idxterm group="ecml"><item>td</item><subitem>align</subitem></idxterm>
+
 					Horizontal text alignment can be controlled per row or for each cell individually,
 					by setting the <tt><b>align</b></tt> attribute to <tt>left</tt>, <tt>center</tt>
 					or <tt>right</tt>. Starting with ecromedos 2.0, text in tables can also be set
@@ -291,6 +361,10 @@
 			<subsection>
 				<title>Rows Spanning Multiple Columns</title>
 				<p>
+					<idxterm><item>table</item><subitem>multi-column cells</subitem></idxterm>
+
+					<idxterm group="ecml"><item>td</item><subitem>colspan</subitem></idxterm>
+
 					Sometimes it may be necessary to make a table cell stretch across multiple
 				colums. You can achieve this by setting the <tt><b>colspan</b></tt> attribute
 				on a cell to the number of columns that it should cover. Unfortunately, there
@@ -302,6 +376,13 @@
 			<subsection>
 				<title>Subtables</title>
 				<p>
+					<idxterm><item>subtables</item></idxterm>
+
+					<idxterm group="ecml"><item>subtable</item></idxterm>
+					<idxterm group="ecml"><item>subtable</item><subitem>frame</subitem></idxterm>
+					<idxterm group="ecml"><item>subtable</item><subitem>color</subitem></idxterm>
+					<idxterm group="ecml"><item>subtable</item><subitem>colspan</subitem></idxterm>
+
 					With ECML it is not possible to create tables with cells that span multiple
 					rows, i.e. there is no <tt>rowspan</tt> attribute. Starting with version 2.0,
 					you can use subtables to partially get around this limitation. A subtable
@@ -367,6 +448,12 @@
 		<section>
 			<title>Displaying Figures</title>
 			<p>
+				<idxterm><item>figure</item></idxterm>
+
+				<idxterm group="ecml"><item>figure</item></idxterm>
+				<idxterm group="ecml"><item>figure</item><subitem>id</subitem></idxterm>
+				<idxterm group="ecml"><item>caption</item></idxterm>
+
 				Figures are incorporated into a document via the <tt><b>figure</b></tt> element.
 			You can give figures a <tt><b>caption</b></tt> and an <tt><b>id</b></tt>. A figure
 			that carries an id attribute can be referenced via the <tt><b>ref</b></tt> and
@@ -387,6 +474,9 @@
 				]]></code>
 			</listing>
 			<p>
+				<idxterm group="ecml"><item>img</item></idxterm>
+				<idxterm group="ecml"><item>img</item><subitem>src</subitem></idxterm>
+
 				With the <tt><b>src</b></tt> attribute you specify the location of the image
 			on your harddisk. If the image's file format is not suitable for use with a
 			particular output format, the document pre-processor will automatically convert
@@ -398,6 +488,11 @@
 				proper representation in all target formats.</i>
 			</p>
 			<p>
+				<idxterm><item>figure</item><subitem>width</subitem></idxterm>
+
+				<idxterm group="ecml"><item>img</item><subitem>print-width</subitem></idxterm>
+				<idxterm group="ecml"><item>img</item><subitem>screen-width</subitem></idxterm>
+
 				The attributes <tt><b>print-width</b></tt> and <tt><b>screen-width</b></tt>
 			determine the width of the image in printable output and in XHTML output, respectively.
 			For printable output this can be a value in points (pt) or centimeters (cm) or a
@@ -405,13 +500,21 @@
 			output is specified in pixels (px).
 			</p>
 			<p>
+				<idxterm><item>figure</item><subitem>alignment</subitem></idxterm>
+				<idxterm group="ecml"><item>figure</item><subitem>align</subitem></idxterm>
+
 				The figure's horizontal alignment is controlled by setting the <tt><b>align</b></tt>
-			attribute to <tt>left</tt>, <tt>center</tt> or <tt>right</tt>.
+			attribute to <tt>left</tt>, <tt>center</tt> or <tt>right</tt>. If you would like a
+			thin black border around your figure, set the <tt><b>border</b></tt> attribute to
+			<tt>yes</tt>.
 			</p>
 		</section>
 		<section>
 			<title>About Floating Objects</title>
 			<p>
+				<idxterm><item>floats</item></idxterm>
+				<idxterm><item>floating objects</item></idxterm>
+
 				Per default, figures and tables are placed exactly where specified in the
 			source document. Imagine though, that you are generating printable output and so far
 			the page has been filled by two thirds with text. Technically, the next thing to be
@@ -419,6 +522,9 @@
 			to be moved to the next page, leaving the page before empty by one third.
 			</p>
 			<p>
+				<idxterm group="ecml"><item>figure</item><subitem>float</subitem></idxterm>
+				<idxterm group="ecml"><item>table</item><subitem>float</subitem></idxterm>
+
 				This is visually unpleasant and in addition bloats your document unnecessarily.
 			As a soluting, you can turn figures or tables into <i>floating objects</i> by setting
 			the <tt><b>float</b></tt> attribute on the main element to <tt>yes</tt>. Making an
@@ -431,12 +537,22 @@
 		<section>
 			<title>Verbatim Text and Code Listings</title>
 			<p>
+				<idxterm><item>listings</item></idxterm>
+				<idxterm><item>preserving whitespace</item></idxterm>
+				<idxterm><item>program code</item></idxterm>
+
+				<idxterm group="ecml"><item>verbatim</item></idxterm>
+
 				You can use the <tt><b>verbatim</b></tt> element when you need to print scripts
 			and want whitespace to be preseved. Text inside a verbatim tag will
 			be printed in typewriter letters and whitespace will be displayed 1:1 just
 			as it appeared in your editor.
 			</p>
 			<p>
+				<idxterm group="ecml"><item>listing</item></idxterm>
+				<idxterm group="ecml"><item>code</item></idxterm>
+				<idxterm group="ecml"><item>code</item><subitem>syntax</subitem></idxterm>
+
 				For program code you should use the <tt><b>listing</b></tt> element, which has as
 			a single child the <tt><b>code</b></tt> element. You can have your code syntactically
 			highlighted by specifying the name of the programming language in the <tt><b>syntax</b></tt>
@@ -462,21 +578,36 @@ int main(void) {
 				</code>
 			</listing>
 			<p>
+				<idxterm><item>syntax-highlighting code</item></idxterm>
+
+				<idxterm group="ecml"><item>code</item><subitem>colorscheme</subitem></idxterm>
+				<idxterm group="ecml"><item>code</item><subitem>startline</subitem></idxterm>
+				<idxterm group="ecml"><item>code</item><subitem>linestep</subitem></idxterm>
+				<idxterm group="ecml"><item>code</item><subitem>strip</subitem></idxterm>
+				<idxterm group="ecml"><item>code</item><subitem>bgcolor</subitem></idxterm>
+
 				With the <tt><b>colorscheme</b></tt> attribute you can choose between available
 			coloring schemes. For a complete list, take a look into the folder
 			<tt>lib/highlight/themes</tt> below the installation folder. If you specify a
 			<tt><b>startline</b></tt>, the syntax highlighter will number each line in your code.
 			The <tt><b>linestep</b></tt> attribute specifies the increment
-			from one line to the next. Setting the <tt><b>strip</b></tt> attribute to <tt>yes</tt>
-			will result in whitespace being stripped from the beginning and end of your listing.
-			You can override the background color of the selected coloring scheme with the
-			<tt><b>bgcolor</b></tt> attribute.
+			from one line to the next.
+			</p>
+			<p>
+			<idxterm group="ecml"><item>verbatim</item><subitem>strip</subitem></idxterm>
+			
+			Setting the <tt><b>strip</b></tt> attribute on the <tt><b>verbatim</b></tt> or
+			<tt><b>code</b></tt> elements to <tt>yes</tt> will result in whitespace being
+			stripped from the beginning and end of your listing. You can override the background
+			color of the selected coloring scheme with the <tt><b>bgcolor</b></tt> attribute.
 			</p>
 		</section>
 
 		<section>
 			<title><label id="sect:mathematics"/>Mathematic Formulas</title>
 			<p>
+				<idxterm><item>mathematic formulas</item></idxterm>
+
 				Mathematic formulas are entered in &tex; notation. Explaining &tex; is beyond
 			the scope of this document. For more information, please refer to appropriate
 			literature, such as <cite idref="bib:LSHORT"/>.
@@ -484,6 +615,9 @@ int main(void) {
 			<subsection>
 				<title>Inline Math</title>
 				<p>
+					<idxterm><item>mathematic formulas</item><subitem>inline</subitem></idxterm>
+					<idxterm group="ecml"><item>m</item></idxterm>
+
 					In order to set mathematic expressions inline, i.e. in the running paragraph,
 					use the <tt><b>m</b></tt> element. Take a look at this example:
 				</p>
@@ -500,6 +634,13 @@ int main(void) {
 			<subsection>
 				<title>Formulas as Block Elements</title>
 				<p>
+					<idxterm><item>equations</item></idxterm>
+					<idxterm><item>equations</item><subitem>number</subitem></idxterm>					
+					<idxterm><item>mathematic formulas</item><subitem>as block elements</subitem></idxterm>
+
+					<idxterm group="ecml"><item>equation</item></idxterm>
+					<idxterm group="ecml"><item>equation</item><subitem>numbering</subitem></idxterm>
+
 					Formulas can also be set as block elements. Simply enclose the
 				<tt><b>m</b></tt> element in an <tt><b>equation</b></tt> element. To have
 				your equation numbered, set the <tt><b>number</b></tt> attribute to <tt>yes</tt>.

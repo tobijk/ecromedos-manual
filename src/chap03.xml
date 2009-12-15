@@ -126,9 +126,10 @@ $&gt; ecromedos -n <i>class</i> &gt; index.xml
 			</subsection>
 		</section>
 		<section>
-			<title>Compiling Documents</title>
+			<title>Transforming Documents</title>
 			<p>
-				<idxterm><item>compiling documents</item></idxterm>
+				<idxterm><item>tranforming documents</item></idxterm>
+				<idxterm><item>ecromedos</item><subitem>Document Processor</subitem></idxterm>
 
 				In order to convert your documents from ecromedos Markup Language to one of
 			the supported output formats, you have to call the ecromedos Document Processor
@@ -218,6 +219,7 @@ $&gt; ps2pdf <i>class</i>.ps
 				</verbatim>
 				<p>
 					<idxterm><item>output formats</item><subitem>DVI</subitem></idxterm>
+					<idxterm><item>pdflatex</item></idxterm>
 					<idxterm><item>pdftex</item></idxterm>
 
 					The first command will generate Postscript output from the DVI file and the
@@ -233,6 +235,8 @@ $&gt; pdflatex <i>class</i>.tex
 				</color>
 				</verbatim>
 				<p>
+					<idxterm><item>xelatex</item></idxterm>
+
 					In addition, there is some preliminary support for generating output that can
 				be processed with the unicode-aware &xetex; using the <tt>xelatex</tt> command:
 				</p>

@@ -90,21 +90,9 @@
 		<section>
 			<title>Installing Binary Packages</title>
 			<subsection>
-				<title>On Debian/GNU Linux</title>
+				<title>Debian/GNU and Ubuntu Linux</title>
 				<p>
 					<idxterm><item>installation</item><subitem>on Debian/GNU Linux</subitem></idxterm>
-				</p>
-			</subsection>
-			<subsection>
-				<title>On OpenSUSE</title>
-				<p>
-					<idxterm><item>installation</item><subitem>on OpenSUSE</subitem></idxterm>
-				</p>
-			</subsection>
-			<subsection>
-				<title>On FreeBSD</title>
-				<p>
-					<idxterm><item>installation</item><subitem>on FreeBSD</subitem></idxterm>
 				</p>
 			</subsection>
 		</section>
