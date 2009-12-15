@@ -34,8 +34,12 @@
 			URL:&nbsp;<tt><link url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://&zwsp;www.&zwsp;gnu.&zwsp;org/&zwsp;licenses/&zwsp;old-licenses/&zwsp;gpl-2.0.html</link></tt>.
 		</bibitem>
 		<bibitem label="KOMASCR" id="bib:KOMASCR">
-			Frank Neukam, Markus Kohm, Axel Kielhorn. <i>The KOMA-Script Bundle</i>. March 2005.<br/>
+			Frank Neukam, Markus Kohm, Axel Kielhorn. <i>The KOMA-Script Bundle</i>. June 2009.<br/>
 			URL:&nbsp;<tt><link url="ftp://ftp.ctan.org/tex-archive/macros/latex/contrib/koma-script/scrguien.pdf">ftp://&zwsp;ftp.&zwsp;ctan.&zwsp;org/&zwsp;tex-&zwsp;archive/&zwsp;macros/&zwsp;latex/&zwsp;contrib/&zwsp;koma-&zwsp;script/&zwsp;scrguien.pdf</link></tt>.
+		</bibitem>
+		<bibitem label="CAPTION" id="bib:CAPTION">
+			Axel Sommerfeldt. <i>Customizing captions of floating environments using the caption package</i>. March 2008.<br/>
+			URL:&nbsp;<tt><link url="http://tug.ctan.org/tex-archive/macros/latex/contrib/caption/caption-eng.pdf">http://&zwsp;tug.&zwsp;ctan.&zwsp;org/&zwsp;tex-archive/&zwsp;macros/&zwsp;latex/&zwsp;contrib/&zwsp;caption/&zwsp;caption-eng.pdf</link></tt>
 		</bibitem>
 	</biblio>
 
