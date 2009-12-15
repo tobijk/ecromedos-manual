@@ -38,10 +38,10 @@ fi
 
 if [ $output = 'all' ] || [ $output = 'pdf' ]; then
 	(cd tmp &&
-	ecromedos -fxelatex ../src/manual.xml &&
+	ecromedos -fxelatex -s ../style/latex-style.xml ../src/manual.xml &&
 	for i in `seq 3`; do
-		xelatex report.tex
+		xelatex book.tex
 	done &&
-	mv report.pdf ../pdf/manual.pdf) > /dev/null
+	mv book.pdf ../pdf/manual.pdf) > /dev/null 2>&1
 fi
 rm -fr tmp
