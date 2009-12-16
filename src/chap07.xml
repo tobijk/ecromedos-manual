@@ -177,7 +177,7 @@
 					The font properties of a label marking up a term in a definition list.
 					</p>
 				</dd>
-				<dt><tt>document-font</tt></dt>
+				<dt>document-font</dt>
 				<dd>
 					<p>
 					Use this element to change the font settings. For instance, in order to set
@@ -187,7 +187,7 @@
 						<tt>\renewcommand{\rmdefault}{\sfdefault}\normalfont</tt>
 					</verbatim>
 				</dd>
-				<dt><tt>document-options</tt></dt>
+				<dt>document-options</dt>
 				<dd>
 					<p>
 					The package options that are passed to the &latex; macro package KOMA-Script.
