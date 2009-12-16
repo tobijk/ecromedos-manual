@@ -81,8 +81,8 @@
 				<code bgcolor="#f2f2f2" strip="yes">
 report
   |-head
-  |-make-toc
   |-legal
+  |-make-toc
   |-preface
   .
   .
@@ -281,7 +281,7 @@ report
 			<title><label id="sect:xreferences"/>Working with Cross-References</title>
 			<p>
 				Sometimes you will want to refer to another section in your manuscript, i.e.
-			you may write something like <qq><i>[...] you will find out more about this on
+			you may write something like, <qq><i>[...] you will find out more about this on
 			page XYZ</i></qq>. However, at the time of writing your markup, you cannot tell
 			on which page the section you are referring to will actually be printed. The
 			solution is to label the locations you wish to reference and let ecromedos take

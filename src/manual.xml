@@ -7,8 +7,8 @@
 <!ENTITY chap05 SYSTEM "chap05.xml">
 <!ENTITY chap06 SYSTEM "chap06.xml">
 <!ENTITY chap07 SYSTEM "chap07.xml">
-<!ENTITY apdx02 SYSTEM "apdx01.xml">
-<!ENTITY apdx03 SYSTEM "apdx02.xml">
+<!ENTITY apdx01 SYSTEM "apdx01.xml">
+<!ENTITY apdx02 SYSTEM "apdx02.xml">
 <!ENTITY biblio SYSTEM "biblio.xml">
 ]>
 <book lang="en_US" fontsize="11pt" papersize="a4paper" div="14" bcor="1.5cm"
@@ -48,14 +48,10 @@
 
 	&apdx01;
 	&apdx02;
-	&apdx03;
-
-	<make-glossary locale="en_US"/>
 
 	&biblio;
 
 	<make-index group="ecml" title="Language Elements" locale="en_US"/>
-	<make-index group="default" locale="en_US"/>
 
 </book>
 

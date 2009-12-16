@@ -234,7 +234,7 @@
 
 					Using the keywords <tt>rowsep</tt> and <tt>colsep</tt>, you can activate
 				the dividing lines in between table cells. You can do this globally, by adding
-				them to the table's <tt>frame</tt> element, or for individual rows
+				them to the table's <tt><b>frame</b></tt> attribute, or for individual rows
 				and cells. Copy the following listing into an emtpy document and try adding and
 				removing lines from the table grid, to get a feel for it.
 				</p>

@@ -89,14 +89,12 @@
 			<p>
 				Last but not least, some major effort has gone into removing formatting
 			information, such as CSS styles, from the XSL stylesheets wherever possible and
-			providing central stylesheets for XHTML and &latex; output. Thus, simple
-			customizations no longer require digging into the XSL stylesheets.
+			providing central styles definition files. Thus, simple customizations no
+			longer require digging into the XSL stylesheets.
 			</p>
 			<p>
 				Unfortunately, the new DTD <i>is not</i> backwards compatible to documents
-			from version 1. However, you may still use the old XSL stylesheets with the new
-			document processor. Alternatively, follow the instructions in appendix <ref
-			idref="sect:upgradingdocs"/> to upgrade your documents to version 2.
+			from version 1.
 			</p>
 		</section>
 		<section>
@@ -122,8 +120,7 @@
 				<li>
 				<p>
 					In chapter <ref idref="sect:installation"/>, you will find instructions for
-				installing ecromedos on your platform of choice. Covered platforms comprise
-				different Linux distributions and FreeBSD.
+				installing ecromedos from source or binary packages.
 				</p>
 				</li>
 				<li>
@@ -136,16 +133,14 @@
 				<li>
 				<p>
 					After reading chapter <ref idref="sect:writingdocuments"/>, you will know
-				how to compose simple documents and do basic text-formatting. In addition, you
-				will learn how to insert cross-references and how to attach footnotes and
-				marginal notes to the text body.
+				how to compose simple documents and do basic text-formatting.
 				</p>
 				</li>
 				<li>
 				<p>
 					Chapter <ref idref="sect:liststablesfigures"/> introduces some of the more
 				advanced language constructs, teaching you how to use lists, define tables,
-				set mathematic formulas, or embed graphic figures into your documents.
+				set mathematic formulas, or embed graphical figures into your documents.
 				</p>
 				</li>
 				<li>
@@ -172,7 +167,7 @@
 				<li>
 				<p>
 					ECML language elements mentioned in the text will be written in
-				bold-faced typewriter letters.
+				bold-face typewriter letters.
 				</p>
 				</li>
 				<li>
@@ -214,11 +209,10 @@
 		<section>
 			<title>Acknowledgements</title>
 			<p>
-				I would like to thank Prof.&nbsp;H.-E.&nbsp;Erbs from
-			<link url="http://www.h-da.de">Darmstadt University of Applied Sciences</link>
-			for his support and advice when I started work on ecromedos as an undergraduate
-			project. His well-dosed, constructive criticism during the development process
-			and his positive acknowledgements of the results kept me motivated.
+				I would like to thank Prof.&nbsp;H.-E.&nbsp;Erbs from the
+			<link url="http://www.h-da.de">University of Applied Sciences in Darmstadt</link>,
+			Germany, for his support and advice when I started work on the first prototype of
+			ecromedos as an undergraduate project in 2005.
 			</p>
 			<p>
 				A big <qq>thank you</qq> goes out to Daniel Veillard for writing a
