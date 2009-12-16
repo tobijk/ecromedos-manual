@@ -191,7 +191,6 @@ will find learning ECML particularly easy.
 			<title>Keeping a Bibliography</title>
 			<p>
 				<idxterm group="ecml"><item>biblio</item></idxterm>
-				<idxterm group="ecml"><item>bibitem</item></idxterm>
 
 				Bibliographies are entered with the <tt><b>biblio</b></tt> tag and individual entries
 			with <tt><b>bibitem</b></tt>. The bibliography comes after the last section in your
@@ -423,9 +422,6 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 				<p>
 					<idxterm group="ecml"><item>idxsection</item></idxterm>
 					<idxterm group="ecml"><item>idxsection</item><subitem>name</subitem></idxterm>
-					<idxterm group="ecml"><item>item</item></idxterm>
-					<idxterm group="ecml"><item>subitem</item></idxterm>
-					<idxterm group="ecml"><item>subsubitem</item></idxterm>
 
 					As you can see the structure of an index is somewhat similar to that of a glossary.
 				The <tt><b>index</b></tt> is split into <tt><b>idxsections</b></tt>, each of which

@@ -4,7 +4,7 @@
 		<p>
 			For each supported output format, there exists a subfolder	
 		<tt>transform/&lt;format&gt;</tt> below the installation folder. Inside this
-		folder, the XSL stylesheets with the transformation rules which produce this
+		folder, the XSL stylesheets with the transformation rules for this
 		target format and a style definition file <tt>style.xml</tt> are stored.
 		</p>
 		<p>
@@ -20,8 +20,8 @@
 				The central style definition for XHTML is an old-fashioned
 			CSS stylesheet, wrapped inside an XML container. For users who have previous
 			experience with CSS, most parts of the stylesheet should be straight-forward
-			to figure out. The following subsections focus on pointing out the elements
-			of the stylesheet concerning the page layout.
+			to figure out. The following subsections pointing out the elements of the
+			stylesheet concerning the page layout.
 			</p>
 			<subsection>
 				<title>Frontpage and Table of Contents</title>
@@ -37,7 +37,7 @@
 				<p>
 					marked with a red outline in figure <ref idref="fig:htmlhead"/>. The header
 				elements themselves are arranged in a <tt>table</tt> with style class <tt><b>head</b></tt>,
-				marked by the blue outline in figure <ref idref="fig:htmlhead"/>.
+				marked by the blue outline in figure.
 				Each element is contained in a separate cell with style class <tt><b>head-<i>element</i></b></tt>,
 				e.g. <tt><b>head-title</b></tt>. The subtitle is set in the same cell as the main title, but
 				wrapped in an extra <tt>div</tt> with style class <tt><b>subtitle</b></tt>, so that it can
@@ -48,15 +48,14 @@
 					<img src="img/html-doc-toc.png" print-width="100%" screen-width="800px"/>
 				</figure>
 				<p>
-					The table of contents (TOC) is contained inside a <tt>div</tt> section with id
-				<tt><b>#toc</b></tt>, marked with a red outline in
-				figure <ref idref="fig:htmltoc"/>. The TOC heading and <qq>list of</qq> headings
-				are set in <tt>divs</tt> with style class <tt><b>toc-heading</b></tt> and 
-				<tt><b>listof-heading</b></tt>, respectively. The entries in the TOC are <tt>divs</tt>
-				with style classes <tt><b>toc-mainitem</b></tt> or <tt><b>toc-subitem</b></tt>, the
-				empty elements in between sections have style class <tt><b>toc-spacer</b></tt>.
-				The indentation of the TOC entries cannot be influenced through the CSS stylesheet, as
-				it is applied dynamically during transformation.
+					The table of contents (TOC) is contained inside a <tt>div</tt> with id
+				<tt><b>#toc</b></tt>, marked with a red outline in figure <ref idref="fig:htmltoc"/>.
+				The TOC heading and <qq>list of</qq> headings
+				are set in <tt>divs</tt> with style classes <tt><b>toc-heading</b></tt> and 
+				<tt><b>listof-heading</b></tt>, respectively. The individual entries in the TOC are
+				<tt>divs</tt> with style classes <tt><b>toc-mainitem</b></tt> or <tt><b>toc-subitem</b></tt>,
+				the empty elements in between sections have style class <tt><b>toc-spacer</b></tt>.
+				The indentation of the TOC entries cannot be influenced through the CSS stylesheet.
 				</p>
 			</subsection>
 			<subsection>
@@ -75,9 +74,9 @@
 			<subsection>
 				<title>Navigation Elements</title>
 				<p>
-					The top navigation bar is set inside a <tt>div</tt> section with id
-				<color rgb="#881111"><tt><b>nav-top</b></tt></color>, which in turns contains
-				a <tt>table</tt> with the same style class name. The table has a cell <tt><b>nav-top-title</b></tt>
+					The top navigation bar is set inside a <tt>div</tt> with id
+				<tt><b>nav-top</b></tt>, which in turns contains a <tt>table</tt> with the same
+				style class name. The table has a cell <tt><b>nav-top-title</b></tt>
 				displaying the document title and a cell <tt><b>nav-top-buttons</b></tt> containing
 				the navigations buttons.
 				</p>
@@ -103,9 +102,9 @@
 				<title>Glossary and Index</title>
 				<p>
 					The heading at the top of the glossary page is a simple <tt><b>h1</b></tt>
-				element. The heading at the beginning of each section is also a <tt><b>h1</b></tt>
+				element. The heading at the beginning of each glossary section is also an <tt><b>h1</b></tt>
 				with additional style class <tt><b>glsection</b></tt>. The alphabetic quick links
-				at the top which allow you to quickly jump to certain sections are contained inside
+				at the top, which allow you to quickly jump to certain sections are contained inside
 				a <tt>div</tt> with class <tt><b>gllinks</b></tt>. Active links are <tt>spans</tt>
 				of class <tt><b>gllink</b></tt>, and inactive of class <tt><b>glnolink</b></tt>.
 				The horizontal rule between sections has style class <tt><b>glseparator</b></tt>.
@@ -115,15 +114,15 @@
 					<img src="img/html-glossary.png" print-width="100%" screen-width="800px"/>
 				</figure>
 				<p>
-					Analogously to the glossary, the heading atop an index is a <tt><b>h1</b></tt>,
-				and the heading at the beginning of each section is a <tt><b>h1</b></tt> with
+					Analogously to the glossary, the heading atop an index is an <tt><b>h1</b></tt>,
+				and the heading at the beginning of each section is an <tt><b>h1</b></tt> with
 				additional style class <tt><b>idxsection</b></tt>. The alphabetic quick links are set
 				in a container with class <tt><b>idxlinks</b></tt> and are themselves <tt>spans</tt> of
 				style classes <tt><b>idxlink</b></tt> and <tt><b>idxnolink</b></tt>. The entries are
 				arranged in a <tt>table</tt> of class <tt><b>idxlisting</b></tt> whose cells are
 				styled with class <tt><b>idxitem</b></tt>. Each text entry is wrapped inside a
-				<tt>span</tt> <tt><b>idxitem</b></tt>, <tt><b>idxsubitem</b></tt> or <tt><b>idxsubsubitem</b></tt>.
-				Indentation is controlled through these elements.
+				<tt>span</tt> of class <tt><b>idxitem</b></tt>, <tt><b>idxsubitem</b></tt> or
+				<tt><b>idxsubsubitem</b></tt>; indentation is controlled through these elements.
 				</p>
 				<figure  align="left" border="yes">
 					<caption>A keyword index.</caption>
@@ -134,7 +133,7 @@
 		<section>
 			<title>Changing the Look of &latex;-based Output</title>
 			<p>
-				In the style definition file for &latex; you will find separate sections for each
+				In the style definition file for &latex; you will find a separate section for each
 			of the main document classes, each of which contains a list of stylable elements for that
 			document class. Some basic knowledge of &latex; will be required to be able to edit these.
 			</p>
@@ -223,7 +222,7 @@
 				<dd>
 					<p>
 					The page style to be used for pages starting a keyword index (see 
-					<cite idref="bib:KOMASCR"/> page 66 ff.). Use <tt>emtpy</tt> for a page without any
+					<cite idref="bib:KOMASCR"/>, page 66 ff.). Use <tt>emtpy</tt> for a page without any
 					decorations, <tt>scrplain</tt>	for a page that is undecorated but has a
 					page number, or <tt>scrheadings</tt> for a page with page number and column titles.
 					</p>
@@ -258,7 +257,7 @@
 					<p>
 					This element is meant to contain the definitions of the column titles for pages
 					of style <tt>scrplain</tt> and <tt>scrheadings</tt>. For a detailed description
-					of the contained elements, consult <cite idref="bib:KOMASCR"/> page 127 ff.
+					of the contained elements, consult <cite idref="bib:KOMASCR"/>, page 127 ff.
 					</p>
 				</dd>
 				<dt>page-number</dt>
@@ -290,7 +289,7 @@
 				<dd>
 					<p>
 					The page style to be used for pages starting a new part (see 
-					<cite idref="bib:KOMASCR"/> page 66 ff.). Use <tt>emtpy</tt> for a page without any
+					<cite idref="bib:KOMASCR"/>, page 66 ff.). Use <tt>emtpy</tt> for a page without any
 					decorations, <tt>scrplain</tt>	for a page that is undecorated but has a
 					page number, or <tt>scrheadings</tt> for a page with page number and column titles.
 					</p>
@@ -330,7 +329,7 @@
 				<dd>
 					<p>
 					The page style to be used for the title page (see 
-					<cite idref="bib:KOMASCR"/> page 66 ff.). Use <tt>emtpy</tt> for a page without any
+					<cite idref="bib:KOMASCR"/>, page 66 ff.). Use <tt>emtpy</tt> for a page without any
 					decorations, <tt>scrplain</tt>	for a page that is undecorated but has a
 					page number, or <tt>scrheadings</tt> for a page with page number and column titles.					
 					</p>

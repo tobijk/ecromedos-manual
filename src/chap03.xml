@@ -170,10 +170,6 @@ $&gt; ecromedos -f latex <i>document</i>
 				</color>
 				</verbatim>
 				<p>
-					<idxterm group="ecml"><item>article</item><subitem>secsplitdepth</subitem></idxterm>
-					<idxterm group="ecml"><item>book</item><subitem>secsplitdepth</subitem></idxterm>
-					<idxterm group="ecml"><item>report</item><subitem>secsplitdepth</subitem></idxterm>
-
 					Depending on your setting of <tt><b>secsplitdepth</b></tt> (see section
 				<ref idref="sect:outputchunking"/>), you will obtain one or more output files
 				with the extension <i>tex</i>. The main &tex;-file will carry the name of the
