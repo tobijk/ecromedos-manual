@@ -2,8 +2,6 @@
 	<chapter>
 		<title><label id="sect:generalusage"/>General Usage Instructions</title>
 		<p>
-			<idxterm><item>command line usage</item></idxterm>
-
 			This chapter covers the basics of starting a new document and using the
 		<tt><b>ecromedos</b></tt> command line tool to convert documents to
 		representational formats, also touching on the available output options that
@@ -21,18 +19,12 @@
 			<subsection>
 				<title>Choosing a Document Class</title>
 				<p>
-					<idxterm><item>document class</item></idxterm>
-
 					When starting a new document, you first have to choose a
 				<i>document class</i> fitting the type of document you intend to write.
 				Document classes are abstract definitions of typical real-world document types,
 				such as <q>letter</q>, <q>book</q>, or <q>newspaper article</q>.
 				</p>
 				<p>
-					<idxterm><item>document class</item><subitem>article</subitem></idxterm>
-					<idxterm><item>document class</item><subitem>book</subitem></idxterm>
-					<idxterm><item>document class</item><subitem>report</subitem></idxterm>
-
 					The ecromedos Markup Language (ECML) provides the three document classes
 				<b><tt>article</tt></b>, <b><tt>book</tt></b> and <b><tt>report</tt></b>. The
 				primary difference between these is how many section levels they provide
@@ -71,8 +63,6 @@
 			<subsection>
 				<title><label id="sect:maketemplate"/>Starting from a Template</title>
 				<p>
-					<idxterm><item>template document</item></idxterm>
-
 					When you have decided on which document class you want to use, the
 				recommended way of starting your document is to generate a bare document template.
 				In order to do so, open a terminal window and issue the following command:
@@ -128,9 +118,6 @@ $&gt; ecromedos -n <i>class</i> &gt; index.xml
 		<section>
 			<title>Transforming Documents</title>
 			<p>
-				<idxterm><item>tranforming documents</item></idxterm>
-				<idxterm><item>ecromedos</item><subitem>Document Processor</subitem></idxterm>
-
 				In order to convert your documents from ecromedos Markup Language to one of
 			the supported output formats, you have to call the ecromedos Document Processor
 			from the command line. The exact procedures are explained in the following
@@ -139,9 +126,6 @@ $&gt; ecromedos -n <i>class</i> &gt; index.xml
 			<subsection>
 				<title>Producing XHTML Output</title>
 				<p>
-					<idxterm><item>output formats</item></idxterm>
-					<idxterm><item>output formats</item><subitem>XHTML</subitem></idxterm>
-
 					XHTML is the default output format, unless you modified the corresponding
 				setting in the configuration file. In the default installation, to convert a
 				document from ECML to XHTML, you simply have to issue the following	command:
@@ -151,8 +135,6 @@ $&gt; ecromedos <i>document</i>
 				</color>
 				</verbatim>
 				<p>
- 					<idxterm><item>working directory</item></idxterm>
-
 					where <i>document</i> is the name of an ECML input file. The output files
 				will be placed into the working directory of the <tt>ecromedos</tt> command. If
 				you don't want the output in the same directory as the source files, simply
@@ -179,8 +161,6 @@ $&gt; ecromedos ../<i>document</i>
 			<subsection>
 				<title>Producing Postscript and PDF</title>
 				<p>
-					<idxterm><item>output formats</item><subitem>PostScript and PDF</subitem></idxterm>
-
 					If you want to produce a Postscript or PDF version of your document, you
 				will have to generate &latex; output first. Use the <tt><b>-f</b></tt> command
 				line switch to tell ecromedos the desired target format:
@@ -205,8 +185,6 @@ $&gt; latex <i>class</i>.tex
 				</color>
 				</verbatim>
 				<p>
-					<idxterm><item>cross-references</item></idxterm>
-
 					You may have to call &latex; two or three times until all cross-references
 				are resolved and the table of contents is completely built. The	result will be a
 				file with the extension <i>dvi</i>. You can use the following commands to
@@ -218,10 +196,6 @@ $&gt; ps2pdf <i>class</i>.ps
 				</color>
 				</verbatim>
 				<p>
-					<idxterm><item>output formats</item><subitem>DVI</subitem></idxterm>
-					<idxterm><item>pdflatex</item></idxterm>
-					<idxterm><item>pdftex</item></idxterm>
-
 					The first command will generate Postscript output from the DVI file and the
 				second command will turn the Postscript into PDF. Starting with ecromedos 2.0.0,
 				you can take advantage of the fact that &tex; can produce PDF directly through
@@ -235,8 +209,6 @@ $&gt; pdflatex <i>class</i>.tex
 				</color>
 				</verbatim>
 				<p>
-					<idxterm><item>xelatex</item></idxterm>
-
 					In addition, there is some preliminary support for generating output that can
 				be processed with the unicode-aware &xetex; using the <tt>xelatex</tt> command:
 				</p>
@@ -254,9 +226,6 @@ $&gt; xelatex <i>class</i>.tex
 		<section>
 			<title>Output Options</title>
 			<p>
-				<idxterm><item>output options</item></idxterm>
-				<idxterm><item>semantic markup</item></idxterm>
-
 				Even though we are dealing with semantic markup, there are some decisions
 			about the presentation of a document that are left to the author, such as
 			whether the document should have a table of contents or not, whether sections
@@ -285,8 +254,6 @@ $&gt; xelatex <i>class</i>.tex
 				there are countries that speak the same language but use different scripts.
 				</p>
 				<p>
-					<idxterm><item>document</item><subitem>language</subitem></idxterm>
-
 					Currently, ecromedos supports the following language/territory combinations:
 				</p>
 				<table print-width="60%" screen-width="600px" align="left"
@@ -316,7 +283,6 @@ $&gt; xelatex <i>class</i>.tex
 					<idxterm group="ecml"><item>article</item><subitem>secsplitdepth</subitem></idxterm>
 					<idxterm group="ecml"><item>book</item><subitem>secsplitdepth</subitem></idxterm>
 					<idxterm group="ecml"><item>report</item><subitem>secsplitdepth</subitem></idxterm>
-					<idxterm><item>splitting documents</item></idxterm>
 
 					Set the <tt><b>secsplitdepth</b></tt> attribute on the root element of your
 				document to an integer value between 0 and 5, in order to control down to which
@@ -352,7 +318,6 @@ $&gt; xelatex <i>class</i>.tex
 					<idxterm group="ecml"><item>article</item><subitem>secnumdepth</subitem></idxterm>
 					<idxterm group="ecml"><item>book</item><subitem>secnumdepth</subitem></idxterm>
 					<idxterm group="ecml"><item>report</item><subitem>secnumdepth</subitem></idxterm>
-					<idxterm><item>section numbers</item></idxterm>
 
 					Set the <tt><b>secnumdepth</b></tt> attribute on the document's root element
 				to an integer value between 0 and 5, in order to control down to which section
@@ -363,7 +328,6 @@ $&gt; xelatex <i>class</i>.tex
 			<subsection>
 				<title>Generating a Table of Contents</title>
 				<p>
-					<idxterm><item>table of contents</item></idxterm>
 					<idxterm group="ecml"><item>make-toc</item></idxterm>
 
 					In previous versions of ecromedos the generation of the table of contents
@@ -406,8 +370,6 @@ $&gt; xelatex <i>class</i>.tex
 				Postscript and PDF.
 				</p>
 				<p>
-					<idxterm><item>papersize</item></idxterm>
-
 					The purpose of the <tt><b>papersize</b></tt> attribute should be pretty
 				obvious. Supported values are <tt>legalpaper</tt>, <tt>letterpaper</tt>,
 				<tt>executivepaper</tt>, <tt>a<i>X</i>paper</tt>, <tt>b<i>X</i>paper</tt>,
@@ -423,8 +385,6 @@ $&gt; xelatex <i>class</i>.tex
 				write <tt>bcor="1.5cm"</tt> to get a binding correction of 1.5 centimeters.
 				</p>
 				<p>
-					<idxterm><item>KOMA Script</item></idxterm>
-
 				The <tt><b>div</b></tt> attribute indirectly controls the dimensions of the text
 				body. Its argument is passed through to the &latex; macro package KOMA-Script
 				which is responsible for layouting the document. KOMA-Script tries to

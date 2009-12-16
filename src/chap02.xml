@@ -2,8 +2,6 @@
 	<chapter>
 		<title><label id="sect:installation"/>Installation</title>
 		<p>
-			<idxterm><item>installation</item></idxterm>
-
 			This chapter covers the installation of ecromedos on different Linux
 			distributions and on FreeBSD.
 		</p>
@@ -19,8 +17,6 @@
 		<section>
 			<title>Dependencies</title>
 			<p>
-				<idxterm><item>dependencies</item></idxterm>
-
 				For proper operation, ecromedos depends on the following third-party
 			software offerings:
 			</p>
@@ -28,8 +24,6 @@
 				<dt>Python</dt>
 				<dd>
 				<p>
-					<idxterm><item>dependencies</item><subitem>Python</subitem></idxterm>
-
 					A powerful scripting language. Python is available for all popular operating
 				systems and can be obtained from the website of the Python Software Foundation
 				at <link url="http://python.org"><tt>http://&zwsp;www.&zwsp;python.&zwsp;org</tt></link>.
@@ -40,9 +34,6 @@
 				<dt>libxml and libxslt</dt>
 				<dd>
 				<p>
-					<idxterm><item>dependencies</item><subitem>libxml</subitem></idxterm>
-					<idxterm><item>dependencies</item><subitem>libxslt</subitem></idxterm>
-
 					Two super fast and stable libraries for processing XML, developed by Daniel
 				Veillard for the GNOME project. Both libraries offer bindings to Python. The
 				project homepage is at <link url="http://www.xmlsoft.org"><tt>http://&zwsp;www.&zwsp;xmlsoft.&zwsp;org</tt></link>.
@@ -51,8 +42,6 @@
 				<dt>Imagemagick</dt>
 				<dd>
 				<p>
-					<idxterm><item>dependencies</item><subitem>imagemagick</subitem></idxterm>
-
 					A set of tools for image manipulation. ecromedos uses Imagemagick for
 				resizing bitmap images and to do format conversions. You can download the 
 				software from
@@ -62,8 +51,6 @@
 				<dt>&tex;</dt>
 				<dd>
 				<p>
-					<idxterm><item>dependencies</item><subitem>TeX</subitem></idxterm>
-
 					If you want to produce Postscript or PDF, you need an installation of the
 				&tex; typesetting system. Windows users should download the latest MiK&tex; from
 				<link url="http://miktex.org"><tt>http://&zwsp;www.&zwsp;miktex.&zwsp;org</tt></link>.
@@ -78,7 +65,6 @@
 		<section>
 			<title>Installation from Source</title>
 			<p>
-				<idxterm><item>installation</item><subitem>from source</subitem></idxterm>
 			</p>
 			<subsection>
 				<title>On Linux/Unix</title>
@@ -92,7 +78,6 @@
 			<subsection>
 				<title>Debian/GNU and Ubuntu Linux</title>
 				<p>
-					<idxterm><item>installation</item><subitem>on Debian/GNU Linux</subitem></idxterm>
 				</p>
 			</subsection>
 		</section>

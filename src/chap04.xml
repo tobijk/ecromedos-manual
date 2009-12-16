@@ -8,8 +8,6 @@
 		<section>
 			<title>A Brief Introduction to XML</title>
 			<p>
-				<idxterm><item>XML</item></idxterm>
-
 				The <i>Extensible Markup Language</i> is not a data description language in
 			itself. Rather, it defines a syntax that lets you design your own customized
 			markup languages for arbitrary data models. Take a look at the following
@@ -41,8 +39,6 @@
 				]]></code>
 			</listing>
 			<p>
-				<idxterm><item>XML</item><subitem>declaration</subitem></idxterm>
-
 				What you see is a complete XML document describing the popular Pina
 			Colada cocktail. On the first line, you see the XML declaration. It specifies
 			the XML version and the character encoding of the document. In general, you
@@ -53,10 +49,6 @@
 			the various ingredients that you need to make a Pina Colada.
 			</p>
 			<p>
-				<idxterm><item>tag</item></idxterm>
-				<idxterm><item>XML</item><subitem>element</subitem></idxterm>
-				<idxterm><item>node</item></idxterm>
-
 				The textual elements delimiting the beginning and end of an XML element are
 			called <i>tags</i>. An opening tag has the form <tt>&lt;element&gt;</tt> and
 			the	corresponding closing tag is written <tt>&lt;/element&gt;</tt>.	XML elements
@@ -69,9 +61,6 @@
 			<tt>yes</tt>.
 			</p>
 			<p>
-				<idxterm><item>ecromedos</item><subitem>Markup Language</subitem></idxterm>
-				<idxterm><item>XML</item><subitem>markup</subitem></idxterm>
-
 				The names of elements and attributes can be chosen arbitrarily to represent
 			a given data model. In this example we tried to model a drink but you might just
 			as well define a set of tags to describe the parts of an automotive vehicle.
@@ -82,10 +71,6 @@
 		<section>
 			<title>How to Structure Your Documents</title>
 			<p>
-			<idxterm><item>document class</item></idxterm>
-			<idxterm><item>document</item><subitem>structure</subitem></idxterm>
-			<idxterm><item>document</item><subitem>tree</subitem></idxterm>
-
 				In general, you should start new documents from a document template, as
 			described in section <ref idref="sect:maketemplate"/>. An initial template
 			produced that way will contain a complete skeleton for a document of the chosen
@@ -131,8 +116,6 @@ report
 				</code>
 			</listing>
 			<p>
-				<idxterm><item>sectioning</item></idxterm>
-
 				This tree is greatly simplified and incomplete, because naturally any type of
 			sectioning element, with the exception of <tt><b>subsubsection</b></tt>, can
 			contain multiple subsections.
@@ -153,11 +136,6 @@ report
 		<section>
 			<title>Basic Text Formatting</title>
 			<p>
-				<idxterm><item>text-formatting elements</item></idxterm>
-				<idxterm><item>emphasis</item></idxterm>
-				<idxterm><item>emphasis</item><subitem>bold</subitem></idxterm>
-				<idxterm><item>emphasis</item><subitem>italic</subitem></idxterm>
-				<idxterm><item>emphasis</item><subitem>underlined</subitem></idxterm>
 				<idxterm group="ecml" sortkey="I"><item>i</item></idxterm>
 				<idxterm group="ecml" sortkey="B"><item>b</item></idxterm>
 				<idxterm group="ecml" sortkey="U"><item>u</item></idxterm>
@@ -241,7 +219,6 @@ report
 				<idxterm group="ecml"><item>large</item></idxterm>
 				<idxterm group="ecml"><item>x-large</item></idxterm>
 				<idxterm group="ecml"><item>xx-large</item></idxterm>
-				<idxterm><item>font size</item></idxterm>
 
 				For the sake of completeness, there are the seven elements
 			<tt><b>xx-small</b></tt>, <tt><b>x-small</b></tt>, <tt><b>small</b></tt>,
@@ -261,7 +238,6 @@ report
 		<section>
 			<title>Controlling Hyphenation</title>
 			<p>
-				<idxterm><item>hyphenation</item></idxterm>
 				<idxterm group="ecml" sortkey="Y"><item>y</item></idxterm>
 
 				In printable output, text is set justified over the entire width of the
@@ -278,8 +254,6 @@ report
 		<section>
 			<title>Manually Inserting Line or Page Breaks</title>
 			<p>
-				<idxterm><item>page break</item></idxterm>
-				<idxterm><item>line break</item></idxterm>
 				<idxterm group="ecml"><item>br</item></idxterm>
 				<idxterm group="ecml"><item>pagebreak</item></idxterm>
 
@@ -293,8 +267,6 @@ report
 			</p>
 			<p>
 				<idxterm group="ecml"><item>nobr</item></idxterm>
-				<idxterm><item>non-breaking space</item></idxterm>
-				<idxterm><item>line break</item><subitem>prevention</subitem></idxterm>
 
 				When you need to <i>prevent</i> linebreaks in certain places, you can either
 			use the non-breaking space (see section <ref idref="sect:entities"/>) or protect
@@ -308,8 +280,6 @@ report
 		<section>
 			<title><label id="sect:xreferences"/>Working with Cross-References</title>
 			<p>
-				<idxterm><item>cross-references</item></idxterm>
-
 				Sometimes you will want to refer to another section in your manuscript, i.e.
 			you may write something like <qq><i>[...] you will find out more about this on
 			page XYZ</i></qq>. However, at the time of writing your markup, you cannot tell
@@ -364,7 +334,6 @@ report
 				<idxterm group="ecml"><item>ref</item><subitem>idref</subitem></idxterm>
 				<idxterm group="ecml"><item>pageref</item></idxterm>
 				<idxterm group="ecml"><item>pageref</item><subitem>idref</subitem></idxterm>
-				<idxterm><item>section counter</item></idxterm>
 
 				The <tt><b>ref</b></tt> and <tt><b>pageref</b></tt> elements can also point
 			to any other object with an <tt><b>id</b></tt> attribute, such as a
@@ -376,7 +345,6 @@ report
 		<section>
 			<title>Placing Marginal Notes and Footnotes</title>
 			<p>
-				<idxterm><item>marginal notes</item></idxterm>
 				<idxterm group="ecml"><item>marginal</item></idxterm>
 
 				Marginal notes can be placed with the <tt><b>marginal</b></tt> tag. And
@@ -394,7 +362,6 @@ report
 				]]></code>
 			</listing>
 			<p>
-				<idxterm><item>footnotes</item></idxterm>
 				<idxterm group="ecml"><item>footnote</item></idxterm>
 
 				Please note that &latex; does not allow setting marginals inside table
@@ -406,8 +373,6 @@ report
 		<section>
 			<title><label id="sect:quoting"/>Inline and Block Quotes</title>
 			<p>
-				<idxterm><item>quoting</item></idxterm>
-				<idxterm><item>quoting</item><subitem>inline</subitem></idxterm>
 				<idxterm group="ecml" sortkey="Q"><item>q</item></idxterm>
 				<idxterm group="ecml"><item>qq</item></idxterm>
 
@@ -418,7 +383,6 @@ report
 			for single and double quoting, respectively.
 			</p>
 			<p>
-				<idxterm><item>quoting</item><subitem>block</subitem></idxterm>
 				<idxterm group="ecml"><item>blockquote</item></idxterm>
 
 				When quoting large portions of text, consider using the <tt><b>blockquote</b></tt>
@@ -430,10 +394,6 @@ report
 		<section>
 			<title><label id="sect:entities"/>Useful Pre-Defined Entities</title>
 			<p>
-				<idxterm><item>entities</item></idxterm>
-				<idxterm><item>zero-width space</item></idxterm>
-				<idxterm><item>em-dash</item></idxterm>
-				<idxterm><item>en-dash</item></idxterm>
 				<idxterm group="ecml"><item>entity</item></idxterm>
 
 				ecromedos defines a small set of entities that may come in handy occasionally.
@@ -476,7 +436,6 @@ report
 				]]></code>
 			</listing>
 			<p>
-				<idxterm><item>document type declaration</item></idxterm>
 				<idxterm group="ecml"><item>entity</item><subitem>name</subitem></idxterm>
 
 				If you start your documents by generating a template, as described in section
