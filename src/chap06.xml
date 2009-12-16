@@ -8,7 +8,6 @@
 		<section>
 			<title><label id="sect:appendices"/>The Appendices</title>
 			<p>
-				<idxterm><item>appendices</item></idxterm>
 				<idxterm group="ecml"><item>appendix</item></idxterm>
 				<idxterm group="ecml"><item>appendix</item><subitem>tocentry</subitem></idxterm>
 
@@ -23,7 +22,6 @@
 		<section>
 			<title><label id="sect:glossaries"/>Creating a Glossary</title>
 			<p>
-				<idxterm><item>glossary</item></idxterm>
 				<idxterm group="ecml"><item>make-glossary</item></idxterm>
 
 				Creating a glossary can be as easy as pulling out your magic wand and saying
@@ -33,7 +31,6 @@
 			<subsection>
 				<title><label id="sect:defterm"/>Making Definitions on the Spot</title>
 				<p>
-					<idxterm><item>glossary</item><subitem>defining entries</subitem></idxterm>
 					<idxterm group="ecml"><item>defterm</item></idxterm>
 
 					Whenever you come across a term or expression in your manuscript that you
@@ -68,7 +65,6 @@ will find learning ECML particularly easy.
 					]]></code>
 				</listing>
 				<p>
-					<idxterm><item>glossary</item><subitem>collation</subitem></idxterm>
 					<idxterm group="ecml"><item>defterm</item><subitem>sortkey</subitem></idxterm>
 
 					There may be special cases, in which the collation rules of your locale
@@ -90,7 +86,6 @@ will find learning ECML particularly easy.
 			<subsection>
 				<title>Automatic Generation of the Glossary</title>
 				<p>
-					<idxterm><item>glossary</item><subitem>automatic generation</subitem></idxterm>
 					<idxterm group="ecml"><item>make-glossary</item></idxterm>
 
 					Putting instances of <tt><b>defterm</b></tt> in your document will
@@ -126,7 +121,6 @@ will find learning ECML particularly easy.
 				The default alphabet is the basic latin alphabet.
 				</p>
 				<p>
-					<idxterm><item>index</item><subitem>collation</subitem></idxterm>
 					<idxterm group="ecml"><item>make-glossary</item><subitem>locale</subitem></idxterm>
 
 					The	<tt><b>locale</b></tt> attribute indicates the language whose collation rules
@@ -149,8 +143,6 @@ will find learning ECML particularly easy.
 			<subsection>
 				<title><label id="sect:glossariesmanually"/>Creating the Glossary Manually</title>
 				<p>
-					<idxterm><item>glossary</item><subitem>manual creation</subitem></idxterm>
-
 					If you don't like the idea of having <tt><b>defterm</b></tt> elements all
 				over your document, or for some other reason would prefer to set the glossary
 				yourself, then here is how to do it:
@@ -198,7 +190,6 @@ will find learning ECML particularly easy.
 		<section>
 			<title>Keeping a Bibliography</title>
 			<p>
-				<idxterm><item>bibliography</item></idxterm>
 				<idxterm group="ecml"><item>biblio</item></idxterm>
 				<idxterm group="ecml"><item>bibitem</item></idxterm>
 
@@ -224,7 +215,6 @@ will find learning ECML particularly easy.
 				]]></code>
 			</listing>
 			<p>
-				<idxterm><item>bibliography</item><subitem>automatic numbering</subitem></idxterm>
 				<idxterm group="ecml"><item>biblio</item><subitem>number</subitem></idxterm>
 				<idxterm group="ecml"><item>bibitem</item></idxterm>
 				<idxterm group="ecml"><item>bibitem</item><subitem>label</subitem></idxterm>
@@ -241,8 +231,6 @@ will find learning ECML particularly easy.
 			<minisection>
 				<title>Citing from the Bibliography</title>
 				<p>
-					<idxterm><item>bibliography</item><subitem>citing from the</subitem></idxterm>
-					<idxterm><item>citations</item></idxterm>
 					<idxterm group="ecml"><item>cite</item></idxterm>
 					<idxterm group="ecml"><item>cite</item><subitem>idref</subitem></idxterm>
 
@@ -272,9 +260,6 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 		<section>
 			<title>Generating Keyword Indexes</title>
 			<p>
-				<idxterm><item>index</item><subitem>definition</subitem></idxterm>
-				<idxterm><item>keyword indexes</item></idxterm>
-			
 				ecromedos facilitates the generation of keyword indexes by allowing you to place index
 			markers in the text as you are writing. These markers are collected, sorted and turned into
 			corresponding index sections by the document pre-processor without requiring any additional
@@ -284,7 +269,6 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 			<subsection>
 				<title>Placing Index Markers</title>
 				<p>
-					<idxterm><item>index</item><subitem>markers</subitem></idxterm>
 					<idxterm group="ecml"><item>idxterm</item></idxterm>
 
 					Index markers are embedded directly into the flowing text. However, in order to
@@ -353,7 +337,6 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 			<subsection>
 				<title>Automatic Index Generation</title>
 				<p>
-					<idxterm><item>index</item><subitem>automatic generation</subitem></idxterm>
 					<idxterm group="ecml"><item>make-index</item></idxterm>
 
 					Use the <tt><b>make-index</b></tt> element to have the index markers in a particular
@@ -382,7 +365,6 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 				after the <tt><b>biblio</b></tt> element.
 				</p>
 				<p>
-					<idxterm><item>index</item><subitem>collation</subitem></idxterm>
 					<idxterm group="ecml"><item>make-index</item><subitem>locale</subitem></idxterm>
 
 					The	<tt><b>locale</b></tt> attribute indicates the language whose collation rules
@@ -394,7 +376,6 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 				will fall back to standard C sorting.
 				</p>
 				<p>
-					<idxterm><item>index</item><subitem>title</subitem></idxterm>
 					<idxterm group="ecml"><item>make-index</item><subitem>title</subitem></idxterm>
 
 					The optional <tt><b>title</b></tt> attribute allows you to override the
@@ -404,7 +385,6 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 			<subsection>
 				<title>Manual Index Creation</title>
 				<p>
-					<idxterm><item>index</item><subitem>manual creation</subitem></idxterm>
 					<idxterm group="ecml"><item>idxref</item></idxterm>
 					<idxterm group="ecml"><item>index</item></idxterm>
 

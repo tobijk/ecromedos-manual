@@ -21,8 +21,6 @@
 		<section>
 			<title>What is ecromedos?</title>
 			<p>
-				<idxterm><item>ecromedos</item></idxterm>
-
 				ecromedos is an integrated solution for XML-based publishing in print and
 			on the Web. It is primarily targeted at, but not limited to, the creation of
 			technical documentation in the field of Computer Science. Documents are written
@@ -35,20 +33,6 @@
 			typesetting system.
 			</p>
 			<p>
-				<idxterm><item>ecromedos</item><subitem>Markup Language</subitem></idxterm>
-				<defterm>
-					<dt>DocBook</dt>
-					<dd>
-					DocBook is a semantic markup language, originally developed by HAL Computer
-					Systems and O'Reilly &amp; Associates to enable document interchange between
-					document publications systems of different vendors. DocBook has since grown
-					into a comprehensive document authoring system. Modern versions of DocBook
-					use XML for the markup and come with templates based on the Extensible
-					Stylesheet Language for the transformation of documents to representational
-					formats.
-					</dd>
-				</defterm>
-
 				The <i>ecromedos Markup Language</i> (ECML) is modelled closely after HTML
 			with some ideas and additional elements borrowed from &latex;. It lets you
 			compose comprehensive, well-structured documents from a comparably small set of
@@ -56,10 +40,6 @@
 			languages like DocBook will find learning ECML particularly easy.
 			</p>
 			<p>
-				<idxterm><item>ecromedos</item><subitem>Document Processor</subitem></idxterm>
-				<idxterm><item>document pre-processor</item></idxterm>
-				<idxterm><item>pre-processor</item></idxterm>
-
 				The <i>ecromedos Document Processor</i> (eDP) uses XSL Transformations
 			(XSLT) to convert source documents from ECML to the supported output formats.
 			In addition, the eDP contains a specialized pre-processor, which operates
@@ -122,8 +102,6 @@
 		<section>
 			<title>Licensing</title>
 			<p>
-				<idxterm><item>GPL License</item></idxterm>
-			
 				ecromedos is free (as in speech) software, licensed under the <i>GNU
 			General Public License, version 2</i> <cite idref="bib:GPL2"/>. You are allowed
 			to take the source code and modify it as you please, as long as you publish your
@@ -188,8 +166,6 @@
 		<section>
 			<title>Typographic Conventions</title>
 			<p>
-				<idxterm><item>typographic conventions</item></idxterm>
-
 				Throughout this document the following typographic conventions apply:
 			</p>			
 			<ul>
@@ -227,8 +203,6 @@
 		<section>
 			<title>Getting Involved</title>
 			<p>
-				<idxterm><item>development of ecromedos</item></idxterm>
-
 				ecromedos version 2 is a big step forward from version 1, but there still is
 			a lot to do. There are many ways in which you can contribute. You can report
 			bugs and help squash them, you can write documentation, and you can submit
