@@ -73,52 +73,71 @@
 				First, double check that you have installed the dependencies listed in section
 			<ref idref="sect:dependencies"/>.
 			</p>
-			<p>
- 				ecromedos can be installed anywhere in the file system. It is recommended,
- 			however, that you place it in <tt>/opt</tt>. In order to do so, open a shell
- 			and become superuser root by typing
- 			</p>
- 			<verbatim strip="yes"><color rgb="#000088">
-$&gt; su -
-			</color>
-			</verbatim>
-			<p>			
-				Then change your working directory to <tt>/opt</tt>
-			</p>
- 			<verbatim strip="yes"><color rgb="#000088">
-$&gt; cd /opt
-			</color>
-			</verbatim>
-			<p>
-				and unpack the tarball. The following example assumes that the tarball
-			resides in the home directory of system user tobias:
-			</p>
- 			<verbatim strip="yes"><color rgb="#000088">
-$&gt; tar -xvzf /home/tobias/ecromeds-x.y.z.tar.gz
-			</color>
-			</verbatim>
-			<p>
-				Now change to <tt>/usr/local/bin</tt> and create a symbolic link to the
-			main executable:
-			</p>
- 			<verbatim strip="yes"><color rgb="#000088">
-$&gt; cd /usr/local/bin
-$&gt; ln -s /opt/ecromedos-x.y.z/bin/ecromedos
-			</color>
-			</verbatim>
-			<p>
-				By placing this link in the system path, you will now be able to call
-			ecromedos by name without having to enter the canonical path to the
-			executable.
-			</p>
 			<minisection>
-				<title>Adapting the Configuration</title>
+				<title>Step <counter group="inst_step" simple="yes"/>: Unpacking the Tarball</title>
+				<p>
+	 				ecromedos can be installed anywhere in the file system. It is recommended,
+	 			however, that you place it in <tt>/opt</tt>. In order to do so, open a shell
+	 			and become superuser root by typing
+	 			</p>
+	 			<verbatim strip="yes"><color rgb="#000088">
+#&gt; su -
+				</color>
+				</verbatim>
+				<p>			
+					Then change your working directory to <tt>/opt</tt>
+				</p>
+	 			<verbatim strip="yes"><color rgb="#000088">
+#&gt; cd /opt
+				</color>
+				</verbatim>
+				<p>
+					and unpack the tarball. The following example assumes that the tarball
+				resides in the home directory of system user tobias:
+				</p>
+	 			<verbatim strip="yes"><color rgb="#000088">
+#&gt; tar -xvzf /home/tobias/ecromeds-x.y.z.tar.gz
+				</color>
+				</verbatim>
+			</minisection>
+			<minisection>
+				<title>Step <counter group="inst_step" simple="yes"/>: Adding the Executable to the System Path</title>
+				<p>
+					Now change to <tt>/usr/local/bin</tt> and create a symbolic link to the
+				main executable:
+				</p>
+	 			<verbatim strip="yes"><color rgb="#000088">
+#&gt; cd /usr/local/bin
+#&gt; ln -s /opt/ecromedos-x.y.z/bin/ecromedos
+				</color>
+				</verbatim>
+				<p>
+					By placing this link in the system path, you will be able to call
+				ecromedos by name without having to enter the canonical path to the
+				executable.
+				</p>
+			</minisection>
+			<minisection>
+				<title>Step <counter group="inst_step" simple="yes"/>: Pre-compiling the Source Files</title>
+				<p>
+					Since you would typically install ecromedos in a location, to which
+				normal system users don't have write access, you should pre-compile the
+				Python source files to bytecode, so that users can benefit from the
+				speed increase this delivers when the application is loaded. To do so,
+				change <i>into</i> the installation	directory and issue the following command:
+				</p>
+ 			<verbatim strip="yes"><color rgb="#000088">
+#&gt; find . -name "*.py" -exec python -c "import py_compile; py_compile.compile('{}')" \;
+			</color></verbatim>
+			</minisection>
+			<minisection>
+				<title>Step <counter group="inst_step" simple="yes"/>: Adapting the Configuration</title>
 				<p>
 					Having completed the installation procedure described above, you may now edit
 				the configuration file <tt>ecmds.conf</tt>, which is located in the subdirectory
 				<tt>etc</tt> below the installation folder. ecromedos is designed to be relocatable,
-				so in many cases it should just	work out of the box. However, the path settings
-				pointing to third-party software that ecromedos relies on may have to be corrected.
+				so in many cases it should just	work out of the box. However, the variables holding
+				pointers to third-party software that ecromedos relies on may have to be corrected.
 				In particular, check all variables ending in <tt>_bin</tt> or <tt>_dir</tt>.
 				</p>
 				<p>
@@ -139,6 +158,23 @@ $&gt; ln -s /opt/ecromedos-x.y.z/bin/ecromedos
 			<subsection>
 				<title>Debian/GNU and Ubuntu Linux</title>
 				<p>
+					If you are running Debian/GNU or Ubuntu Linux, you can install ecromedos from
+				packages using apt. Insert the following entry into <tt>/etc/&zwsp;apt/&zwsp;sources.list</tt>:
+				</p>
+				<listing>
+					<code bgcolor="#eeeeee" strip="yes">
+deb http://www.ecromedos.net/packages/debian stable contrib
+					</code>
+				</listing>
+				<p>
+				Then run
+				</p>
+	 			<verbatim strip="yes"><color rgb="#000088">
+#&gt; apt-get update
+#&gt; apt-get install ecromedos
+				</color></verbatim>
+				<p>
+					Optionally the documentation can be installed fromt the package <tt>ecromedos-doc</tt>.
 				</p>
 			</subsection>
 		</section>

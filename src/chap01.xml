@@ -179,7 +179,7 @@
 				<li>
 				<p>
 					Examples of command line text input will be set in typewriter letters. The
-				character sequence <b><tt>$&gt;</tt></b> represents a shell prompt.
+				character sequence <b><tt>#&gt;</tt></b> represents a shell prompt.
 				</p>
 				</li>
 				<li>
