@@ -68,7 +68,7 @@
 				In order to do so, open a terminal window and issue the following command:
 				</p>
 				<verbatim strip="yes"><color rgb="#000088">
-$&gt; ecromedos -n <i>class</i> &gt; index.xml
+#&gt; ecromedos -n <i>class</i> &gt; index.xml
 				</color>
 				</verbatim>
 				<p>
@@ -131,7 +131,7 @@ $&gt; ecromedos -n <i>class</i> &gt; index.xml
 				document from ECML to XHTML, you simply have to issue the following	command:
 				</p>
 				<verbatim strip="yes"><color rgb="#000088">
-$&gt; ecromedos <i>document</i>
+#&gt; ecromedos <i>document</i>
 				</color>
 				</verbatim>
 				<p>
@@ -141,9 +141,9 @@ $&gt; ecromedos <i>document</i>
 				create an empty folder, change into it,	and call ecromedos from there:
  				</p>
 				<verbatim strip="yes"><color rgb="#000088">
-$&gt; mkdir spool
-$&gt; cd spool
-$&gt; ecromedos ../<i>document</i>
+#&gt; mkdir spool
+#&gt; cd spool
+#&gt; ecromedos ../<i>document</i>
 				</color>
 				</verbatim>
 				<p>
@@ -166,7 +166,7 @@ $&gt; ecromedos ../<i>document</i>
 				line switch to tell ecromedos the desired target format:
 				</p>
 				<verbatim strip="yes"><color rgb="#000088">
-$&gt; ecromedos -f latex <i>document</i>
+#&gt; ecromedos -f latex <i>document</i>
 				</color>
 				</verbatim>
 				<p>
@@ -177,7 +177,7 @@ $&gt; ecromedos -f latex <i>document</i>
 				invoke the &latex; compiler like this:
 				</p>
 				<verbatim strip="yes"><color rgb="#000088">
-$&gt; latex <i>class</i>.tex
+#&gt; latex <i>class</i>.tex
 				</color>
 				</verbatim>
 				<p>
@@ -187,8 +187,8 @@ $&gt; latex <i>class</i>.tex
 				convert the DVI	file to PostScript and PDF:
 				</p>
 				<verbatim strip="yes"><color rgb="#000088">
-$&gt; dvips -Ppdf <i>class</i>.dvi
-$&gt; ps2pdf <i>class</i>.ps
+#&gt; dvips -Ppdf <i>class</i>.dvi
+#&gt; ps2pdf <i>class</i>.ps
 				</color>
 				</verbatim>
 				<p>
@@ -200,8 +200,8 @@ $&gt; ps2pdf <i>class</i>.ps
 				compiled with the <tt>pdflatex</tt> command:
 				</p>
 				<verbatim strip="yes"><color rgb="#000088">
-$&gt; ecromedos -f pdflatex <i>document</i>
-$&gt; pdflatex <i>class</i>.tex
+#&gt; ecromedos -f pdflatex <i>document</i>
+#&gt; pdflatex <i>class</i>.tex
 				</color>
 				</verbatim>
 				<p>
@@ -209,8 +209,8 @@ $&gt; pdflatex <i>class</i>.tex
 				be processed with the unicode-aware &xetex; using the <tt>xelatex</tt> command:
 				</p>
 				<verbatim strip="yes"><color rgb="#000088">
-$&gt; ecromedos -f xelatex <i>document</i>
-$&gt; xelatex <i>class</i>.tex
+#&gt; ecromedos -f xelatex <i>document</i>
+#&gt; xelatex <i>class</i>.tex
 				</color>
 				</verbatim>
 				<p>
