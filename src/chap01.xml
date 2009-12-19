@@ -28,7 +28,7 @@
 			special processing toolchain. Currently, ecromedos supports the target formats
 			XHTML and &latex;, where the latter can be compiled into high-quality PostScript
 			or PDF by use of the &tex;<footnote>More information on &tex; and &latex; can be
-			found on the <i>Comprehensive &tex; Archive Network</i> at
+			found in the <i>Comprehensive &tex; Archive Network</i> at
 			<link url="http://www.ctan.org"><tt>http://&zwsp;www.&zwsp;ctan.&zwsp;org</tt></link>.</footnote>
 			typesetting system.
 			</p>

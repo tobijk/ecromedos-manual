@@ -122,12 +122,13 @@
 				<p>
 					Since you would typically install ecromedos in a location, to which
 				normal system users don't have write access, you should pre-compile the
-				Python source files to bytecode, so that users can benefit from the
-				speed increase this delivers when the application is loaded. To do so,
-				change <i>into</i> the installation	directory and issue the following command:
+				Python source files to bytecode, so that users can benefit from much-improved
+				application start-up times. To do so, change <i>into</i> the installation directory
+				and issue the following command:
 				</p>
  			<verbatim strip="yes"><color rgb="#000088">
-#&gt; find . -name "*.py" -exec python -c "import py_compile; py_compile.compile('{}')" \;
+#&gt; find . -name "*.py" -exec \
+	python -c "import py_compile; py_compile.compile('{}')" \;
 			</color></verbatim>
 			</minisection>
 			<minisection>
@@ -136,14 +137,15 @@
 					Having completed the installation procedure described above, you may now edit
 				the configuration file <tt>ecmds.conf</tt>, which is located in the subdirectory
 				<tt>etc</tt> below the installation folder. ecromedos is designed to be relocatable,
-				so in many cases it should just	work out of the box. However, the variables holding
-				pointers to third-party software that ecromedos relies on may have to be corrected.
-				In particular, check all variables ending in <tt>_bin</tt> or <tt>_dir</tt>.
+				so in many cases it should just	work out of the box. However, the configuration
+				variables holding pointers to third-party software that ecromedos relies on may
+				have to be corrected. In particular, check all variables ending in <tt>_bin</tt>
+				or <tt>_dir</tt>.
 				</p>
 				<p>
 					The value of a configuration variable can be reused in arguments to 
-				other variables by prepending a dollar sign to the name of the variable to be
-				referenced. For instance, if <tt>base_dir</tt> is set to <tt>/opt/ecromedos-x.y.z/</tt>,
+				other variables by prefexing the name of the variable to be	referenced with
+				a dollar sign. For instance, if <tt>base_dir</tt> is set to <tt>/opt/ecromedos-x.y.z/</tt>,
 				then you can set <tt>lib_dir</tt> to <tt>/opt/ecromedos-x.y.z/lib</tt> by
 				simply writing <tt>lib_dir = $base_dir/lib</tt>.
 				</p>
@@ -155,26 +157,32 @@
 		</section>
 		<section>
 			<title>Installing Binary Packages</title>
+			<p>
+				Packages for Debian, Ubuntu and OpenSUSE are provided. Since ecromedos is written
+			in Python, and thus does not need to be compiled or linked against system libraries,
+			it should run on any version of these distros, as long as the dependencies listed in
+			section <ref idref="sect:dependencies"/> are available.
+			</p>
 			<subsection>
 				<title>Debian/GNU and Ubuntu Linux</title>
 				<p>
-					If you are running Debian/GNU or Ubuntu Linux, you can install ecromedos from
-				packages using apt. Insert the following entry into <tt>/etc/&zwsp;apt/&zwsp;sources.list</tt>:
+					If you are running Debian/GNU or Ubuntu Linux, you can install ecromedos via apt.
+					Just insert the following entry into <tt>/etc/&zwsp;apt/&zwsp;sources.list</tt>:
 				</p>
 				<listing>
 					<code bgcolor="#eeeeee" strip="yes">
-deb http://www.ecromedos.net/packages/debian stable contrib
+deb http://www.ecromedos.net/packages/debian debian contrib
 					</code>
 				</listing>
 				<p>
-				Then run
+				Then update the package cache and install ecromedos by saying
 				</p>
 	 			<verbatim strip="yes"><color rgb="#000088">
 #&gt; apt-get update
 #&gt; apt-get install ecromedos
 				</color></verbatim>
 				<p>
-					Optionally the documentation can be installed fromt the package <tt>ecromedos-doc</tt>.
+					The documentation is contained in a separate package <tt>ecromedos-doc</tt>.
 				</p>
 			</subsection>
 		</section>
