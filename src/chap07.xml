@@ -20,7 +20,7 @@
 				The central style definition for XHTML is an old-fashioned
 			CSS stylesheet, wrapped inside an XML container. For users who have previous
 			experience with CSS, most parts of the stylesheet should be straight-forward
-			to figure out. The following subsections pointing out the elements of the
+			to figure out. The following subsections point out the elements of the
 			stylesheet concerning the page layout.
 			</p>
 			<subsection>
@@ -37,7 +37,7 @@
 				<p>
 					marked with a red outline in figure <ref idref="fig:htmlhead"/>. The header
 				elements themselves are arranged in a <tt>table</tt> with style class <tt><b>head</b></tt>,
-				marked by the blue outline in figure.
+				marked by the blue outline.
 				Each element is contained in a separate cell with style class <tt><b>head-<i>element</i></b></tt>,
 				e.g. <tt><b>head-title</b></tt>. The subtitle is set in the same cell as the main title, but
 				wrapped in an extra <tt>div</tt> with style class <tt><b>subtitle</b></tt>, so that it can
@@ -104,7 +104,7 @@
 					The heading at the top of the glossary page is a simple <tt><b>h1</b></tt>
 				element. The heading at the beginning of each glossary section is also an <tt><b>h1</b></tt>
 				with additional style class <tt><b>glsection</b></tt>. The alphabetic quick links
-				at the top, which allow you to quickly jump to certain sections are contained inside
+				at the top, which allow you to jump directly to certain sections are contained inside
 				a <tt>div</tt> with class <tt><b>gllinks</b></tt>. Active links are <tt>spans</tt>
 				of class <tt><b>gllink</b></tt>, and inactive of class <tt><b>glnolink</b></tt>.
 				The horizontal rule between sections has style class <tt><b>glseparator</b></tt>.
