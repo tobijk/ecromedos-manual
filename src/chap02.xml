@@ -2,7 +2,9 @@
 	<chapter>
 		<title><label id="sect:installation"/>Installation</title>
 		<p>
-			This chapter covers the installation of ecromedos from source and binary packages.
+			This chapter covers the installation of ecromedos from source and binary packages. You
+		should be able to run ecromedos on any system on which the dependencies listed below are
+		available.
 		</p>
 		<section>
 			<title>Obtaining the Latest Version</title>
@@ -50,10 +52,12 @@
 				<dd>
 				<p>
 					If you want to produce Postscript or PDF, you need an installation of the
-				&tex; typesetting system. It is recommended that you use &tex; Live 2006 or later,
+				&tex; typesetting system. It is recommended that you use &tex; Live 2007 or later,
 				available from
 				<link url="http://www.tug.org/texlive/"><tt>http://&zwsp;www.&zwsp;tug.&zwsp;org/&zwsp;texlive/</tt></link>.
-				Using the once popular but no longer maintained te&tex; distribution together with
+				Windows users may also want to have a look at the MiK&tex; distribution, available from
+				<link url="http://miktex.org/"><tt>http://&zwsp;miktex.&zwsp;org</tt></link>.
+				Using the once popular but now unmaintained te&tex; distribution together with
 				ecromedos 2 is not recommended.
 				</p>
 				</dd>
