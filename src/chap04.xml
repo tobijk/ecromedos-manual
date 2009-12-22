@@ -14,7 +14,7 @@
 			example:
 			</p>
 			<listing>
-				<code bgcolor="#f2f2f2" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
 					strip="yes"><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 <cocktail alcoholic="yes">
@@ -78,7 +78,7 @@
 			represented by the following tree:
 			</p>
 			<listing>
-				<code bgcolor="#f2f2f2" strip="yes">
+				<code bgcolor="#eeeeee" strip="yes">
 report
   |-head
   |-legal
@@ -301,7 +301,7 @@ report
 			Take a look at the following example:
 			</p>
 			<listing>
-				<code bgcolor="#f2f2f2" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
 					strip="yes"><![CDATA[			
 <chapter>
     <title>The Show about Nothing</title>
@@ -317,7 +317,7 @@ report
 			and <tt><b>pageref</b></tt> to get the page number like this:
 			</p>
 			<listing>
-				<code bgcolor="#f2f2f2" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
 					strip="yes"><![CDATA[
 <chapter>
     <title>About Myself</title>
@@ -352,7 +352,7 @@ report
 			HTML output. Try this example:
 			</p>
 			<listing>
-				<code bgcolor="#f2f2f2" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
 					strip="yes"><![CDATA[
 <p>
     In this episode<marginal>The Summer of George</marginal>,
@@ -429,7 +429,7 @@ report
 			type declaration at the top of your document:
 			</p>
 			<listing>
-				<code bgcolor="#f2f2f2" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
 					strip="yes"><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE report SYSTEM "http://www.ecromedos.net/dtd/2.0/ecromedos.dtd">
