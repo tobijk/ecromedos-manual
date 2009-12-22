@@ -38,7 +38,7 @@ fi
 
 if [ $output = 'all' ] || [ $output = 'pdf' ]; then
 	(cd tmp &&
-	ecromedos -fxelatex -s ../style/latex-style.xml ../src/manual.xml &&
+	ecromedos -fxelatex -s ../style/latex-style.xml --texlive=2007 ../src/manual.xml &&
 	for i in `seq 3`; do
 		xelatex book.tex
 	done &&
