@@ -53,7 +53,7 @@
 	</book>
 	<report>
 		<document-font>\renewcommand{\rmdefault}{\sfdefault}\normalfont</document-font>
-		<document-options>pointednumbers,automark,pagesize,headinclude,footexclude,bibtotoc,headsepline</document-options>
+		<document-options>pointednumbers,automark,pagesize,headinclude,footexclude,bibtotoc</document-options>
 		<document-title>\large\sffamily\bfseries</document-title>
 		<document-subtitle>\normalsize</document-subtitle>
 		<sectioning-title>\normalsize\sffamily\bfseries</sectioning-title>
@@ -83,8 +83,8 @@
 			\chead[]{}
 			\ohead[]{\headmark}
 			\ifoot[]{}
-			\cfoot[]{}
-			\ofoot[{\rule[-1pt]{5pt}{9pt}} \pagemark]{\rule[-1pt]{5pt}{9pt} \pagemark}
+			\cfoot[{\rule[-1pt]{5pt}{9pt}} \pagemark]{\rule[-1pt]{5pt}{9pt} \pagemark}
+			\ofoot[]{}
 		</page-head-fields>
 	</report>
 	<article>
