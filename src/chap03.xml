@@ -31,7 +31,7 @@
 				and how	they are rendered when generating printable output.
 				</p>
 				<dl>
-					<dt><tt><b>article</b></tt></dt>
+					<dt>article</dt>
 					<dd>
 						<idxterm group="ecml"><item>article</item></idxterm>
 
@@ -41,7 +41,7 @@
 					elements <tt><b>section</b></tt>, <tt><b>subsection</b></tt> and
 					<tt><b>subsubsection</b></tt>.
 					</dd>
-					<dt><tt><b>book</b></tt></dt>
+					<dt>book</dt>
 					<dd>
 						<idxterm group="ecml"><item>book</item></idxterm>
 
@@ -51,7 +51,7 @@
 					Chapters start on odd-numbered pages and may be further grouped into
 					<tt><b>parts</b></tt>.
 					</dd>
-					<dt><tt><b>report</b></tt></dt>
+					<dt>report</dt>
 					<dd>
 						<idxterm group="ecml"><item>report</item></idxterm>
 

@@ -132,8 +132,6 @@
 			<subsection>
 				<title>Basic Tables</title>
 				<p>
-					<idxterm group="ecml"><item>table</item><subitem>basic exmaple</subitem></idxterm>
-
 					Tables are likely the most complicated part of ECML. But once you know the
 				ins and outs of the ECML table model, you will appreciate the ease with which
 				you can create good-looking tables in your documents. To get you started, take a
