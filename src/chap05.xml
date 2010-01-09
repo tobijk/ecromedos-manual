@@ -275,7 +275,7 @@
 					The thickness of the grid rules may be specified with the attributes
 					<tt><b>print-rulewidth</b></tt> and <tt><b>screen-rulewidth</b></tt>.
 					The color of the lines can be controlled via the <tt><b>rulecolor</b></tt>
-					attribute. Color values must be given as an HTML-style RGB triplet
+					attribute. Color values must be given as a CSS-style RGB triplet
 					in hexadecimal notation. So in this example, the table rules would be
 					black, which is also the default.
 				</p>

@@ -359,6 +359,9 @@
 					<idxterm group="ecml"><item>article</item><subitem>div</subitem></idxterm>
 					<idxterm group="ecml"><item>book</item><subitem>div</subitem></idxterm>
 					<idxterm group="ecml"><item>report</item><subitem>div</subitem></idxterm>
+					<idxterm group="ecml"><item>article</item><subitem>parskip</subitem></idxterm>
+					<idxterm group="ecml"><item>book</item><subitem>parskip</subitem></idxterm>
+					<idxterm group="ecml"><item>report</item><subitem>parskip</subitem></idxterm>
 
 					The attributes <tt><b>papersize</b></tt>, <tt><b>bcor</b></tt> and
 				<tt><b>div</b></tt>, which may be set on the document's root element, are passed
@@ -389,6 +392,13 @@
 				rectangles of equal size, which serve as the basic units for splitting the page
 				into margins and text body. The greater you choose <tt><b>div</b></tt>, the
 				larger the text area will be. Try values between eight and 16.
+				</p>
+				<p>
+				Use the <tt><b>parskip</b></tt> attribute to specify the amount of horizontal
+				space to insert in between paragraphs of text. You have the choice between
+				<tt>full</tt> for a full line, <tt>half</tt> for half a line (default) or
+				<tt>off</tt> to have no skip in between paragraphs. In the last case, the
+				first line of each paragraph will be indented.
 				</p>
 			</subsection>
 		</section>

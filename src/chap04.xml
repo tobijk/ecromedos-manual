@@ -76,6 +76,11 @@
 			produced that way will contain a complete skeleton for a document of the chosen
 			document class. For a book or report the overall structure of a document can be
 			represented by the following tree:
+
+				<idxterm group="ecml"><item>chapter</item></idxterm>
+				<idxterm group="ecml"><item>section</item></idxterm>
+				<idxterm group="ecml"><item>subsection</item></idxterm>
+				<idxterm group="ecml"><item>subsubsection</item></idxterm>			
 			</p>
 			<listing>
 				<code bgcolor="#eeeeee" strip="yes">
@@ -116,25 +121,86 @@ report
 				</code>
 			</listing>
 			<p>
+				<idxterm group="ecml"><item>abstract</item></idxterm>
+				<idxterm group="ecml"><item>glossary</item></idxterm>
+
 				This tree is greatly simplified and incomplete, because naturally any type of
 			sectioning element, with the exception of <tt><b>subsubsection</b></tt>, can
-			contain multiple subsections.
-			</p>
-			<p>
-				<idxterm group="ecml"><item>preface</item></idxterm>
-				<idxterm group="ecml"><item>abstract</item></idxterm>
-				<idxterm group="ecml"><item>legal</item></idxterm>
-				<idxterm group="ecml"><item>glossary</item></idxterm>
-				<idxterm group="ecml"><item>section</item></idxterm>
-
-				When using the article class, the <tt><b>preface</b></tt> element is
-			replaced by <tt><b>abstract</b></tt> and the elements <tt><b>legal</b></tt>, 
+			contain multiple subordinate sections. When using the article class, the <tt><b>preface</b></tt>
+			element is replaced by <tt><b>abstract</b></tt> and the elements <tt><b>legal</b></tt>,
 			<tt><b>glossary</b></tt> and <tt><b>index</b></tt> are not available. Furthermore,
 			the top-level sectioning element in an article is the <tt><b>section</b></tt>.
 			</p>
+
+			<minisection>
+				<title>Document Header And Legal Section</title>
+				<p>
+				The very first child element of the root element is always the document
+				header section, which has the following structure:
+
+					<idxterm group="ecml"><item>head</item></idxterm>
+					<idxterm group="ecml"><item>subject</item></idxterm>
+					<idxterm group="ecml"><item>title</item></idxterm>
+					<idxterm group="ecml"><item>subtitle</item></idxterm>
+					<idxterm group="ecml"><item>author</item></idxterm>
+					<idxterm group="ecml"><item>date</item></idxterm>
+					<idxterm group="ecml"><item>publisher</item></idxterm>
+				</p>
+				<listing>
+					<code bgcolor="#eeeeee" syntax="xml" strip="yes" colorscheme="xml-editor"><![CDATA[
+<head>
+	<subject>Special Subject, e.g. Ph.D. Thesis</subject>
+	<title>Document Main Title</title>
+	<subtitle>Subtitle</title>
+	<author>Author 1</author>
+	<author>Author 2</author>
+	...
+	<date>Date of Publication</date>
+	<publisher>Name of Publisher</publisher>
+</head>
+					]]></code>
+				</listing>
+				<p>
+					<idxterm group="ecml"><item>legal</item></idxterm>
+
+				Contrary to HTML, where the order of the header elements can be arbitrary,
+				in ECML the order is fixed.	In books and reports the header can be
+				followed by an optional <tt><b>legal</b></tt> section, which consists of
+				paragraphs of text and which is meant to hold copyright information and
+				related stuff. The legal section should generally fit on one single page
+				of whatever paper format you have chosen for printable output.
+				</p>
+			</minisection>
+			<minisection>
+				<title>The <tt>preface</tt> Element</title>
+				<p>
+					<idxterm group="ecml"><item>preface</item></idxterm>
+
+				In books and reports you may use the <tt><b>preface</b></tt> element to
+				set an abitrary number of introductory sections right after the document
+				head and the table of contents. The title of a preface will not be
+				numbered and will not appear in the table of contents of printable
+				output. A preface may contain paragraphs of text, as well as block elements,
+				such as figures and tables. It must not contain any deeper sections
+				except for minisections. If you feel, you need to divide your preface,
+				you should consider making it a chapter.
+				</p>
+			</minisection>
+			<minisection>
+				<title>Minisections</title>
+				<p>
+					<idxterm group="ecml"><item>minisection</item></idxterm>
+
+				A <tt><b>minisection</b></tt> is a special kind of section, that
+				can occur anywhere in the section hierarchy. The title of a
+				minisection will <tt>not</tt> be numbered and will <tt>not</tt> receive
+				an entry in	the table of contents.
+				</p>
+			</minisection>
 		</section>
+
 		<section>
-			<title>Basic Text Formatting</title>
+			<title>Formatting Text</title>
 			<p>
 				<idxterm group="ecml" sortkey="I"><item>i</item></idxterm>
 				<idxterm group="ecml" sortkey="B"><item>b</item></idxterm>
@@ -155,60 +221,72 @@ report
 				<caption>Using text-formatting elements</caption>
 				<shortcaption>Using text-formatting elements (continued)</shortcaption>
 				<colgroup>
-					<col width="60%"/>
-					<col width="40%"/>
+					<col width="63%"/>
+					<col width="37%"/>
 				</colgroup>
 				<th frame="rowsep">
 					<td><b>Markup</b></td>
 					<td><b>Resulting Output</b></td>
 				</th>
-				<tr>
+				<tr valign="middle">
 					<td><tt>&lt;u&gt;underlined text&lt;/u&gt;</tt></td>
 					<td><u>underlined text</u></td>
 				</tr>
-				<tr>
+				<tr valign="middle">
 					<td><tt>&lt;i&gt;text in italics&lt;/i&gt;</tt></td>
 					<td><i>text in italics</i></td>
 				</tr>
-				<tr>
+				<tr valign="middle">
 					<td><tt>&lt;b&gt;bold-faced letters&lt;/b&gt;</tt></td>
 					<td><b>bold-faced letters</b></td>
 				</tr>
-				<tr>
+				<tr valign="middle">
 					<td><tt>&lt;b&gt;&lt;i&gt;bold face and italics&lt;/i&gt;&lt;/b&gt;</tt></td>
 					<td><b><i>bold face and italics</i></b></td>
 				</tr>
-				<tr>
+				<tr valign="middle">
 					<td><tt>&lt;tt&gt;text in typewriter letters&lt;/tt&gt;</tt></td>
 					<td><tt>text in typewriter letters</tt></td>
 				</tr>
-				<tr>
+				<tr valign="middle">
+					<td><tt>Super&lt;sup&gt;script&lt;/sup&gt;</tt></td>
+					<td>Super<sup>script</sup></td>
+				</tr>
+				<tr valign="middle">
+					<td><tt>Sub&lt;sub&gt;script&lt;/sub&gt;</tt></td>
+					<td>Sub<sub>script</sub></td>
+				</tr>
+				<tr valign="middle">
 					<td><tt>&lt;xx-small&gt;text in XXS&lt;/xx-small&gt;</tt></td>
 					<td><xx-small>text in XXS</xx-small></td>
 				</tr>
-				<tr>
+				<tr valign="middle">
 					<td><tt>&lt;x-small&gt;text in XS&lt;/x-small&gt;</tt></td>
 					<td><x-small>text in XS</x-small></td>
 				</tr>
-				<tr>
+				<tr valign="middle">
 					<td><tt>&lt;small&gt;small letters&lt;/small&gt;</tt></td>
 					<td><small>small letters</small></td>
 				</tr>
-				<tr>
-					<td><tt>&lt;medium&gt;regular size&lt;medium&gt;</tt></td>
+				<tr valign="middle">
+					<td><tt>&lt;medium&gt;regular size&lt;/medium&gt;</tt></td>
 					<td><medium>regular size</medium></td>
 				</tr>
-				<tr>
-					<td><tt>&lt;large&gt;large letters&lt;large&gt;</tt></td>
+				<tr valign="middle">
+					<td><tt>&lt;large&gt;large letters&lt;/large&gt;</tt></td>
 					<td><large>large letters</large></td>
 				</tr>
-				<tr>
-					<td><tt>&lt;x-large&gt;text in XL&lt;x-large&gt;</tt></td>
+				<tr valign="middle">
+					<td><tt>&lt;x-large&gt;text in XL&lt;/x-large&gt;</tt></td>
 					<td><x-large>text in XL</x-large></td>
 				</tr>
-				<tr>
-					<td><tt>&lt;xx-large&gt;text in XXL&lt;xx-large&gt;</tt></td>
+				<tr valign="middle">
+					<td><tt>&lt;xx-large&gt;text in XXL&lt;/xx-large&gt;</tt></td>
 					<td><xx-large>text in XXL</xx-large></td>
+				</tr>
+				<tr valign="middle">
+					<td><tt>&lt;color rgb="#880000"&gt;text in red letters&lt;/color&gt;</tt></td>
+					<td><color rgb="#dd0000">text in red letters</color></td>
 				</tr>
 			</table>
 			<p>
@@ -224,15 +302,27 @@ report
 			<tt><b>xx-small</b></tt>, <tt><b>x-small</b></tt>, <tt><b>small</b></tt>,
 			<tt><b>medium</b></tt>, <tt><b>large</b></tt>, <tt><b>x-large</b></tt> and
 			<tt><b>xx-large</b></tt> that let you control the font size. However, there
-			should hardly ever be a reason to change the font size explicitely. Table
-			<ref idref="tbl:textformatting"/> shows a series of examples on text formatting.
+			should hardly ever be a reason to change the font size explicitely. Use the
+			elements <tt><b>sup</b></tt> and <tt><b>sub</b></tt> in order to set text in
+			super or supscript.
+
+				<idxterm group="ecml"><item>sup</item></idxterm>
+				<idxterm group="ecml"><item>sub</item></idxterm>
 			</p>
 			<p>
-				You may have noticed that this is one of the few areas where the ecromedos
+				<idxterm group="ecml"><item>color</item></idxterm>
+				<idxterm group="ecml"><item>color</item><subitem>rgb</subitem></idxterm>
+
+			You can color text with the <tt><b>color</b></tt> element as shown in table
+			<ref idref="tbl:textformatting"/>. The <tt><b>rgb</b></tt> attribute expects
+			a color value in CSS-style hexadecimal notation.
+			</p>
+			<p>
+			You may have noticed that formatting text is one of the few areas where the ecromedos
 			Markup Language (ECML) isn't purely semantic. If that bothers you, just pretend
 			<tt><b>i</b></tt> stood for <i>emphasis</i> and discard the other elements.
-			Alternatively, you could develop your own, completely semantic markup language
-			on top of ECML.
+			Alternatively, you could use these features to develop your own, specialized
+			markup language on top of ECML, which is very much encouraged!
 			</p>
 		</section>
 		<section>
@@ -285,7 +375,7 @@ report
 			page XYZ</i></qq>. However, at the time of writing your markup, you cannot tell
 			on which page the section you are referring to will actually be printed. The
 			solution is to label the locations you wish to reference and let ecromedos take
-			care of filling in the correct values whenever it encounters a reference to a
+			care of filling in the correct number whenever it encounters a reference to a
 			label in your document<footnote>Depending on the target format, ecromedos may
 			actually delegate the task of filling in cross-references to the formatting
 			subsystem, such as is the case for &latex; output.</footnote>.
