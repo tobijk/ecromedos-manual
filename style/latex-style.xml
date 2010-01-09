@@ -83,7 +83,7 @@
 			\chead[]{}
 			\ohead[]{\headmark}
 			\ifoot[]{}
-			\cfoot[{\rule[-1pt]{5pt}{9pt}} \pagemark]{\rule[-1pt]{5pt}{9pt} \pagemark}
+			\cfoot[\pagemark]{\pagemark}
 			\ofoot[]{}
 		</page-head-fields>
 	</report>
