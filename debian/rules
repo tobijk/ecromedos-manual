@@ -1,0 +1,65 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	touch configure-stamp
+
+build: build-stamp
+build-stamp: configure-stamp  
+	dh_testdir
+	mkdir tmp html pdf
+	# make pdf
+	cd tmp && ecromedos -fxelatex -s ../style/latex-style.xml --texlive=2007 ../src/manual.xml
+	cd tmp && xelatex report.tex && xelatex report.tex && xelatex report.tex
+	cp tmp/report.pdf pdf/manual.pdf
+	# make xhtml
+	cd html && ecromedos -fxhtml ../src/manual.xml
+	touch $@
+
+clean: 
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	rm -fr tmp pdf html
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+
+	for dir in html pdf src; do \
+		if [ -d $$dir ]; then \
+			cp -a "$$dir" $(CURDIR)/debian/ecromedos-doc/usr/share/doc/ecromedos-doc/; \
+		fi; \
+	done
+
+# Build architecture-independent files here.
+binary-indep: build install
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs 
+	dh_installdocs
+	dh_installexamples
+#	dh_install
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

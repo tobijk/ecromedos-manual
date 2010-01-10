@@ -1,0 +1,17 @@
+Source: ecromedos-doc
+Section: doc
+Priority: extra
+Maintainer: Tobias Koch <maintainer@ecromedos.net>
+Build-Depends: debhelper (>= 7), ecromedos (>= 2.0)
+Standards-Version: 3.7.3
+Homepage: http://ecromedos.net
+
+Package: ecromedos-doc
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Docs for the ecromedos XML document authoring system
+ ecromedos is an integrated solution for XML-based publishing in print
+ and on the Web. It is primarily targeted at, but not limited to, the
+ creation of technical documentation in the field of Computer Science.
+ .
+ This package contains the documentation.
