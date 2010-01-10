@@ -1,6 +1,6 @@
-ecromedos-doc (2.0-1) unstable; urgency=low
+ecromedos-doc (2.0r0-1) unstable; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release 
 
- -- Tobias Koch <tobias@neil.e3sec.com>  Sun, 10 Jan 2010 04:35:35 +0100
+ -- Tobias Koch <tobias@ecromedos.net>  Sun, 10 Jan 2010 04:19:25 +0100
 
