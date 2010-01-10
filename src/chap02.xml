@@ -176,7 +176,7 @@
 				</p>
 				<listing>
 					<code bgcolor="#eeeeee" strip="yes">
-deb http://www.ecromedos.net/packages/debian debian contrib
+deb http://ecromedos.net/packages/debian debian contrib
 					</code>
 				</listing>
 				<p>
@@ -189,6 +189,32 @@ deb http://www.ecromedos.net/packages/debian debian contrib
 				<p>
 					The documentation is contained in a separate package <tt>ecromedos-doc</tt>.
 				</p>
+			</subsection>
+			<subsection>
+				<title>OpenSUSE Linux</title>
+				<p>
+					To comfortably install ecromedos on OpenSUSE, add the following repository
+				URL to your repository sources:
+				</p>
+				<listing>
+					<code bgcolor="#eeeeee" strip="yes">
+http://ecromedos.net/packages/opensuse
+					</code>
+				</listing>
+				<p>
+					You can either do this from YaST or on the command line using <tt>zypper</tt>
+				like this:
+				</p>
+	 			<verbatim strip="yes"><color rgb="#000088">
+#&gt; zypper addrepo -c -f http://ecromedos.net/packages/opensuse/ ecromedos2
+#&gt; zypper install ecromedos
+				</color></verbatim>
+				<p>
+				And if you also want to install the documentation:
+				</p>
+	 			<verbatim strip="yes"><color rgb="#000088">
+#&gt; zypper install ecromedos-doc
+				</color></verbatim>
 			</subsection>
 		</section>
 	</chapter>
