@@ -34,7 +34,7 @@ install: build
 	dh_clean -k 
 	dh_installdirs
 
-	for dir in html pdf src; do \
+	for dir in html pdf; do \
 		if [ -d $$dir ]; then \
 			cp -a "$$dir" $(CURDIR)/debian/ecromedos-doc/usr/share/doc/ecromedos-doc/; \
 		fi; \
