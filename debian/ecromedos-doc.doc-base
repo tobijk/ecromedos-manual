@@ -1,9 +1,9 @@
 Document: ecromedos-doc
 Title: ecromedos 2 - Users' Manual
 Author: Tobias Koch <tobias@ecromedos.net>
-Abstract: This users' manual explains how to use the
+Abstract: This manual explains how to use the
  ecromedos 2 XML document authoring system.
-Section: doc
+Section: Text
 
 Format: PDF
 Files: /usr/share/doc/ecromedos-doc/pdf/manual.pdf
@@ -11,5 +11,4 @@ Files: /usr/share/doc/ecromedos-doc/pdf/manual.pdf
 Format: HTML
 Index: /usr/share/doc/ecromedos-doc/html/index.html
 Files: /usr/share/doc/ecromedos-doc/html/*.html
-
 
