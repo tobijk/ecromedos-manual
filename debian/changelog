@@ -1,3 +1,9 @@
+ecromedos-doc (2.0r1-1) unstable; urgency=low
+
+  * Added instructions for package install on OpenSUSE
+
+ -- Tobias Koch <tobias@ecromedos.net>  Sun, 10 Jan 2010 21:21:00 +0100
+
 ecromedos-doc (2.0r0-1) unstable; urgency=low
 
   * Initial release 
