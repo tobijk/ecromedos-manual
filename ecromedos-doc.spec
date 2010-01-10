@@ -21,11 +21,14 @@ This package contains the documentation.
 %build
 mkdir tmp html pdf
 # make pdf
-cd tmp && ecromedos -fxelatex -s ../style/latex-style.xml ../src/manual.xml
-cd tmp && xelatex report.tex && xelatex report.tex && xelatex report.tex
-cp tmp/report.pdf pdf/manual.pdf
+cd tmp
+ecromedos -fxelatex -s ../style/latex-style.xml ../src/manual.xml
+xelatex report.tex
+xelatex report.tex
+xelatex report.tex
+cp report.pdf ../pdf/manual.pdf
 # make xhtml
-cd html && ecromedos -fxhtml ../src/manual.xml
+cd ../html && ecromedos -fxhtml ../src/manual.xml
 
 %install
 rm -rf $RPM_BUILD_ROOT
