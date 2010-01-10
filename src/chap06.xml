@@ -22,8 +22,6 @@
 		<section>
 			<title><label id="sect:glossaries"/>Creating a Glossary</title>
 			<p>
-				<idxterm group="ecml"><item>make-glossary</item></idxterm>
-
 				Creating a glossary can be as easy as pulling out your magic wand and saying
 			<tt><b>make-glossary</b></tt>. If you are afraid, that spell might fire backwards,
 			you can also create your glossary manually instead.
