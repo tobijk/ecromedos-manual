@@ -93,16 +93,16 @@
         </head>
         <make-toc depth="3" lof="no" lot="no" lol="no"/>
 
-		...
-		
+        ...
+
         <chapter>
                 <title>Chapter Title</title>
-             	<p>
-				First paragraph in first chapter...
+                <p>
+                First paragraph in first chapter...
                 </p>
         </chapter>
 
-		...
+        ...
 
 </report>
 					]]></code>
@@ -110,7 +110,7 @@
 				<p>
 					Even if you are not yet familiar with the ecromedos Markup Language, you
 				should be able to interpret the general structure of the markup. For now, you
-				don't need to know the details. You will dive more deeply into document	writing
+				don't need to know the details. You will dive deeper into document writing
 				in chapter <ref idref="sect:writingdocuments"/>.
 				</p>
 			</subsection>
@@ -193,7 +193,7 @@
 				</verbatim>
 				<p>
 					The first command will generate Postscript output from the DVI file and the
-				second command will turn the Postscript into PDF. Starting with ecromedos 2.0.0,
+				second command will turn the Postscript into PDF. Starting with ecromedos 2.0,
 				you can take advantage of the fact that &tex; can produce PDF directly through
 				the <i>pdftex</i> driver. So instead of taking the detour over an intermediate
 				Postscript file, you can instruct ecromedos to produce output that can be
@@ -206,7 +206,7 @@
 				</verbatim>
 				<p>
 					In addition, there is some preliminary support for generating output that can
-				be processed with the unicode-aware &xetex; using the <tt>xelatex</tt> command:
+				be processed with the Unicode-aware &xetex; using the <tt>xelatex</tt> command:
 				</p>
 				<verbatim strip="yes"><color rgb="#000088">
 #&gt; ecromedos -f xelatex <i>document</i>
@@ -294,7 +294,7 @@
 					Here is an example on how it works. When you write a book or report without
 				making use of the <tt><b>part</b></tt> element, setting
 				<tt><b>secsplitdepth</b></tt> to 1 will result in each chapter being written to
-				a separate output file. The level count always starts at zero. So if, one day,
+				a separate file. The level count always starts at zero. So if, one day,
 				you decide to group the chapters into parts, leaving
 				<tt><b>secsplitdepth</b></tt> at 1 means that the document is now split at the
 				parts' level. If you still want each chapter to go to a separate
@@ -346,6 +346,18 @@
 				of Figures</qq>, <qq>List of Tables</qq> or <qq>List of Listings</qq>,
 				respectively.
 				</p>
+				<minisection>
+					<title>Section Overviews</title>
+					<p>
+						There is some preliminary support
+					for per-section overviews. To generate a mini table of contents for a section, simply
+					put a <tt><b>make-overview</b></tt> element right at the beginning of the section.
+					There is one caveat however: &latex; only supports section overviews for the base
+					sections, i.e. in the book and report classes you can have section overviews for
+					parts and chapters but not for sections and subsections. For HTML this limitation
+					does not exist.
+					</p>
+				</minisection>
 			</subsection>
 			<subsection>
 				<title>Options Specific to Printable Output</title>

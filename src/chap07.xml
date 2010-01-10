@@ -27,8 +27,8 @@
 				<title>Frontpage and Table of Contents</title>
 				<p>
 					The document head, carrying for example the title, authors, date of
-				publication, publisher and copyright details, is set inside a <tt>div</tt>
-				section with the id <tt><b>#head</b></tt>,
+				publication and publisher is set inside a <tt>div</tt>
+				section with id <tt><b>#head</b></tt>,
 				</p>
 				<figure align="left" border="yes" id="fig:htmlhead">
 					<caption>The title page header elements.</caption>
@@ -55,7 +55,7 @@
 				<tt><b>listof-heading</b></tt>, respectively. The individual entries in the TOC are
 				<tt>divs</tt> with style classes <tt><b>toc-mainitem</b></tt> or <tt><b>toc-subitem</b></tt>,
 				the empty elements in between sections have style class <tt><b>toc-spacer</b></tt>.
-				The indentation of the TOC entries cannot be influenced through the CSS stylesheet.
+				The indentation of the entries cannot be influenced through the CSS stylesheet.
 				</p>
 			</subsection>
 			<subsection>
@@ -64,7 +64,7 @@
 					The page contents are wrapped inside a <tt>div</tt> with id <tt><b>#content</b></tt>,
 				marked with a red outline in figure <ref idref="fig:htmlpage"/>. The main canvas and
 				margin are table cells of classes <tt><b>textbody</b></tt> and <tt><b>margin</b></tt>,
-				in a table with style class <tt><b>content</b></tt>, marked with a blue outline.
+				part of a table with style class <tt><b>content</b></tt>, marked with a blue outline.
 				</p>
 				<figure  align="left" border="yes" id="fig:htmlpage">
 					<caption>The main canvas and margin.</caption>
@@ -133,9 +133,10 @@
 		<section>
 			<title>Changing the Look of &latex;-based Output</title>
 			<p>
-				In the style definition file for &latex; you will find a separate section for each
-			of the main document classes, each of which contains a list of stylable elements for that
-			document class. Some basic knowledge of &latex; will be required to be able to edit these.
+				In the style definition file for &latex;, you will find a separate section for each
+			of the supported document classes, with each section containing a list of stylable elements
+			for the	corresponding document class. Some basic knowledge of &latex; will be required to be able
+			to edit these.
 			</p>
 			<p>
 				The following style elements exist:
@@ -145,7 +146,7 @@
 				<dd>
 					<p>
 					The package options that are passed through to the <tt>caption</tt> &latex;
-					package. Please consult <cite idref="bib:CAPTION"/>, page 5 ff., for more
+					package. Please consult <cite idref="bib:CAPTION"/>, pages 5 ff., for more
 					information on the available options.
 					</p>
 				</dd>
@@ -222,7 +223,7 @@
 				<dd>
 					<p>
 					The page style to be used for pages starting a keyword index (see 
-					<cite idref="bib:KOMASCR"/>, page 66 ff.). Use <tt>emtpy</tt> for a page without any
+					<cite idref="bib:KOMASCR"/>, pages 66 ff.). Use <tt>emtpy</tt> for a page without any
 					decorations, <tt>scrplain</tt>	for a page that is undecorated but has a
 					page number, or <tt>scrheadings</tt> for a page with page number and column titles.
 					</p>
@@ -257,7 +258,7 @@
 					<p>
 					This element is meant to contain the definitions of the column titles for pages
 					of style <tt>scrplain</tt> and <tt>scrheadings</tt>. For a detailed description
-					of the contained elements, consult <cite idref="bib:KOMASCR"/>, page 127 ff.
+					of the contained elements, consult <cite idref="bib:KOMASCR"/>, pages 127 ff.
 					</p>
 				</dd>
 				<dt>page-number</dt>
@@ -270,7 +271,7 @@
 				<dd>
 					<p>
 					Sets the default page style to one of <tt>empty</tt>, <tt>scrplain</tt>,
-					<tt>scrheadings</tt> (see <cite idref="bib:KOMASCR"/>, page 126 ff.).
+					<tt>scrheadings</tt> (see <cite idref="bib:KOMASCR"/>, pages 126 ff.).
 					</p>
 				</dd>
 				<dt>paragraph-title</dt>
@@ -289,7 +290,7 @@
 				<dd>
 					<p>
 					The page style to be used for pages starting a new part (see 
-					<cite idref="bib:KOMASCR"/>, page 66 ff.). Use <tt>emtpy</tt> for a page without any
+					<cite idref="bib:KOMASCR"/>, pages 66 ff.). Use <tt>emtpy</tt> for a page without any
 					decorations, <tt>scrplain</tt>	for a page that is undecorated but has a
 					page number, or <tt>scrheadings</tt> for a page with page number and column titles.
 					</p>
@@ -329,7 +330,7 @@
 				<dd>
 					<p>
 					The page style to be used for the title page (see 
-					<cite idref="bib:KOMASCR"/>, page 66 ff.). Use <tt>emtpy</tt> for a page without any
+					<cite idref="bib:KOMASCR"/>, pages 66 ff.). Use <tt>emtpy</tt> for a page without any
 					decorations, <tt>scrplain</tt>	for a page that is undecorated but has a
 					page number, or <tt>scrheadings</tt> for a page with page number and column titles.					
 					</p>

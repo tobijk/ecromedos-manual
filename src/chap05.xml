@@ -29,7 +29,7 @@
 				with the <tt><b>ol</b></tt> element. List items are enclosed inside <tt><b>li</b></tt>
 				tags. Both list types may be nested within each other up to four levels deep.
 				Starting with ecromedos version 2, list items may contain arbitrary block
-				elements. But please note that a block element inside a list <i>cannot</i> have
+				elements. But please note that a block element inside a list <i>must not</i> bear
 				a caption. The following listing shows an example of a nested list structure:
 				</p>
 				<listing>
@@ -115,7 +115,7 @@
 				<p>
 					While the <tt><b>dt</b></tt> element may contain only simple text and
 				text-formatting elements, the <tt><b>dd</b></tt> element may contain arbitrary
-				block elements.
+				sequences of block elements.
 				</p>
 			</subsection>
 		</section>
@@ -124,7 +124,7 @@
 			<p>
 				Starting with version 2, ecromedos features a complete table model with
 			table captions, cells that can span multiple columns, nested subtables and minute
-			control over the visibility of the table borders. The language elements for setting
+			control over the visibility of the table grid. The language elements for setting
 			tables were largely borrowed from HTML. However, there are some subtle differences
 			between the HTML and the ECML table model, which will become apparent in the course
 			of this section.
@@ -134,7 +134,7 @@
 				<p>
 					Tables are likely the most complicated part of ECML. But once you know the
 				ins and outs of the ECML table model, you will appreciate the ease with which
-				you can create good-looking tables in your documents. To get you started, take a
+				you can create good-looking tables in your documents. To get started, take a
 				look at the following example of a basic <m>4\ x\ 4</m> table:
 				</p>
 				<listing>
@@ -195,7 +195,7 @@
 				<tt><b>colgroup</b></tt> element describes the column layout. For each column
 				in the table, there must be	a <tt><b>col</b></tt> element specifying the relative
 				width of the column. Make sure that these total up to 100%, or you may experience
-				strange effects.
+				strange effects!
 				</p>
 				<p>
 					<idxterm group="ecml"><item>th</item></idxterm>
@@ -275,7 +275,7 @@
 					The thickness of the grid rules may be specified with the attributes
 					<tt><b>print-rulewidth</b></tt> and <tt><b>screen-rulewidth</b></tt>.
 					The color of the lines can be controlled via the <tt><b>rulecolor</b></tt>
-					attribute. Color values must be given as a CSS-style RGB triplet
+					attribute. Color values must be given as CSS-style RGB triplets
 					in hexadecimal notation. So in this example, the table rules would be
 					black, which is also the default.
 				</p>
@@ -301,7 +301,7 @@
 					]]></code>
 				</listing>
 				<p>
-					Please note that colored cells may overlap with dark grid rules when
+					Please note that colored cells may appear to overlap with dark grid rules when
 				viewing	PostScript or PDF documents on screen. Therefore, you should avoid
 				using colored cells and grid rules together or instead use white rules when
 				working with colored tables.
@@ -417,13 +417,13 @@
 			</subsection>
 		</section>
 		<section>
-			<title>Displaying Figures</title>
+			<title>Embedding Graphics</title>
 			<p>
 				<idxterm group="ecml"><item>figure</item></idxterm>
 				<idxterm group="ecml"><item>figure</item><subitem>id</subitem></idxterm>
 				<idxterm group="ecml"><item>caption</item></idxterm>
 
-				Figures are incorporated into a document via the <tt><b>figure</b></tt> element.
+				Graphical figures are incorporated into a document via the <tt><b>figure</b></tt> element.
 			You can give figures a <tt><b>caption</b></tt> and an <tt><b>id</b></tt>. A figure
 			that carries an id attribute can be referenced via the <tt><b>ref</b></tt> and
 			<tt><b>pageref</b></tt> elements (see Section <ref idref="sect:xreferences"/>).
@@ -446,7 +446,7 @@
 				<idxterm group="ecml"><item>img</item></idxterm>
 				<idxterm group="ecml"><item>img</item><subitem>src</subitem></idxterm>
 
-				With the <tt><b>src</b></tt> attribute you specify the location of the image
+				With the <tt><b>src</b></tt> attribute, you specify the location of the image
 			on your harddisk. If the image's file format is not suitable for use with a
 			particular output format, the document pre-processor will automatically convert
 			it. For instance, when generating &latex; output, raster images are automatically
@@ -474,6 +474,15 @@
 			thin black border around your figure, set the <tt><b>border</b></tt> attribute to
 			<tt>yes</tt>.
 			</p>
+			<p>
+				There is experimental support for letting the text flow around figures. Simply place
+			the <tt><b>figure</b></tt> element <i>inside</i> a paragraph like an inline element and
+			make sure that you explicitely set the figure's alignment to <tt>left</tt> or <tt>right</tt>.
+			</p>
+			<p>
+			You may also load small images or icons into the running text using the <tt><b>img</b></tt>
+			element as an inline element.
+			</p>
 		</section>
 		<section>
 			<title>About Floating Objects</title>
@@ -488,8 +497,8 @@
 				<idxterm group="ecml"><item>figure</item><subitem>float</subitem></idxterm>
 				<idxterm group="ecml"><item>table</item><subitem>float</subitem></idxterm>
 
-				This is visually unpleasant and in addition bloats your document unnecessarily.
-			As a soluting, you can turn figures or tables into <i>floating objects</i> by setting
+				This is not only visually unpleasant, but also bloats your document unnecessarily.
+			As a solution, you can turn figures or tables into <i>floating objects</i> by setting
 			the <tt><b>float</b></tt> attribute on the main element to <tt>yes</tt>. Making an
 			object float means that you give the formatting engine (i.e. &latex;) permission to
 			move it to a different location in the text in order to warrant optimal text flow
@@ -504,7 +513,7 @@
 
 				You can use the <tt><b>verbatim</b></tt> element when you need to print scripts
 			and want whitespace to be preseved. Text inside a verbatim tag will
-			be printed in typewriter letters and whitespace will be displayed 1:1 just
+			be printed in typewriter letters and whitespace will be displayed just
 			as it appeared in your editor.
 			</p>
 			<p>
@@ -516,7 +525,7 @@
 			a single child the <tt><b>code</b></tt> element. You can have your code syntactically
 			highlighted by specifying the name of the programming language in the <tt><b>syntax</b></tt>
 			attribute. The document pre-processor can highlight a wide range of programming languages.
-			For a complete list, take a look into the folder <tt>lib/highlight/langDefs</tt>
+			For a complete list, take a look into the folder <tt>lib/hylight/langDefs</tt>
 			below the installation folder. Here is an example for the classic <qq>Hello World</qq> in C:
 			</p>
 			<listing>
@@ -545,7 +554,7 @@ int main(void) {
 
 				With the <tt><b>colorscheme</b></tt> attribute you can choose between available
 			coloring schemes. For a complete list, take a look into the folder
-			<tt>lib/highlight/themes</tt> below the installation folder. If you specify a
+			<tt>lib/hylight/themes</tt> below the installation folder. If you specify a
 			<tt><b>startline</b></tt>, the syntax highlighter will number each line in your code.
 			The <tt><b>linestep</b></tt> attribute specifies the increment
 			from one line to the next.
@@ -613,6 +622,5 @@ int main(void) {
 				</p>
 			</subsection>
 		</section>
-
 	</chapter>
 

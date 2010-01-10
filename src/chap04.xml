@@ -9,7 +9,7 @@
 			<title>A Brief Introduction to XML</title>
 			<p>
 				The <i>Extensible Markup Language</i> is not a data description language in
-			itself. Rather, it defines a syntax that lets you design your own customized
+			itself. Rather, it defines a syntax that allows you to design your own customized
 			markup languages for arbitrary data models. Take a look at the following
 			example:
 			</p>
@@ -40,7 +40,7 @@
 			</listing>
 			<p>
 				What you see is a complete XML document describing the popular Pina
-			Colada cocktail. On the first line, you see the XML declaration. It specifies
+			Colada cocktail. On the first line you see the XML declaration. It specifies
 			the XML version and the character encoding of the document. In general, you
 			should use one of the unicode character encodings UTF-8 or UTF-16, since any
 			standards-conforming XML parser is required to be able to read these.
@@ -131,11 +131,17 @@ report
 			<tt><b>glossary</b></tt> and <tt><b>index</b></tt> are not available. Furthermore,
 			the top-level sectioning element in an article is the <tt><b>section</b></tt>.
 			</p>
+			<p>
+				<idxterm group="ecml" sortkey="P"><item>p</item></idxterm>
+
+				Block elements may be figures, equations or tables; or simply paragraphs of text,
+			which are set with the <tt><b>p</b></tt> element.
+			</p>
 
 			<minisection>
 				<title>Document Header And Legal Section</title>
 				<p>
-				The very first child element of the root element is always the document
+				The very first child element of a document's root element is always the document
 				header section, which has the following structure:
 
 					<idxterm group="ecml"><item>head</item></idxterm>
@@ -178,11 +184,11 @@ report
 
 				In books and reports you may use the <tt><b>preface</b></tt> element to
 				set an abitrary number of introductory sections right after the document
-				head and the table of contents. The title of a preface will not be
-				numbered and will not appear in the table of contents of printable
-				output. A preface may contain paragraphs of text, as well as block elements,
+				header and the table of contents. The title of a preface will not be
+				numbered and it will not appear in the table of contents when generating printable
+				output. A preface may contain paragraphs of text, as well as other block elements,
 				such as figures and tables. It must not contain any deeper sections
-				except for minisections. If you feel, you need to divide your preface,
+				except for minisections. If you feel that you need to divide your preface,
 				you should consider making it a chapter.
 				</p>
 			</minisection>
@@ -193,8 +199,19 @@ report
 
 				A <tt><b>minisection</b></tt> is a special kind of section, that
 				can occur anywhere in the section hierarchy. The title of a
-				minisection will <tt>not</tt> be numbered and will <tt>not</tt> receive
-				an entry in	the table of contents.
+				minisection will be set in smaller letters than any regular section
+				title, it will <tt>not</tt> be numbered and also not listed in the
+				table of contents.
+				</p>
+			</minisection>
+			<minisection>
+				<title>Paragraphs</title>
+				<p>
+					A paragraph is set with the <tt><b>p</b></tt> element and is the
+				simplest block element available, containing only formatted text and inline
+				elements. Paragraphs can also optionally have a <tt><b>title</b></tt>, which
+				will be	set inline. See section <ref idref="sect:counters"/> for an example
+				of how this can be useful.
 				</p>
 			</minisection>
 		</section>
@@ -337,7 +354,7 @@ report
 			cases it cannot hyphenate certain words, at all. You can provide hints, telling
 			&latex; where a word may be broken up, by inserting <tt><b>y</b></tt> tags in
 			the right spots. For example, in order to tell &latex; that it may split the word
-			<qq>bibliography</qq> only between <i>biblio</i> and <i>graphy</i>, you would
+			<qq>bibliography</qq> only in between <i>biblio</i> and <i>graphy</i>, you would
 			write <tt>biblio&lt;y/&gt;graphy</tt> in your markup.
 			</p>
 		</section>
@@ -352,8 +369,7 @@ report
 			or your web browser) to take care of this. In rare cases, however, you may have
 			to intervene manually. You can use the <tt><b>br</b></tt> element to break the
 			current line or <tt><b>pagebreak</b></tt> to start a new page. You should
-			<i>not</i> use multiple line or page breaks in a row. Mind that a page break is
-			only visible in printable output.
+			<i>not</i> use multiple line or page breaks in a row.
 			</p>
 			<p>
 				<idxterm group="ecml"><item>nobr</item></idxterm>
@@ -363,8 +379,8 @@ report
 			the specific strip of text with the <tt><b>nobr</b></tt> tag. For example, a
 			title or academic degree should not be separated from the name that follows it.
 			Consequently, you should write <tt>Dr.&amp;nbsp;Pepper</tt> or
-			<tt>&lt;nobr&gt;Dr. Pepper&lt;/nobr&gt;</tt> to prevent the formatting engine
-			from possibly breaking the line right before the name Pepper. 
+			<tt>&lt;nobr&gt;Dr.&nbsp;Pepper&lt;/nobr&gt;</tt> to prevent the formatting engine
+			from possibly breaking the line right before Pepper. 
 			</p>
 		</section>
 		<section>
@@ -387,7 +403,7 @@ report
 				The syntax for the definition of cross-references has changed slightly in
 			ecromedos version 2. To label a certain spot in the text, use the <tt><b>label</b></tt>
 			tag. This tag has a single, mandatory <tt><b>id</b></tt> attribute. This must be
-			a unique identifier among all elements that carry an <tt><b>id</b></tt> attribute.
+			a unique identifier among <i>all</i> elements that carry an <tt><b>id</b></tt> attribute.
 			Take a look at the following example:
 			</p>
 			<listing>
@@ -403,7 +419,7 @@ report
 				]]></code>
 			</listing>
 			<p>
-				You can now use the element <tt><b>ref</b></tt> to obtain the section number
+				You can now use the <tt><b>ref</b></tt> element to obtain the section number
 			and <tt><b>pageref</b></tt> to get the page number like this:
 			</p>
 			<listing>
@@ -431,7 +447,55 @@ report
 			<tt><b>ref</b></tt> will resolve to the corresponding object counter instead of
 			the section counter.
 			</p>
+			<minisection>
+				<title>Hyperlinks</title>
+				<p>
+					You can insert hyperlinks into your document with the <tt><b>link</b></tt>
+				element, which has a single, mandatory attribute <tt><b>url</b></tt>, which is
+				used in exactly the same way as the <tt>href</tt> attribute on HTML anchors:
+				</p>
+				<listing>
+					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor" strip="yes"><![CDATA[
+Click this <link url="mailto:bobburnquist@example.com">link</link> to
+send a mail to a non-existent e-mail address or visit
+<link url="http://www.shredordie.com/">shredordie.com</link> for some
+cool skate videos.
+					]]></code>
+				</listing>
+			</minisection>
 		</section>
+
+		<section>
+			<title>Counters<label id="sect:counters"/></title>
+			<p>
+				You can create new object counters with the <tt><b>counter</b></tt>
+			element. For example, you may decide to create an <qq>example</qq>
+			environment with its own object counter. An instance of such an
+			<qq>example</qq> might look like this:
+			
+				<idxterm group="ecml"><item>counter</item></idxterm>
+			</p>
+			<listing>
+				<code bgcolor="#eeeeee" syntax="xml" strip="yes" colorscheme="xml-editor"><![CDATA[
+<p>
+	<title>Example <counter group="example"
+		simple="no" id="ex:counterhowto"/>:</title>
+	<i>
+	This is an example on how to use the <tt><b>counter</b></tt> element ...
+	</i>
+</p>
+				]]></code>
+			</listing>
+			<p>
+			By giving the counter an <tt><b>id</b></tt>, you can cross-reference the
+			counter using the <tt><b>ref</b></tt> and <tt><b>pageref</b></tt> elements
+			(see section <ref idref="sect:xreferences"/>). If you set the optional
+			<tt><b>simple</b></tt> attribute to <tt>yes</tt>, the section count will
+			be omitted. In the rare event that you need to start counting from zero,
+			set the optional <tt><b>base</b></tt> attribute to <tt>0</tt>.
+			</p>
+		</section>
+
 		<section>
 			<title>Placing Marginal Notes and Footnotes</title>
 			<p>
@@ -476,7 +540,7 @@ report
 				<idxterm group="ecml"><item>blockquote</item></idxterm>
 
 				When quoting large portions of text, consider using the <tt><b>blockquote</b></tt>
-			tag, which acts as a block element and may contain multiple paragraphs of text.
+			element, which acts as a block element and may contain multiple paragraphs of text.
 			Block quotes will be indented left and right to set them off from the rest of the
 			text.
 			</p>

@@ -66,7 +66,8 @@
 					<p>
 						A utility to convert DVI files to PNG or GIF graphics. ecromedos needs this
 					to convert mathematic formulas to bitmap graphics when generating XHTML output.
-					dvipng is available from <link url="http://www.nongnu.org/dvipng/"><tt>http://&zwsp;www.&zwsp;nongnu.&zwsp;org/&zwsp;dvipng/</tt></link>.
+					dvipng is available from <link url="http://www.nongnu.org/dvipng/"><tt>http://&zwsp;www.&zwsp;nongnu.&zwsp;org/&zwsp;dvipng/</tt></link>,
+					it may also be included in your &tex; distribution.
 					</p>
 				</dd>
 			</dl>
