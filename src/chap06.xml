@@ -76,8 +76,8 @@ will find learning ECML particularly easy.
 				<listing>
 					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
 						strip="yes"><![CDATA[
-<defterm sortkey="Krokodil">
-	<dt>Crocodile</dt>
+<defterm sortkey="krokodil">
+	<dt>crocodile</dt>
 	<dd>
 	...
 					]]></code>
@@ -116,8 +116,8 @@ will find learning ECML particularly easy.
 				the	glossary will be <i>sorted</i>. In order to determine the collation, use the
 				<tt><b>locale</b></tt> attribute instead. The <tt><b>alphabet</b></tt> attribute
 				should contain a list of characters separated with whitespace. It may also contain
-				a denominator of the form <tt>[<i>name</i>]</tt>, where <i>name</i> would typically
-				be the word <qq>symbols</qq>, for entries that consist of only symbolic	characters.
+				a denominator of the form <tt>[<i>name</i>]</tt> &endash; where <i>name</i> would typically
+				be the word <qq>symbols</qq> &endash; for entries that consist of only symbolic	characters.
 				The default alphabet is the basic latin alphabet.
 				</p>
 				<p>
@@ -270,7 +270,7 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 				<p>
 					<idxterm group="ecml"><item>idxterm</item></idxterm>
 
-					Index markers are embedded directly into the flowing text. However, in order to
+					Index markers are embedded inline into the runnning paragraph. However, in order to
 				not cause too much visual disturbance in the source document, it is recommended
 				to aggregate markers at	the beginning or end of paragraphs. The listing below is
 				an excerpt from the	source code of this chapter:
@@ -322,7 +322,7 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 					There is one thing to note about this example: all entries are placed
 				in a separate <tt><b>group</b></tt> called <i>ecml</i>. Effectively, a separate
 				index listing all ECML language elements is created. Entries for which no group
-				is given will go into the <i>default</i> group.
+				is specified will go into the <i>default</i> group.
 				</p>
 				<p>
 					<idxterm group="ecml"><item>idxterm</item><subitem>sortkey</subitem></idxterm>
@@ -339,9 +339,10 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 					<idxterm group="ecml"><item>make-index</item></idxterm>
 
 					Use the <tt><b>make-index</b></tt> element to have the index markers in a particular
-				group assembled into an actual keyword index. This manual, for instance, has two indexes:
-				one which lists all ECML language elements and attributes and a regular topic-based index
-				into the document.
+				group assembled into an actual keyword index. This document, for example, contains an
+				index that links all ECML language elements and attributes to the sections in which they
+				are discussed. The generation of this index is triggered with a <tt><b>make-index</b></tt>
+				element like this:
 				</p>
 				<listing>
 					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
@@ -350,7 +351,6 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 	</biblio>
 
 	<make-index group="ecml" title="Language Elements" locale="en_US"/>
-	<make-index group="default" locale="en_US"/>
 
 </report>
 					]]></code>
@@ -358,10 +358,7 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 				<p>
 					<idxterm group="ecml"><item>make-index</item><subitem>group</subitem></idxterm>
 
-					The code above is all that is needed to generate the indexes for this document.
-				Explicitely stating <i>default</i> as the group for the main index, as above, is not
-				necessary but good practice. The <tt><b>make-index</b></tt> element goes logically
-				after the <tt><b>biblio</b></tt> element.
+				The <tt><b>make-index</b></tt> element goes logically after the <tt><b>biblio</b></tt> element.
 				</p>
 				<p>
 					<idxterm group="ecml"><item>make-index</item><subitem>locale</subitem></idxterm>
@@ -391,7 +388,7 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 				here is	how to do it: Instead of placing index markers in the document, you leave ordinary
 				<tt><b>labels</b></tt> in places that you wish to reference from the index. Then in the
 				index, simply use the <tt><b>idxref</b></tt> element, which behaves just like
-				<tt><b>pageref</b></tt> (see section <ref idref="sect:xreferences"/>),	to obtain the page
+				<tt><b>pageref</b></tt> (see section <ref idref="sect:xreferences"/>), to obtain the page
 				number of a	label. The following is an excerpt from the XML that the document pre-processor
 				may	have generated for the listing of ECML language elements that can be found at the
 				end	of this document.

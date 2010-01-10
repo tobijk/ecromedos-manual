@@ -34,7 +34,7 @@
 			</p>
 			<p>
 				The <i>ecromedos Markup Language</i> (ECML) is modelled closely after HTML
-			with some ideas and additional elements borrowed from &latex;. It lets you
+			with some ideas and additional elements borrowed from &latex;. It allows you to
 			compose comprehensive, well-structured documents from a comparably small set of
 			language elements. Users who are already familiar with HTML or document markup
 			languages like DocBook will find learning ECML particularly easy.
@@ -93,7 +93,7 @@
 			longer require digging into the XSL stylesheets.
 			</p>
 			<p>
-				Unfortunately, the new DTD <i>is not</i> backwards compatible to documents
+				Unfortunately, the new DTD is <i>not</i> backwards compatible to documents
 			from version 1.
 			</p>
 		</section>
@@ -133,14 +133,15 @@
 				<li>
 				<p>
 					After reading chapter <ref idref="sect:writingdocuments"/>, you will know
-				how to compose simple documents and do basic text-formatting.
+				how to write simple documents, do basic text-formatting and work with
+				cross-references and counters.
 				</p>
 				</li>
 				<li>
 				<p>
 					Chapter <ref idref="sect:liststablesfigures"/> introduces some of the more
 				advanced language constructs, teaching you how to use lists, define tables,
-				set mathematic formulas, or embed graphical figures into your documents.
+				set mathematic formulas, or embed images into your documents.
 				</p>
 				</li>
 				<li>
@@ -152,8 +153,8 @@
 				</li>
 				<li>
 				<p>
-					In Chapter <ref idref="sect:styling"/>, you will take a peek under the hood
-				to find out how you can modify the general appearance of rendered output.
+					Chapter <ref idref="sect:styling"/> explains how to create your own
+				style definitions to change the appearance of rendered ouput.
 				</p>
 				</li>
 			</ul>
@@ -190,7 +191,7 @@
 				<li>
 				<p>
 					Italicized text is used in listings for placeholders that need to be
-				substituted by the user.
+				substituted	by the user.
 				</p>
 				</li>
 			</ul>
@@ -209,10 +210,10 @@
 		<section>
 			<title>Acknowledgements</title>
 			<p>
-				I would like to thank Prof.&nbsp;H.-E.&nbsp;Erbs from the
+				I would like to thank <nobr>Prof. H.-E. Erbs</nobr> from the
 			<link url="http://www.h-da.de">University of Applied Sciences in Darmstadt</link>,
-			Germany, for his support and advice when I started work on the first prototype of
-			ecromedos as an undergraduate project in 2005.
+			Germany, for his support and advice when I started work on ecromedos as an
+			undergraduate project in 2005.
 			</p>
 			<p>
 				A big <qq>thank you</qq> goes out to Daniel Veillard for writing a
@@ -222,7 +223,7 @@
 			how to write a syntax-highlighter, that I got for free by looking at his code.
 			</p>
 			<p>
-				Thanks to everybody working on Free Software, your stuff is a lot of fun!
+			Thanks to everybody working on Free Software, your stuff is a lot of fun!
 			</p>
 		</section>
 	</chapter>
