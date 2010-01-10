@@ -5,9 +5,6 @@ Abstract: This users' manual explains how to use the
  ecromedos 2 XML document authoring system.
 Section: doc
 
-Format: ECML
-Files: /usr/share/doc/ecromedos-doc/src/*.xml
-
 Format: PDF
 Files: /usr/share/doc/ecromedos-doc/pdf/manual.pdf
 
