@@ -48,6 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/doc/packages/ecromedos-doc
 
 %changelog
+* Sun Jan 17 2010 Tobias Koch <tobias@ecromedos.net>
+- Rebuilt with ecromedos 2.0.1, fixes some minor formatting glitches
+
 * Sun Jan 10 2010 Tobias Koch <tobias@ecromedos.net> 
 - Initial release of version 2.0r0
 
