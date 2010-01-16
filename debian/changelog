@@ -1,3 +1,9 @@
+ecromedos-doc (2.0r2-1) unstable; urgency=low
+
+  * Rebuilt with ecromedos 2.0.1, fixes some minor formatting glitches
+
+ -- Tobias Koch <tobias@ecromedos.net>  Sun, 17 Jan 2010 00:36:00 +0100
+
 ecromedos-doc (2.0r1-1) unstable; urgency=low
 
   * Added instructions for package install on OpenSUSE
