@@ -22,7 +22,7 @@ This package contains the documentation.
 mkdir tmp html pdf
 # make pdf
 cd tmp
-ecromedos -fxelatex -s ../style/latex-style.xml ../src/manual.xml
+ecromedos -fxelatex -s ../style/latex-style.xml --texlive=2007 ../src/manual.xml
 xelatex report.tex
 xelatex report.tex
 xelatex report.tex
