@@ -174,11 +174,9 @@
 					If you are running Debian/GNU or Ubuntu Linux, you can install ecromedos via apt.
 					Just insert the following entry into <tt>/etc/&zwsp;apt/&zwsp;sources.list</tt>:
 				</p>
-				<listing>
-					<code bgcolor="#eeeeee" strip="yes">
+				<verbatim bgcolor="#eeeeee" strip="yes">
 deb http://ecromedos.net/packages/debian debian contrib
-					</code>
-				</listing>
+				</verbatim>
 				<p>
 				Then update the package cache and install ecromedos by saying
 				</p>
@@ -196,11 +194,9 @@ deb http://ecromedos.net/packages/debian debian contrib
 					To comfortably install ecromedos on OpenSUSE, add the following repository
 				URL to your repository sources:
 				</p>
-				<listing>
-					<code bgcolor="#eeeeee" strip="yes">
+				<verbatim bgcolor="#eeeeee" strip="yes">
 http://ecromedos.net/packages/opensuse
-					</code>
-				</listing>
+				</verbatim>
 				<p>
 					You can either do this from YaST or on the command line using <tt>zypper</tt>
 				like this:
