@@ -32,12 +32,9 @@ echo "Building package in $TMPDIR:"
 
 git archive --prefix=ecromedos-doc-${TAG}/ --format=tar ${TAG} | \
 	(cd ${TMPDIR} && \
-	tar -x --exclude=.gitignore --exclude=debian -f - && \
-	tar -czf ecromedos-doc_${TAG}.orig.tar.gz ecromedos-doc-${TAG} \
-	&& rm -fr ecromedos-doc-${TAG})
-
-git archive --prefix=ecromedos-doc-${TAG}/ --format=tar pkg-deb | \
-	(cd ${TMPDIR} && tar -x --exclude=.gitignore --exclude=debian/package.sh -f -)
+	tar -x --exclude=.gitignore --exclude=debian/package.sh \
+        --exclude=ecromedos-doc.spec --exclude=package.sh -f - && \
+	tar -czf ecromedos-doc_${TAG}.orig.tar.gz ecromedos-doc-${TAG})
 
 (cd ${TMPDIR}/ecromedos-doc-${TAG} &&
 	dpkg-buildpackage -us -uc &&

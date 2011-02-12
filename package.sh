@@ -34,7 +34,7 @@ mkdir -p $TMPDIR/{RPMS,BUILD,SOURCES,SPECS,SRPMS}
 
 git archive --prefix=ecromedos-doc-${TAG}/ --format=tar ${TAG} | \
 	(cd ${TMPDIR}/SOURCES && \
-	tar -x --exclude=.gitignore --exclude=debian --exclude=ecromedos.spec --exclude=package.sh -f - && \
+	tar -x --exclude=.gitignore --exclude=debian --exclude=ecromedos-doc.spec --exclude=package.sh -f - && \
 	tar -czf ecromedos-doc-${TAG}.tar.gz ecromedos-doc-${TAG} \
 	&& rm -fr ecromedos-doc-${TAG})
 
