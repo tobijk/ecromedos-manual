@@ -9,7 +9,7 @@
 <style>
 	<book>
 		<document-font>\renewcommand{\rmdefault}{\sfdefault}\normalfont</document-font>
-		<document-options>pointednumbers,cleardoubleempty,automark,pagesize,headsepline,headinclude,footexclude,bibtotoc</document-options>
+		<document-options>numbers=enddot,cleardoubleempty,automark,pagesize,headsepline,headinclude,footinclude=false,bibliography=totoc</document-options>
 		<document-title>\large\sffamily\bfseries</document-title>
 		<document-subtitle>\normalsize</document-subtitle>
 		<sectioning-title>\normalsize\sffamily\bfseries</sectioning-title>
@@ -53,7 +53,7 @@
 	</book>
 	<report>
 		<document-font>\renewcommand{\rmdefault}{\sfdefault}\normalfont</document-font>
-		<document-options>pointednumbers,automark,pagesize,headinclude,footexclude,bibtotoc</document-options>
+		<document-options>numbers=enddot,automark,pagesize,headinclude,footinclude=false,bibliography=totoc</document-options>
 		<document-title>\large\sffamily\bfseries</document-title>
 		<document-subtitle>\normalsize</document-subtitle>
 		<sectioning-title>\normalsize\sffamily\bfseries</sectioning-title>
@@ -89,7 +89,7 @@
 	</report>
 	<article>
 		<document-font>\renewcommand{\rmdefault}{\sfdefault}\normalfont</document-font>
-		<document-options>pointednumbers,automark,pagesize,abstracton,headinclude,footexclude,bibtotoc</document-options>
+		<document-options>numbers=enddot,automark,pagesize,abstracton,headinclude,footinclude=false,bibliography=totoc</document-options>
 		<document-title>\large\sffamily\bfseries</document-title>
 		<document-subtitle>\normalsize</document-subtitle>
 		<sectioning-title>\normalsize\sffamily\bfseries</sectioning-title>
