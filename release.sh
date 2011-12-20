@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function usage {
+usage() {
 	echo "Usage: package.sh <tag> <outdir>"
 }
 
