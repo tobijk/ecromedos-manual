@@ -15,9 +15,9 @@
 	secnumdepth="3" secsplitdepth="1" parskip="half">
 
 	<head>
-		<title>ecromedos 2 - Users' Manual</title>
+		<title>ecromedos 2.1 - Users' Manual</title>
 		<author>Tobias Koch</author>
-		<date>January 10, 2010</date>
+		<date>January 12, 2012</date>
 		<publisher>
 			<tt><link url="http://ecromedos.net">ecromedos.net</link></tt>
 		</publisher>
@@ -25,7 +25,7 @@
 
 	<legal>
 		<p>
-			&#169; Copyright 2009, 2010 &endash; Tobias Koch
+			&#169; Copyright 2009 &endash; 2012 &endash; Tobias Koch
 		</p>
 		<p>
 			Permission is granted to copy, distribute and/or modify this document
