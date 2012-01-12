@@ -522,18 +522,18 @@
 				<idxterm group="ecml"><item>code</item><subitem>syntax</subitem></idxterm>
 
 				For program code you should use the <tt><b>listing</b></tt> element, which has as
-			a single child the <tt><b>code</b></tt> element. You can have your code syntactically
-			highlighted by specifying the name of the programming language in the <tt><b>syntax</b></tt>
-			attribute. The document pre-processor can highlight a wide range of programming languages.
-			For a complete list, take a look into the folder <tt>lib/hylight/langDefs</tt>
-			below the installation folder. Here is an example for the classic <qq>Hello World</qq> in C:
+			a single child the <tt><b>code</b></tt> element. You can have your code syntax
+			highlighted by specifying the name of the programming language or script in the
+			<tt><b>syntax</b></tt> attribute. Here is an example for the classic <qq>Hello
+			World</qq> in C:
 			</p>
 			<listing>
 				<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 					strip="yes">
 &lt;listing&gt;
     &lt;code syntax="c" colorscheme="borland"
-        strip="yes" startline="1" linestep="100">&lt;![CDATA[
+        strip="yes" startline="1" linestep="100"
+        tabspaces="2">&lt;![CDATA[
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
@@ -547,25 +547,41 @@ int main(void) {
 			</listing>
 			<p>
 				<idxterm group="ecml"><item>code</item><subitem>colorscheme</subitem></idxterm>
+
+				ecromedos internally uses the powerful <link url="http://pygments.org">Pygments</link>
+			syntax highlighter, which can lex a vast amount of programming languages and scripts.
+			Pygments also comes with a number of predefined coloring schemes (styles) that you may
+			select with the <tt><b>colorscheme</b></tt> attribute. For a complete list of supported
+			languages and available styles, run the command
+			</p>
+ 			<verbatim strip="yes"><color rgb="#000088">
+#&gt; pygmentize -L
+			</color></verbatim>
+			<p>
 				<idxterm group="ecml"><item>code</item><subitem>startline</subitem></idxterm>
 				<idxterm group="ecml"><item>code</item><subitem>linestep</subitem></idxterm>
 				<idxterm group="ecml"><item>code</item><subitem>strip</subitem></idxterm>
-				<idxterm group="ecml"><item>code</item><subitem>bgcolor</subitem></idxterm>
 
-				With the <tt><b>colorscheme</b></tt> attribute you can choose between available
-			coloring schemes. For a complete list, take a look into the folder
-			<tt>lib/hylight/themes</tt> below the installation folder. If you specify a
-			<tt><b>startline</b></tt>, the syntax highlighter will number each line in your code.
-			The <tt><b>linestep</b></tt> attribute specifies the increment
+			If you specify a <tt><b>startline</b></tt>, the syntax highlighter will number each line
+			in your code. The <tt><b>linestep</b></tt> attribute specifies the increment
 			from one line to the next.
 			</p>
 			<p>
 				<idxterm group="ecml"><item>verbatim</item><subitem>strip</subitem></idxterm>
+				<idxterm group="ecml"><item>code</item><subitem>bgcolor</subitem></idxterm>
 			
 			Setting the <tt><b>strip</b></tt> attribute on the <tt><b>verbatim</b></tt> or
 			<tt><b>code</b></tt> elements to <tt>yes</tt> will result in whitespace being
 			stripped from the beginning and end of your listing. You can override the background
 			color of the selected coloring scheme with the <tt><b>bgcolor</b></tt> attribute.
+			</p>
+			<p>
+				<idxterm group="ecml"><item>verbatim</item><subitem>tabspaces</subitem></idxterm>
+				<idxterm group="ecml"><item>code</item><subitem>tabspaces</subitem></idxterm>
+
+				Per default, ecromedos converts all tabulators inside a <tt><b>verbatim</b></tt>
+			or <tt><b>code</b></tt> element to 4 spaces. You can override the number of spaces
+			using the <tt><b>tabspaces</b></tt> attribute.
 			</p>
 		</section>
 

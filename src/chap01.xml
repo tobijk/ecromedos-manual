@@ -213,14 +213,16 @@
 				I would like to thank <nobr>Prof. Dr. Heinz-Erich Erbs</nobr> from the
 			<link url="http://www.h-da.de">University of Applied Sciences in Darmstadt</link>,
 			Germany, for his support and advice when I started work on ecromedos as an
-			undergraduate project in 2005.
+			undergraduate project.
 			</p>
 			<p>
 				A big <qq>thank you</qq> goes out to Daniel Veillard for writing a
 			phantastic set of libraries for processing XML, to Guido van Rossum and the
 			Python Software Foundation for a beautiful scripting language, to Donald Knuth
 			for the coolest typesetting program around, and to André Simon for a lecture on
-			how to write a syntax-highlighter, that I got for free by looking at his code.
+			how to write a syntax-highlighter<footnote>Newer versions of ecromedos use the
+			<link url="http://pygments.org">Pygments</link> syntax highlighter. Versions
+			before 2.1 came with a built-in syntax highlighter</footnote>, that I got for free by looking at his code.
 			</p>
 			<p>
 			Thanks to everybody working on Free Software, your stuff is a lot of fun!

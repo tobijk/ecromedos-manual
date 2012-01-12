@@ -23,43 +23,39 @@
 			<dl>
 				<dt>Python</dt>
 				<dd>
-				<p>
-					A powerful scripting language. Python is available for all popular operating
-				systems and can be obtained from the website of the Python Software Foundation
-				at <link url="http://python.org"><tt>http://&zwsp;www.&zwsp;python.&zwsp;org</tt></link>.
-				You will need version 2.4 or later to run ecromedos. Please note that ecromedos is
-				not yet ready for Python 3.
-				</p>
+					<p>
+						A powerful scripting language. Python is available for all popular operating
+					systems and can be obtained from the website of the Python Software Foundation
+					at <link url="http://python.org"><tt>http://&zwsp;www.&zwsp;python.&zwsp;org</tt></link>.
+					You will need version 2.4 or later to run ecromedos. Please note that ecromedos is
+					not yet ready for Python 3.
+					</p>
 				</dd>
 				<dt>libxml and libxslt</dt>
 				<dd>
-				<p>
-					Two super fast and stable libraries for processing XML, developed by Daniel
-				Veillard for the GNOME project. Both libraries offer bindings to Python. The
-				project homepage is at <link url="http://www.xmlsoft.org"><tt>http://&zwsp;www.&zwsp;xmlsoft.&zwsp;org</tt></link>.
-				</p>
+					<p>
+						Two super fast and stable libraries for processing XML, developed by Daniel
+					Veillard for the GNOME project. Both libraries offer bindings to Python. The
+					project homepage is at <link url="http://www.xmlsoft.org"><tt>http://&zwsp;www.&zwsp;xmlsoft.&zwsp;org</tt></link>.
+					</p>
 				</dd>
 				<dt>Imagemagick</dt>
 				<dd>
-				<p>
-					A set of tools for image manipulation. ecromedos uses Imagemagick for
-				resizing bitmap images and to do format conversions. You can download the 
-				software from
-				<link url="http://imagemagick.org"><tt>http://&zwsp;www.&zwsp;imagemagick.&zwsp;org</tt></link>.
-				</p>
+					<p>
+						A set of tools for image manipulation. ecromedos uses Imagemagick for
+					resizing bitmap images and to do format conversions. You can download the 
+					software from
+					<link url="http://imagemagick.org"><tt>http://&zwsp;www.&zwsp;imagemagick.&zwsp;org</tt></link>.
+					</p>
 				</dd>
 				<dt>&tex;</dt>
 				<dd>
-				<p>
-					If you want to produce Postscript or PDF, you need an installation of the
-				&tex; typesetting system. It is recommended that you use &tex; Live 2007 or later,
-				available from
-				<link url="http://www.tug.org/texlive/"><tt>http://&zwsp;www.&zwsp;tug.&zwsp;org/&zwsp;texlive/</tt></link>.
-				Windows users may also want to have a look at the MiK&tex; distribution, available from
-				<link url="http://miktex.org/"><tt>http://&zwsp;miktex.&zwsp;org</tt></link>.
-				Using the once popular but now unmaintained te&tex; distribution together with
-				ecromedos 2 is not recommended.
-				</p>
+					<p>
+						If you want to produce Postscript or PDF, you need an installation of the
+					&tex; typesetting system. It is recommended that you use &tex; Live 2009 or later,
+					available from
+					<link url="http://www.tug.org/texlive/"><tt>http://&zwsp;www.&zwsp;tug.&zwsp;org/&zwsp;texlive/</tt></link>.
+					</p>
 				</dd>
 				<dt>dvipng</dt>
 				<dd>
@@ -68,6 +64,15 @@
 					to convert mathematic formulas to bitmap graphics when generating XHTML output.
 					dvipng is available from <link url="http://www.nongnu.org/dvipng/"><tt>http://&zwsp;www.&zwsp;nongnu.&zwsp;org/&zwsp;dvipng/</tt></link>,
 					it may also be included in your &tex; distribution.
+					</p>
+				</dd>
+				<dt>Pygments</dt>
+				<dd>
+					<p>
+						Pygments is a powerful syntax highlighter that can lex a vast amount of
+					programming languages and scripts. ecromedos uses Pygments for automatic syntax
+					highlighting of code samples. Find out more about Pygments at
+					<link url="http://pygments.org"><tt>http://&zwsp;pygments.&zwsp;org</tt></link>.
 					</p>
 				</dd>
 			</dl>
