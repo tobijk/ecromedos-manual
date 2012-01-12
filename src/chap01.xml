@@ -92,9 +92,15 @@
 			providing central styles definition files. Thus, simple customizations no
 			longer require digging into the XSL stylesheets.
 			</p>
+		</section>
+		<section>
+			<title>Additions in Version 2.1</title>
 			<p>
-				Unfortunately, the new DTD is <i>not</i> backwards compatible to documents
-			from version 1.
+				Starting from version 2.1, Pygments<footnote><link
+				url="http://pygments.org"><tt>http://pygments.org</tt></link></footnote>
+			    is used for syntax highlighting. It replaces the old built-in syntax
+			    highlighter. Pygments provides support for lexing a vast amount of
+			    programming languages and scripts and is a very mature and robust product.
 			</p>
 		</section>
 		<section>
