@@ -14,7 +14,7 @@
 			example:
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 					strip="yes"><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 <cocktail alcoholic="yes">
@@ -83,7 +83,7 @@
 				<idxterm group="ecml"><item>subsubsection</item></idxterm>			
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" strip="yes">
+				<code bgcolor="#f3f3f3" strip="yes">
 report
   |-head
   |-legal
@@ -153,7 +153,7 @@ report
 					<idxterm group="ecml"><item>publisher</item></idxterm>
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" strip="yes" colorscheme="xml-editor"><![CDATA[
+					<code bgcolor="#f3f3f3" syntax="xml" strip="yes" colorscheme="borland"><![CDATA[
 <head>
 	<subject>Special Subject, e.g. Ph.D. Thesis</subject>
 	<title>Document Main Title</title>
@@ -407,7 +407,7 @@ report
 			Take a look at the following example:
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 					strip="yes"><![CDATA[			
 <chapter>
     <title>The Show about Nothing</title>
@@ -423,7 +423,7 @@ report
 			and <tt><b>pageref</b></tt> to get the page number like this:
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 					strip="yes"><![CDATA[
 <chapter>
     <title>About Myself</title>
@@ -455,7 +455,7 @@ report
 				used in exactly the same way as the <tt>href</tt> attribute on HTML anchors:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor" strip="yes"><![CDATA[
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland" strip="yes"><![CDATA[
 Click this <link url="mailto:bobburnquist@example.com">link</link> to
 send a mail to a non-existent e-mail address or visit
 <link url="http://www.shredordie.com/">shredordie.com</link> for some
@@ -476,7 +476,7 @@ cool skate videos.
 				<idxterm group="ecml"><item>counter</item></idxterm>
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" strip="yes" colorscheme="xml-editor"><![CDATA[
+				<code bgcolor="#f3f3f3" syntax="xml" strip="yes" colorscheme="borland"><![CDATA[
 <p>
 	<title>Example <counter group="example"
 		simple="no" id="ex:counterhowto"/>:</title>
@@ -506,7 +506,7 @@ cool skate videos.
 			HTML output. Try this example:
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 					strip="yes"><![CDATA[
 <p>
     In this episode<marginal>The Summer of George</marginal>,
@@ -583,7 +583,7 @@ cool skate videos.
 			type declaration at the top of your document:
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 					strip="yes"><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE report SYSTEM "http://www.ecromedos.net/dtd/2.0/ecromedos.dtd">

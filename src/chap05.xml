@@ -33,7 +33,7 @@
 				a caption. The following listing shows an example of a nested list structure:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <ol>
     <li>
@@ -95,7 +95,7 @@
 				respective definition. Take a look at the following example:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <dl>
 	<dt>ecromedos</dt>
@@ -138,7 +138,7 @@
 				look at the following example of a basic <m>4\ x\ 4</m> table:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <table print-width="100%" screen-width="600px"
 	align="left" id="tbl:example_4x4">
@@ -237,7 +237,7 @@
 				removing lines from the table grid, to get a feel for it.
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <table print-width="100%" screen-width="600px"
 	align="left" id="tbl:example_grid" frame="top,bottom"
@@ -293,7 +293,7 @@
 				first row from the previous example a gray background, you could write:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <tr frame="colsep">
 	<td frame="rowsep">1</td><td color="#dddddd">2</td><td>3</td><td>4</td>
@@ -361,7 +361,7 @@
 					a <tt><b>td</b></tt> element. Here is an example:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <table print-width="100%" screen-width="600px"
 	align="left" id="tbl:example_subtable" frame="top,left,right,bottom"
@@ -430,7 +430,7 @@
 			Take a look at the following example:
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 					strip="yes"><![CDATA[
 <figure align="center" id="fig:thebeach">
     <caption>The Beach</caption>
@@ -529,10 +529,10 @@
 			below the installation folder. Here is an example for the classic <qq>Hello World</qq> in C:
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 					strip="yes">
 &lt;listing&gt;
-    &lt;code syntax="c" colorscheme="ide-eclipse"
+    &lt;code syntax="c" colorscheme="borland"
         strip="yes" startline="1" linestep="100">&lt;![CDATA[
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
@@ -585,7 +585,7 @@ int main(void) {
 					use the <tt><b>m</b></tt> element. Take a look at this example:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <p>
     The main proposition of Einstein's
@@ -607,7 +607,7 @@ int main(void) {
 				as a block element:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <equation number="yes">
     <m>e = mc^2</m>

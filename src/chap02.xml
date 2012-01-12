@@ -174,7 +174,7 @@
 					If you are running Debian/GNU or Ubuntu Linux, you can install ecromedos via apt.
 					Just insert the following entry into <tt>/etc/&zwsp;apt/&zwsp;sources.list</tt>:
 				</p>
-				<verbatim bgcolor="#eeeeee" strip="yes">
+				<verbatim bgcolor="#f3f3f3" strip="yes">
 deb http://ecromedos.net/packages/debian debian contrib
 				</verbatim>
 				<p>
@@ -194,7 +194,7 @@ deb http://ecromedos.net/packages/debian debian contrib
 					To comfortably install ecromedos on OpenSUSE, add the following repository
 				URL to your repository sources:
 				</p>
-				<verbatim bgcolor="#eeeeee" strip="yes">
+				<verbatim bgcolor="#f3f3f3" strip="yes">
 http://ecromedos.net/packages/opensuse
 				</verbatim>
 				<p>

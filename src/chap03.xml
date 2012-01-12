@@ -78,7 +78,7 @@
 				following listing.
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE report SYSTEM

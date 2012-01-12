@@ -39,7 +39,7 @@
 				example:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <p>
 Users who are already familiar with HTML or document markup
@@ -72,7 +72,7 @@ will find learning ECML particularly easy.
 				sort as <qq>krokodil</qq>, you would write:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <defterm sortkey="krokodil">
 	<dt>crocodile</dt>
@@ -94,7 +94,7 @@ will find learning ECML particularly easy.
 				American English might look like this:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 ...
 </appendix>
@@ -146,7 +146,7 @@ will find learning ECML particularly easy.
 				yourself, then here is how to do it:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <glossary>
 	...
@@ -196,7 +196,7 @@ will find learning ECML particularly easy.
 			for individual sections. A typical bibliography might look like this:
 			</p>
 			<listing>
-				<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+				<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 					strip="yes"><![CDATA[
 <biblio number="yes">
     <bibitem label="KOCH09" id="bib:KOCH09">
@@ -235,7 +235,7 @@ will find learning ECML particularly easy.
 				to point the reader to the corresponding entry like this:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 ...
 <p>
@@ -274,7 +274,7 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 				an excerpt from the	source code of this chapter:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <p>
 	<idxterm group="ecml">
@@ -343,7 +343,7 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 				element like this:
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 	...
 	</biblio>
@@ -392,7 +392,7 @@ For more information on DocBook, please refer to <cite idref="bib:WALSH03"/>.
 				end	of this document.
 				</p>
 				<listing>
-					<code bgcolor="#eeeeee" syntax="xml" colorscheme="xml-editor"
+					<code bgcolor="#f3f3f3" syntax="xml" colorscheme="borland"
 						strip="yes"><![CDATA[
 <index title="Language Elements" columns="2" tocentry="yes">
 	<idxsection name="A">
