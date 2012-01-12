@@ -1,3 +1,9 @@
+ecromedos-doc (2.1r0b-1) unstable; urgency=low
+
+  * Document changes after switch to Pygments for syntax highlighting
+
+ -- Tobias Koch <tobias.koch@gmail.com>  Thu, 12 Jan 2012 23:55:29 +0200
+
 ecromedos-doc (2.0r2-1) unstable; urgency=low
 
   * Rebuilt with ecromedos 2.0.1, fixes some minor formatting glitches

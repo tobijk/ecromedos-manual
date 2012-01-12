@@ -48,6 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/doc/packages/ecromedos-doc
 
 %changelog
+* Thu Jan 12 2012 Tobias Koch <tobias.koch@gmail.com>
+- Document changes related to switch to Pygments
+
 * Sun Jan 17 2010 Tobias Koch <tobias@ecromedos.net>
 - Rebuilt with ecromedos 2.0.1, fixes some minor formatting glitches
 
