@@ -1,341 +1,252 @@
 
-	<chapter>
-		<title><label id="sect:styling"/>Styling Your Documents</title>
-		<p>
-			For each supported output format, there exists a subfolder	
-		<tt>transform/&lt;format&gt;</tt> below the installation folder. Inside this
-		folder, the XSL stylesheets with the transformation rules for this
-		target format and a style definition file <tt>style.xml</tt> are stored.
-		</p>
-		<p>
-			To modify the style definitions for a given target format, create and edit a
-		copy of the corresponding <tt>style.xml</tt> file. Then use the <tt><b>-s</b></tt>
-		command line switch to point the document processor to the new style file. The
-		format and contents of the style definition file differ depending on the output
-		format.
-		</p>
-		<section>
-			<title>Editing the CSS-Stylesheet</title>
-			<p>
-				The central style definition for XHTML is an old-fashioned
-			CSS stylesheet, wrapped inside an XML container. For users who have previous
-			experience with CSS, most parts of the stylesheet should be straight-forward
-			to figure out. The following subsections point out the elements of the
-			stylesheet concerning the page layout.
-			</p>
-			<subsection>
-				<title>Frontpage and Table of Contents</title>
-				<p>
-					The document head, carrying for example the title, authors, date of
-				publication and publisher is set inside a <tt>div</tt>
-				section with id <tt><b>#head</b></tt>,
-				</p>
-				<figure align="left" border="yes" id="fig:htmlhead">
-					<caption>The title page header elements.</caption>
-					<img src="img/html-doc-head.png" print-width="100%" screen-width="800px"/>
-				</figure>
-				<p>
-					marked with a red outline in figure <ref idref="fig:htmlhead"/>. The header
-				elements themselves are arranged in a <tt>table</tt> with style class <tt><b>head</b></tt>,
-				marked by the blue outline.
-				Each element is contained in a separate cell with style class <tt><b>head-<i>element</i></b></tt>,
-				e.g. <tt><b>head-title</b></tt>. The subtitle is set in the same cell as the main title, but
-				wrapped in an extra <tt>div</tt> with style class <tt><b>subtitle</b></tt>, so that it can
-				be styled differently from the main title.
-				</p>
-				<figure  align="left" border="yes" id="fig:htmltoc">
-					<caption>The table of contents.</caption>
-					<img src="img/html-doc-toc.png" print-width="100%" screen-width="800px"/>
-				</figure>
-				<p>
-					The table of contents (TOC) is contained inside a <tt>div</tt> with id
-				<tt><b>#toc</b></tt>, marked with a red outline in figure <ref idref="fig:htmltoc"/>.
-				The TOC heading and <qq>list of</qq> headings
-				are set in <tt>divs</tt> with style classes <tt><b>toc-heading</b></tt> and 
-				<tt><b>listof-heading</b></tt>, respectively. The individual entries in the TOC are
-				<tt>divs</tt> with style classes <tt><b>toc-mainitem</b></tt> or <tt><b>toc-subitem</b></tt>,
-				the empty elements in between sections have style class <tt><b>toc-spacer</b></tt>.
-				The indentation of the entries cannot be influenced through the CSS stylesheet.
-				</p>
-			</subsection>
-			<subsection>
-				<title>Text Body and Margin</title>
-				<p>
-					The page contents are wrapped inside a <tt>div</tt> with id <tt><b>#content</b></tt>,
-				marked with a red outline in figure <ref idref="fig:htmlpage"/>. The main canvas and
-				margin are table cells of classes <tt><b>textbody</b></tt> and <tt><b>margin</b></tt>,
-				part of a table with style class <tt><b>content</b></tt>, marked with a blue outline.
-				</p>
-				<figure  align="left" border="yes" id="fig:htmlpage">
-					<caption>The main canvas and margin.</caption>
-					<img src="img/html-page.png" print-width="100%" screen-width="800px"/>
-				</figure>
-			</subsection>
-			<subsection>
-				<title>Navigation Elements</title>
-				<p>
-					The top navigation bar is set inside a <tt>div</tt> with id
-				<tt><b>nav-top</b></tt>, which in turns contains a <tt>table</tt> with the same
-				style class name. The table has a cell <tt><b>nav-top-title</b></tt>
-				displaying the document title and a cell <tt><b>nav-top-buttons</b></tt> containing
-				the navigations buttons.
-				</p>
-				<figure align="left" border="yes">
-					<caption>The top navigation bar.</caption>
-					<img src="img/html-page-top.png" print-width="100%" screen-width="800px"/>
-				</figure>
-				<p>
-					Analogously, the bottom navigation bar consists of a <tt>div</tt> with id
-				<tt><b>nav-bottom</b></tt> containing a table carrying the
-				same style class name. This table is split into three cells <tt><b>nav-bottom-left</b></tt>,
-				<tt><b>nav-bottom-center</b></tt> and <tt><b>nav-bottom-right</b></tt>. The text labels
-				and links to previous, next and superordinate sections (see fig. <ref idref="fig:htmlnavbottom"/>)
-				are styled in separate <tt>spans</tt> with style classes <tt><b>nav-link-dir</b></tt> (label) and
-				<tt><b>nav-link</b></tt> (text).
-				</p>
-				<figure  align="left" border="yes" id="fig:htmlnavbottom">
-					<caption>The navigation bar at the page bottom.</caption>
-					<img src="img/html-page-bottom.png" print-width="100%" screen-width="800px"/>
-				</figure>
-			</subsection>
-			<subsection>
-				<title>Glossary and Index</title>
-				<p>
-					The heading at the top of the glossary page is a simple <tt><b>h1</b></tt>
-				element. The heading at the beginning of each glossary section is also an <tt><b>h1</b></tt>
-				with additional style class <tt><b>glsection</b></tt>. The alphabetic quick links
-				at the top, which allow you to jump directly to certain sections are contained inside
-				a <tt>div</tt> with class <tt><b>gllinks</b></tt>. Active links are <tt>spans</tt>
-				of class <tt><b>gllink</b></tt>, and inactive of class <tt><b>glnolink</b></tt>.
-				The horizontal rule between sections has style class <tt><b>glseparator</b></tt>.
-				</p>
-				<figure  align="left" border="yes">
-					<caption>The glossary.</caption>
-					<img src="img/html-glossary.png" print-width="100%" screen-width="800px"/>
-				</figure>
-				<p>
-					Analogously to the glossary, the heading atop an index is an <tt><b>h1</b></tt>,
-				and the heading at the beginning of each section is an <tt><b>h1</b></tt> with
-				additional style class <tt><b>idxsection</b></tt>. The alphabetic quick links are set
-				in a container with class <tt><b>idxlinks</b></tt> and are themselves <tt>spans</tt> of
-				style classes <tt><b>idxlink</b></tt> and <tt><b>idxnolink</b></tt>. The entries are
-				arranged in a <tt>table</tt> of class <tt><b>idxlisting</b></tt> whose cells are
-				styled with class <tt><b>idxitem</b></tt>. Each text entry is wrapped inside a
-				<tt>span</tt> of class <tt><b>idxitem</b></tt>, <tt><b>idxsubitem</b></tt> or
-				<tt><b>idxsubsubitem</b></tt>; indentation is controlled through these elements.
-				</p>
-				<figure  align="left" border="yes">
-					<caption>A keyword index.</caption>
-					<img src="img/html-index.png" print-width="100%" screen-width="800px"/>
-				</figure>
-			</subsection>
-		</section>
-		<section>
-			<title>Changing the Look of &latex;-based Output</title>
-			<p>
-				In the style definition file for &latex;, you will find a separate section for each
-			of the supported document classes, with each section containing a list of stylable elements
-			for the	corresponding document class. Some basic knowledge of &latex; will be required to be able
-			to edit these.
-			</p>
-			<p>
-				The following style elements exist:
-			</p>
-			<dl>
-				<dt>caption-setup</dt>
-				<dd>
-					<p>
-					The package options that are passed through to the <tt>caption</tt> &latex;
-					package. Please consult <cite idref="bib:CAPTION"/>, pages 5 ff., for more
-					information on the available options.
-					</p>
-				</dd>
-				<dt>chapterpage-style</dt>
-				<dd>
-					<p>
-					The page style to be used for pages starting a new chapter (see 
-					<cite idref="bib:KOMASCR"/>, pages 66 ff.). Use <tt>emtpy</tt> for a page without any
-					decorations, <tt>scrplain</tt> for a page that is undecorated but has a page
-					number, or <tt>scrheadings</tt> for	a page with page number and column titles.
-					</p>
-				</dd>
-				<dt>chapter-title</dt>
-				<dd>
-					<p>
-					The font properties of a chapter title.
-					</p>
-				</dd>
-				<dt>description-label</dt>
-				<dd>
-					<p>
-					The font properties of a label marking up a term in a definition list.
-					</p>
-				</dd>
-				<dt>document-font</dt>
-				<dd>
-					<p>
-					Use this element to change the font settings. For instance, in order to set
-					your document in a sans-serif font family, you could set this element to
-					</p>
-					<verbatim strip="yes">
-						<tt>\renewcommand{\rmdefault}{\sfdefault}\normalfont</tt>
-					</verbatim>
-				</dd>
-				<dt>document-options</dt>
-				<dd>
-					<p>
-					The package options that are passed to the &latex; macro package KOMA-Script.
-					Please consult <cite idref="bib:KOMASCR"/>, pages 43 ff., for more information on
-					the available options.
-					</p>
-				</dd>
-				<dt>document-subtitle</dt>
-				<dd>
-					<p>
-					The font properties of the document subtitle.
-					</p>
-				</dd>
-				<dt>document-title</dt>
-				<dd>
-					<p>
-					The font properties of the document title.
-					</p>
-				</dd>
-				<dt>footnote</dt>
-				<dd>
-					<p>
-					The font properties of a footnote.
-					</p>
-				</dd>
-				<dt>footnote-label</dt>
-				<dd>
-					<p>
-					The font properties of a label in a footnote.
-					</p>
-				</dd>
-				<dt>footnote-reference</dt>
-				<dd>
-					<p>
-					The font properties of a footnote reference.
-					</p>
-				</dd>
-				<dt>indexpage-style</dt>
-				<dd>
-					<p>
-					The page style to be used for pages starting a keyword index (see 
-					<cite idref="bib:KOMASCR"/>, pages 66 ff.). Use <tt>emtpy</tt> for a page without any
-					decorations, <tt>scrplain</tt>	for a page that is undecorated but has a
-					page number, or <tt>scrheadings</tt> for a page with page number and column titles.
-					</p>
-				</dd>
-				<dt>minitoc-chapter-title</dt>
-				<dd>
-					<p>
-					Font properties of the title of a chapter overview.
-					</p>
-				</dd>
-				<dt>minitoc-part-title</dt>
-				<dd>
-					<p>
-					Font properties of the title of a part overview.
-					</p>
-				</dd>
-				<dt>minitoc-section-title</dt>
-				<dd>
-					<p>
-					Font properties of the title of a section overview.
-					</p>
-				</dd>
-				<dt>page-head</dt>
-				<dd>
-					<p>
-					Font properties of the column titles of a page of style <tt>scrheadings</tt> (see
-					<cite idref="bib:KOMASCR"/>, page 62).
-					</p>
-				</dd>
-				<dt>page-head-fields</dt>
-				<dd>
-					<p>
-					This element is meant to contain the definitions of the column titles for pages
-					of style <tt>scrplain</tt> and <tt>scrheadings</tt>. For a detailed description
-					of the contained elements, consult <cite idref="bib:KOMASCR"/>, pages 127 ff.
-					</p>
-				</dd>
-				<dt>page-number</dt>
-				<dd>
-					<p>
-					Font properties for page numbers.
-					</p>
-				</dd>
-				<dt>page-style</dt>
-				<dd>
-					<p>
-					Sets the default page style to one of <tt>empty</tt>, <tt>scrplain</tt>,
-					<tt>scrheadings</tt> (see <cite idref="bib:KOMASCR"/>, pages 126 ff.).
-					</p>
-				</dd>
-				<dt>paragraph-title</dt>
-				<dd>
-					<p>
-					Font properties of an inline paragraph title.
-					</p>
-				</dd>
-				<dt>part-number</dt>
-				<dd>
-					<p>
-					Font properties of a part number.
-					</p>
-				</dd>
-				<dt>partpage-style</dt>
-				<dd>
-					<p>
-					The page style to be used for pages starting a new part (see 
-					<cite idref="bib:KOMASCR"/>, pages 66 ff.). Use <tt>emtpy</tt> for a page without any
-					decorations, <tt>scrplain</tt>	for a page that is undecorated but has a
-					page number, or <tt>scrheadings</tt> for a page with page number and column titles.
-					</p>
-				</dd>
-				<dt>part-title</dt>
-				<dd>
-					<p>
-					Font properties of a part title.
-					</p>
-				</dd>
-				<dt>sectioning-title</dt>
-				<dd>
-					<p>
-					Default font properties for section titles. This affects, for example, the
-					<tt><b>minisection</b></tt> titles, for which no separate style element exists.
-					</p>
-				</dd>
-				<dt>section-title</dt>
-				<dd>
-					<p>
-					Font properties of the title of a <tt><b>section</b></tt> element.
-					</p>
-				</dd>
-				<dt>subsection-title</dt>
-				<dd>
-					<p>
-					Font properties of the title of a <tt><b>subsection</b></tt> element.
-					</p>
-				</dd>
-				<dt>subsubsection-title</dt>
-				<dd>
-					<p>
-					Font properties of the title of a <tt><b>subsubsection</b></tt> element.
-					</p>
-				</dd>
-				<dt>titlepage-style</dt>
-				<dd>
-					<p>
-					The page style to be used for the title page (see 
-					<cite idref="bib:KOMASCR"/>, pages 66 ff.). Use <tt>emtpy</tt> for a page without any
-					decorations, <tt>scrplain</tt>	for a page that is undecorated but has a
-					page number, or <tt>scrheadings</tt> for a page with page number and column titles.					
-					</p>
-				</dd>
-			</dl>
-		</section>
-	</chapter>
+    <chapter>
+        <title><label id="sect:styling"/>Styling Your Documents</title>
+        <p>
+            For each supported output format there exists a subfolder    
+        <tt>xslt/&lt;format&gt;</tt> below the installation folder. Inside this
+        folder, the XSL stylesheets with the transformation rules for the
+        given target format and a style definition file named <tt>style.xml</tt>
+        are stored.
+        </p>
+        <p>
+            To modify the style definitions for a given target format, create and edit a
+        copy of the corresponding <tt>style.xml</tt> file. Then use the <tt><b>-s</b></tt>
+        command line switch to point the ecromedos Document Processor to the new style file.
+        The format and contents of the style definition file differ depending on the output
+        format.
+        </p>
+        <section>
+            <title>Modifying the CSS-Stylesheet</title>
+            <p>
+                The central style definition for XHTML is a CSS stylesheet
+            wrapped inside an XML container. The CSS stylesheet is generated from a number of
+            SCSS stylesheets located in the <tt>style/scss</tt> subfolder in the source
+            distribution. SCSS is an extended syntax of CSS that needs to be translated
+            to regular CSS with a special compiler.
+            </p>
+            <p>
+                In order to get started with with SCSS, read the SASS guide at
+            <link url="http://sass-lang.com/guide"><tt>http://sass-lang.com/guide</tt></link>.
+            After installing one of the available SASS compilers call the <tt>make.sh</tt>
+            script in the <tt>style</tt> folder:
+            </p>
+            <listing>
+                <code syntax="bash" strip="yes">
+./make.sh css
+                </code>
+            </listing>
+            <p>
+                The resulting stylesheet will be written to
+            the file <tt>style.css</tt>. Take the full contents of this file and paste them
+            into the XML container inside your <tt>style.xml</tt> file.
+            </p>
+        </section>
+        <section>
+            <title>Changing the Look of &latex;-based Output</title>
+            <p>
+                In the style definition file for &latex;, you will find a separate section for each
+            of the supported document classes, with each section containing a list of stylable elements
+            for the    corresponding document class. Some basic knowledge of &latex; will be required to be able
+            to edit these.
+            </p>
+            <p>
+                The following style elements exist:
+            </p>
+            <dl>
+                <dt>caption-setup</dt>
+                <dd>
+                    <p>
+                    The package options that are passed through to the &latex; <tt>caption</tt>
+                    package. Please consult <cite idref="bib:CAPTION"/>, pages 5 ff., for more
+                    information on the available options.
+                    </p>
+                </dd>
+                <dt>chapterpage-style</dt>
+                <dd>
+                    <p>
+                    The page style to be used for pages starting a new chapter (see 
+                    <cite idref="bib:KOMASCR"/> for details). Use <tt>emtpy</tt> for a page without
+                    any decorations, <tt>scrplain</tt> for a page that is undecorated but has a page
+                    number or <tt>scrheadings</tt> for a page with page number and column titles.
+                    </p>
+                </dd>
+                <dt>chapter-title</dt>
+                <dd>
+                    <p>
+                    The font properties of a chapter title.
+                    </p>
+                </dd>
+                <dt>description-label</dt>
+                <dd>
+                    <p>
+                    The font properties of a label marking up a term in a definition list.
+                    </p>
+                </dd>
+                <dt>document-font</dt>
+                <dd>
+                    <p>
+                    Use this element to change the font settings. For instance, in order to set
+                    your document in a sans-serif font family, you could set this element to
+                    </p>
+                    <verbatim strip="yes">
+                        <tt>\renewcommand{\rmdefault}{\sfdefault}\normalfont</tt>
+                    </verbatim>
+                </dd>
+                <dt>document-options</dt>
+                <dd>
+                    <p>
+                    The package options that are passed to the &latex; macro package KOMA-Script.
+                    Please consult <cite idref="bib:KOMASCR"/> for more information on
+                    the available options.
+                    </p>
+                </dd>
+                <dt>document-subtitle</dt>
+                <dd>
+                    <p>
+                    The font properties of the document subtitle.
+                    </p>
+                </dd>
+                <dt>document-title</dt>
+                <dd>
+                    <p>
+                    The font properties of the document title.
+                    </p>
+                </dd>
+                <dt>footnote</dt>
+                <dd>
+                    <p>
+                    The font properties of a footnote.
+                    </p>
+                </dd>
+                <dt>footnote-label</dt>
+                <dd>
+                    <p>
+                    The font properties of a label in a footnote.
+                    </p>
+                </dd>
+                <dt>footnote-reference</dt>
+                <dd>
+                    <p>
+                    The font properties of a footnote reference.
+                    </p>
+                </dd>
+                <dt>indexpage-style</dt>
+                <dd>
+                    <p>
+                    The page style to be used for pages starting a keyword index (see 
+                    <cite idref="bib:KOMASCR"/> for details). Use <tt>emtpy</tt> for a page without any
+                    decorations, <tt>scrplain</tt> for a page that is undecorated but has a
+                    page number, or <tt>scrheadings</tt> for a page with page number and column titles.
+                    </p>
+                </dd>
+                <dt>minitoc-chapter-title</dt>
+                <dd>
+                    <p>
+                    Font properties of the title of a chapter overview.
+                    </p>
+                </dd>
+                <dt>minitoc-part-title</dt>
+                <dd>
+                    <p>
+                    Font properties of the title of a part overview.
+                    </p>
+                </dd>
+                <dt>minitoc-section-title</dt>
+                <dd>
+                    <p>
+                    Font properties of the title of a section overview.
+                    </p>
+                </dd>
+                <dt>page-head</dt>
+                <dd>
+                    <p>
+                    Font properties of the column titles of a page of style <tt>scrheadings</tt> (see
+                    <cite idref="bib:KOMASCR"/> for details).
+                    </p>
+                </dd>
+                <dt>page-head-fields</dt>
+                <dd>
+                    <p>
+                    This element is meant to contain the definitions of the column titles for pages
+                    of style <tt>scrplain</tt> and <tt>scrheadings</tt>. For a detailed description
+                    of the contained elements, consult <cite idref="bib:KOMASCR"/>.
+                    </p>
+                </dd>
+                <dt>page-number</dt>
+                <dd>
+                    <p>
+                    Font properties for page numbers.
+                    </p>
+                </dd>
+                <dt>page-style</dt>
+                <dd>
+                    <p>
+                    Sets the default page style to one of <tt>empty</tt>, <tt>scrplain</tt>,
+                    <tt>scrheadings</tt> (see <cite idref="bib:KOMASCR"/> for details).
+                    </p>
+                </dd>
+                <dt>paragraph-title</dt>
+                <dd>
+                    <p>
+                    Font properties of an inline paragraph title.
+                    </p>
+                </dd>
+                <dt>part-number</dt>
+                <dd>
+                    <p>
+                    Font properties of a part number.
+                    </p>
+                </dd>
+                <dt>partpage-style</dt>
+                <dd>
+                    <p>
+                    The page style to be used for pages starting a new part (see 
+                    <cite idref="bib:KOMASCR"/> for details). Use <tt>emtpy</tt> for a page without any
+                    decorations, <tt>scrplain</tt> for a page that is undecorated but has a
+                    page number, or <tt>scrheadings</tt> for a page with page number and column titles.
+                    </p>
+                </dd>
+                <dt>part-title</dt>
+                <dd>
+                    <p>
+                    Font properties of a part title.
+                    </p>
+                </dd>
+                <dt>sectioning-title</dt>
+                <dd>
+                    <p>
+                    Default font properties for section titles. This affects, for example, the
+                    <tt><b>minisection</b></tt> titles, for which no separate style element exists.
+                    </p>
+                </dd>
+                <dt>section-title</dt>
+                <dd>
+                    <p>
+                    Font properties of the title of a <tt><b>section</b></tt> element.
+                    </p>
+                </dd>
+                <dt>subsection-title</dt>
+                <dd>
+                    <p>
+                    Font properties of the title of a <tt><b>subsection</b></tt> element.
+                    </p>
+                </dd>
+                <dt>subsubsection-title</dt>
+                <dd>
+                    <p>
+                    Font properties of the title of a <tt><b>subsubsection</b></tt> element.
+                    </p>
+                </dd>
+                <dt>titlepage-style</dt>
+                <dd>
+                    <p>
+                    The page style to be used for the title page (see 
+                    <cite idref="bib:KOMASCR"/> for details). Use <tt>emtpy</tt> for a page without any
+                    decorations, <tt>scrplain</tt> for a page that is undecorated but has a
+                    page number, or <tt>scrheadings</tt> for a page with page number and column titles.                    
+                    </p>
+                </dd>
+            </dl>
+        </section>
+    </chapter>
 
